@@ -1,0 +1,89 @@
+/* Custom styling for 92pkr predictor bot */
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0b0f19;
+}
+::-webkit-scrollbar-thumb {
+  background: #23304c;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3b4d75;
+}
+
+/* Prediction Badge Glows */
+.badge-big {
+  color: #fbbf24;
+  text-shadow: 0 0 20px rgba(251, 191, 36, 0.6), 0 0 40px rgba(251, 191, 36, 0.2);
+}
+
+.badge-small {
+  color: #38bdf8;
+  text-shadow: 0 0 20px rgba(56, 189, 248, 0.6), 0 0 40px rgba(56, 189, 248, 0.2);
+}
+
+.badge-neutral {
+  color: #94a3b8;
+  text-shadow: 0 0 15px rgba(148, 163, 184, 0.3);
+}
+
+/* Roadmap Bead Items */
+.bead-item {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 11px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  position: relative;
+}
+
+.bead-item:hover {
+  transform: scale(1.15);
+  z-index: 10;
+}
+
+/* Ball colors */
+.ball-green {
+  background: radial-gradient(circle at 30% 30%, #34d399, #059669);
+  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.4);
+  color: white;
+}
+
+.ball-red {
+  background: radial-gradient(circle at 30% 30%, #f87171, #dc2626);
+  box-shadow: 0 2px 8px rgba(239, 68, 68, 0.4);
+  color: white;
+}
+
+.ball-violet {
+  background: radial-gradient(circle at 30% 30%, #c084fc, #7c3aed);
+  box-shadow: 0 2px 8px rgba(168, 85, 247, 0.4);
+  color: white;
+}
+
+/* Big vs Small outer border indicator */
+.border-big {
+  border: 2px solid #fbbf24;
+}
+
+.border-small {
+  border: 2px solid #38bdf8;
+}
+
+/* Mini indicator label under bead */
+.bead-label {
+  font-size: 8px;
+  line-height: 1;
+  text-transform: uppercase;
+  opacity: 0.9;
+}

@@ -1,0 +1,94 @@
+{
+  "trained_samples": 317,
+  "evaluation_window": 35,
+  "weights": {
+    "markov": 0.245,
+    "patterns": 0.166,
+    "statistics": 0.589
+  },
+  "accuracy": {
+    "consensus": 51.4,
+    "markov": 60.0,
+    "patterns": 48.6,
+    "statistics": 100.0
+  },
+  "last_verification": {
+    "period": "20260918100051235",
+    "number": 6,
+    "actual": "BIG",
+    "predicted": "BIG",
+    "hit": true
+  },
+  "recent_verifications": [
+    {
+      "period": "20260918100051226",
+      "number": 2,
+      "actual": "SMALL",
+      "predicted": "SMALL",
+      "hit": true
+    },
+    {
+      "period": "20260918100051227",
+      "number": 9,
+      "actual": "BIG",
+      "predicted": "BIG",
+      "hit": true
+    },
+    {
+      "period": "20260918100051228",
+      "number": 5,
+      "actual": "BIG",
+      "predicted": "SMALL",
+      "hit": false
+    },
+    {
+      "period": "20260918100051229",
+      "number": 8,
+      "actual": "BIG",
+      "predicted": "SMALL",
+      "hit": false
+    },
+    {
+      "period": "20260918100051230",
+      "number": 0,
+      "actual": "SMALL",
+      "predicted": "BIG",
+      "hit": false
+    },
+    {
+      "period": "20260918100051231",
+      "number": 5,
+      "actual": "BIG",
+      "predicted": "BIG",
+      "hit": true
+    },
+    {
+      "period": "20260918100051232",
+      "number": 0,
+      "actual": "SMALL",
+      "predicted": "SMALL",
+      "hit": true
+    },
+    {
+      "period": "20260918100051233",
+      "number": 6,
+      "actual": "BIG",
+      "predicted": "BIG",
+      "hit": true
+    },
+    {
+      "period": "20260918100051234",
+      "number": 3,
+      "actual": "SMALL",
+      "predicted": "SMALL",
+      "hit": true
+    },
+    {
+      "period": "20260918100051235",
+      "number": 6,
+      "actual": "BIG",
+      "predicted": "BIG",
+      "hit": true
+    }
+  ]
+}
