@@ -254,9 +254,34 @@
             <i data-lucide="brain-circuit" class="w-4 h-4 text-cyan-400"></i>
             <span class="text-xs font-extrabold tracking-wide uppercase text-slate-200">AI Self-Learning Engine</span>
           </div>
-          <span id="trainedSamplesBadge" class="text-[11px] font-mono px-2 py-0.5 rounded bg-cyan-950 text-cyan-300 border border-cyan-800/60 font-bold">
-            Trained: 0 Draws
-          </span>
+          <div class="flex items-center space-x-1.5">
+            <span class="px-2 py-0.5 rounded text-[10px] font-extrabold bg-amber-950 text-amber-300 border border-amber-800/60 shadow">
+              🎯 7/10 SNIPER TARGET
+            </span>
+            <span id="trainedSamplesBadge" class="text-[11px] font-mono px-2 py-0.5 rounded bg-cyan-950 text-cyan-300 border border-cyan-800/60 font-bold">
+              Trained: 0 Draws
+            </span>
+          </div>
+        </div>
+
+        <!-- 7/10 Target Monitor HUD Bar -->
+        <div class="p-3 rounded-xl bg-slate-900/90 border border-amber-500/30 space-y-1.5 shadow-sm">
+          <div class="flex items-center justify-between text-xs font-bold">
+            <span class="text-slate-300 flex items-center space-x-1.5">
+              <i data-lucide="crosshair" class="w-3.5 h-3.5 text-amber-400"></i>
+              <span>Rolling 10 Rounds (Target: 7 Wins):</span>
+            </span>
+            <span id="target710ScoreBadge" class="font-mono text-xs px-2.5 py-0.5 rounded-full font-black bg-emerald-950 text-emerald-300 border border-emerald-500/60">
+              Evaluating...
+            </span>
+          </div>
+          <div class="w-full bg-slate-950 rounded-full h-2 overflow-hidden border border-slate-800">
+            <div id="target710ProgressBar" class="h-2 rounded-full bg-gradient-to-r from-amber-500 via-cyan-400 to-emerald-400 transition-all duration-500" style="width: 70%"></div>
+          </div>
+          <div class="flex justify-between text-[10px] text-slate-400 font-mono">
+            <span>Minimum 7 Wins Required</span>
+            <span id="target710PercentText" class="text-amber-300 font-bold">70% Target Threshold</span>
+          </div>
         </div>
 
         <!-- Last Round Prediction Result Verification (Win / Miss) -->
@@ -268,7 +293,7 @@
         <!-- Recent Prediction Streak (Last 10 Draws: W / L badges) -->
         <div class="space-y-1.5">
           <div class="flex justify-between text-[11px] text-slate-400 font-semibold">
-            <span>Recent Prediction Streak:</span>
+            <span>Last 10 Verified Signals:</span>
             <span id="recentWinRateText" class="text-emerald-400 font-bold">--% Win Rate</span>
           </div>
           <div id="predictionStreakStrip" class="flex space-x-1.5 overflow-x-auto py-1">
@@ -306,7 +331,7 @@
               <span class="text-[10px] uppercase font-bold text-slate-300 tracking-wider">Calibration & Trap Guard:</span>
             </div>
             <span id="calibVerifiedCount" class="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-950 text-emerald-300 border border-emerald-800/60 font-bold">
-              45 Tests Analyzed
+              790 Tests Analyzed
             </span>
           </div>
 

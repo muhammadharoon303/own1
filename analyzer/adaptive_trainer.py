@@ -152,6 +152,13 @@ class AdaptiveTrainer:
         # Last verification result
         last_eval = eval_details[-1] if eval_details else None
 
+        # Rolling 10 active verification score (Target: 7/10 Wins = 70%)
+        active_evals = [e for e in eval_details if e.get("hit") is not None]
+        last_10_active = active_evals[-10:] if active_evals else []
+        last_10_wins = sum(1 for e in last_10_active if e.get("hit") is True)
+        last_10_count = len(last_10_active)
+        rolling_10_rate = round((last_10_wins / last_10_count * 100), 1) if last_10_count > 0 else 0.0
+
         training_summary = {
             "trained_samples": n,
             "evaluation_window": len(eval_details),
@@ -162,9 +169,18 @@ class AdaptiveTrainer:
                 "patterns": acc_patterns,
                 "statistics": acc_stats
             },
+            "rolling_10": {
+                "wins": last_10_wins,
+                "total": last_10_count,
+                "win_rate": rolling_10_rate,
+                "target_wins": 7,
+                "target_met": (last_10_wins >= 7) if last_10_count >= 10 else None,
+                "display": f"{last_10_wins}/{last_10_count} Wins" if last_10_count > 0 else "0/10 Wins"
+            },
             "last_verification": last_eval,
-            "recent_verifications": eval_details[-10:]  # last 10 verification badges
+            "recent_verifications": last_10_active
         }
+
 
         # Save stats
         try:

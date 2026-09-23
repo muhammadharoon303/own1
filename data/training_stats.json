@@ -1,94 +1,102 @@
 {
-  "trained_samples": 836,
+  "trained_samples": 1044,
   "evaluation_window": 35,
   "weights": {
-    "markov": 0.328,
-    "patterns": 0.379,
-    "statistics": 0.292
+    "markov": 0.131,
+    "patterns": 0.215,
+    "statistics": 0.654
   },
   "accuracy": {
-    "consensus": 57.1,
-    "markov": 52.6,
+    "consensus": 37.1,
+    "markov": 34.8,
     "patterns": 57.1,
-    "statistics": 50.0
+    "statistics": 100.0
+  },
+  "rolling_10": {
+    "wins": 4,
+    "total": 10,
+    "win_rate": 40.0,
+    "target_wins": 7,
+    "target_met": false,
+    "display": "4/10 Wins"
   },
   "last_verification": {
-    "period": "20260918100051724",
-    "number": 6,
-    "actual": "BIG",
+    "period": "20260923100052208",
+    "number": 4,
+    "actual": "SMALL",
     "predicted": "SMALL",
-    "hit": false
+    "hit": true
   },
   "recent_verifications": [
     {
-      "period": "20260918100051715",
-      "number": 6,
+      "period": "20260923100052199",
+      "number": 9,
       "actual": "BIG",
-      "predicted": "BIG",
-      "hit": true
+      "predicted": "SMALL",
+      "hit": false
     },
     {
-      "period": "20260918100051716",
-      "number": 2,
+      "period": "20260923100052200",
+      "number": 0,
       "actual": "SMALL",
       "predicted": "SMALL",
       "hit": true
     },
     {
-      "period": "20260918100051717",
+      "period": "20260923100052201",
       "number": 0,
       "actual": "SMALL",
       "predicted": "BIG",
       "hit": false
     },
     {
-      "period": "20260918100051718",
-      "number": 8,
-      "actual": "BIG",
-      "predicted": "SMALL",
-      "hit": false
-    },
-    {
-      "period": "20260918100051719",
-      "number": 8,
+      "period": "20260923100052202",
+      "number": 7,
       "actual": "BIG",
       "predicted": "BIG",
       "hit": true
     },
     {
-      "period": "20260918100051720",
+      "period": "20260923100052203",
+      "number": 5,
+      "actual": "BIG",
+      "predicted": "SMALL",
+      "hit": false
+    },
+    {
+      "period": "20260923100052204",
+      "number": 1,
+      "actual": "SMALL",
+      "predicted": "SMALL",
+      "hit": true
+    },
+    {
+      "period": "20260923100052205",
+      "number": 7,
+      "actual": "BIG",
+      "predicted": "SMALL",
+      "hit": false
+    },
+    {
+      "period": "20260923100052206",
       "number": 6,
       "actual": "BIG",
       "predicted": "SMALL",
       "hit": false
     },
     {
-      "period": "20260918100051721",
-      "number": 8,
-      "actual": "BIG",
-      "predicted": "BIG",
-      "hit": true
-    },
-    {
-      "period": "20260918100051722",
-      "number": 6,
-      "actual": "BIG",
-      "predicted": "BIG",
-      "hit": true
-    },
-    {
-      "period": "20260918100051723",
-      "number": 8,
-      "actual": "BIG",
-      "predicted": "BIG",
-      "hit": true
-    },
-    {
-      "period": "20260918100051724",
-      "number": 6,
+      "period": "20260923100052207",
+      "number": 5,
       "actual": "BIG",
       "predicted": "SMALL",
       "hit": false
+    },
+    {
+      "period": "20260923100052208",
+      "number": 4,
+      "actual": "SMALL",
+      "predicted": "SMALL",
+      "hit": true
     }
   ]
 }

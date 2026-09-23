@@ -285,16 +285,17 @@ function renderDashboard(data) {
 
   if (prediction) {
     const outcome = prediction.outcome;
-    liveForecast.innerText = outcome;
-    liveForecast.className = "text-6xl font-black tracking-widest py-1 transition-all duration-300";
-
     if (outcome === "BIG") {
-      liveForecast.classList.add("badge-big");
+      liveForecast.innerText = "BIG";
+      liveForecast.className = "text-6xl font-black tracking-widest py-1 transition-all duration-300 badge-big";
     } else if (outcome === "SMALL") {
-      liveForecast.classList.add("badge-small");
+      liveForecast.innerText = "SMALL";
+      liveForecast.className = "text-6xl font-black tracking-widest py-1 transition-all duration-300 badge-small";
     } else {
-      liveForecast.classList.add("badge-neutral");
+      liveForecast.innerText = "WAIT / SKIP";
+      liveForecast.className = "text-4xl sm:text-5xl font-black tracking-wide py-2 transition-all duration-300 badge-neutral";
     }
+
 
     liveConfPercent.innerText = `${prediction.confidence}%`;
     liveConfBar.style.width = `${prediction.confidence}%`;
@@ -380,6 +381,30 @@ function renderDashboard(data) {
   if (winRateText && training.accuracy) {
     const consAcc = training.accuracy.consensus || 50;
     winRateText.innerText = `${consAcc}% Win Rate`;
+  }
+
+  // 7/10 Target Monitor HUD (Rolling 10 periods)
+  const rolling10 = training.rolling_10 || {};
+  const elTargetBadge = document.getElementById("target710ScoreBadge");
+  const elTargetBar = document.getElementById("target710ProgressBar");
+  const elTargetText = document.getElementById("target710PercentText");
+
+  if (elTargetBadge && rolling10.total !== undefined) {
+    elTargetBadge.innerText = rolling10.display || "0/10 Wins";
+    if (rolling10.wins >= 7) {
+      elTargetBadge.className = "font-mono text-xs px-2.5 py-0.5 rounded-full font-black bg-emerald-950 text-emerald-300 border border-emerald-500 shadow animate-pulse";
+    } else if (rolling10.wins >= 5) {
+      elTargetBadge.className = "font-mono text-xs px-2.5 py-0.5 rounded-full font-black bg-amber-950 text-amber-300 border border-amber-600 shadow";
+    } else {
+      elTargetBadge.className = "font-mono text-xs px-2.5 py-0.5 rounded-full font-black bg-rose-950 text-rose-300 border border-rose-600 shadow";
+    }
+  }
+
+  if (elTargetBar && rolling10.win_rate !== undefined) {
+    elTargetBar.style.width = `${Math.min(100, Math.max(10, rolling10.win_rate))}%`;
+  }
+  if (elTargetText && rolling10.win_rate !== undefined) {
+    elTargetText.innerText = `${rolling10.win_rate}% Win Rate (Target: 70%)`;
   }
 
   // Dynamic self-trained weights

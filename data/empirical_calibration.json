@@ -1,232 +1,4742 @@
 [
   {
-    "confidence": 59.0,
+    "condition": "Unknown",
+    "confidence": 57.8,
     "outcome": "Lose",
-    "note": "Row 1: 59% / X (Lose)"
+    "note": "Unknown 57.8% -> Lose"
   },
   {
-    "confidence": 52.0,
-    "outcome": "Lose",
-    "note": "Row 1: 52% / X (Lose)"
-  },
-  {
-    "confidence": 58.5,
-    "outcome": "Win",
-    "note": "Row 1: 58.5% / Checkmark (Win)"
-  },
-  {
-    "confidence": 54.5,
-    "outcome": "Win",
-    "note": "Row 1: 54.5% / Checkmark (Win)"
-  },
-  {
-    "confidence": 52.0,
-    "outcome": "Win",
-    "note": "Row 1: 52% / Checkmark (Win)"
-  },
-  {
-    "confidence": 60.3,
-    "outcome": "Lose",
-    "note": "Row 1: 60.3% / X (Lose)"
-  },
-  {
-    "confidence": 50.0,
-    "outcome": "Neutral",
-    "note": "Row 1: 50% / N (Skip)"
-  },
-  {
-    "confidence": 58.0,
-    "outcome": "Lose",
-    "note": "Row 2: 58% / L (Lose)"
-  },
-  {
-    "confidence": 55.2,
-    "outcome": "Win",
-    "note": "Row 2: 55.2% / Checkmark (Win)"
-  },
-  {
+    "condition": "Unknown",
     "confidence": 52.2,
     "outcome": "Lose",
-    "note": "Row 2: 52.2% / X (Lose)"
+    "note": "Unknown 52.2% -> Lose"
   },
   {
+    "condition": "Unknown",
     "confidence": 50.0,
     "outcome": "Neutral",
-    "note": "Row 2: N (Skip)"
+    "note": "Unknown 50.0% -> Neutral"
   },
   {
-    "confidence": 57.2,
-    "outcome": "Win",
-    "note": "Row 2: 57.2% / Checkmark (Win)"
-  },
-  {
-    "confidence": 55.2,
-    "outcome": "Lose",
-    "note": "Row 2: 55.2% / X (Lose)"
-  },
-  {
-    "confidence": 58.2,
-    "outcome": "Lose",
-    "note": "Row 2: 58.2% / X (Lose)"
-  },
-  {
-    "confidence": 57.3,
-    "outcome": "Lose",
-    "note": "Row 3: 57.3% / X (Lose)"
-  },
-  {
-    "confidence": 50.0,
-    "outcome": "Neutral",
-    "note": "Row 3: N (Skip)"
-  },
-  {
-    "confidence": 52.0,
-    "outcome": "Win",
-    "note": "Row 3: 52% / Checkmark (Win)"
-  },
-  {
-    "confidence": 52.0,
-    "outcome": "Lose",
-    "note": "Row 3: 52% / X (Lose)"
-  },
-  {
+    "condition": "Unknown",
     "confidence": 53.0,
-    "outcome": "Win",
-    "note": "Row 3: 53% / Checkmark (Win)"
-  },
-  {
-    "confidence": 50.0,
-    "outcome": "Neutral",
-    "note": "Row 3: N (Skip)"
-  },
-  {
-    "confidence": 55.9,
     "outcome": "Lose",
-    "note": "Row 3: 55.9% / X (Lose)"
+    "note": "Unknown 53.0% -> Lose"
   },
   {
-    "confidence": 50.0,
-    "outcome": "Neutral",
-    "note": "Row 3: N (Skip)"
-  },
-  {
-    "confidence": 58.5,
-    "outcome": "Win",
-    "note": "Row 4: 58.5% / Checkmark (Win)"
-  },
-  {
-    "confidence": 56.1,
-    "outcome": "Win",
-    "note": "Row 4: 56.1% / Checkmark (Win)"
-  },
-  {
-    "confidence": 50.0,
-    "outcome": "Neutral",
-    "note": "Row 4: N (Skip)"
-  },
-  {
-    "confidence": 61.2,
+    "condition": "Unknown",
+    "confidence": 58.3,
     "outcome": "Lose",
-    "note": "Row 4: 61.2% / X (Lose)"
+    "note": "Unknown 58.3% -> Lose"
   },
   {
-    "confidence": 50.0,
-    "outcome": "Neutral_Lose",
-    "note": "Row 4: N / L (Lose)"
+    "condition": "Unknown",
+    "confidence": 57.2,
+    "outcome": "Lose",
+    "note": "Unknown 57.2% -> Lose"
   },
   {
-    "confidence": 58.0,
-    "outcome": "Win",
-    "note": "Row 4: 58.0% / w (Win)"
-  },
-  {
+    "condition": "Unknown",
     "confidence": 57.0,
     "outcome": "Lose",
-    "note": "Row 4: 57% / X (Lose)"
+    "note": "Unknown 57.0% -> Lose"
   },
   {
-    "confidence": 60.0,
-    "outcome": "Win",
-    "note": "Row 4: 60% / Checkmark (Win)"
-  },
-  {
-    "confidence": 61.0,
-    "outcome": "Win",
-    "note": "Row 5: 61% / Checkmark (Win)"
-  },
-  {
-    "confidence": 66.2,
-    "outcome": "Lose",
-    "note": "Row 5: 66.2% / X (Lose)"
-  },
-  {
-    "confidence": 59.2,
-    "outcome": "Lose",
-    "note": "Row 5: 59.2% / X (Lose)"
-  },
-  {
+    "condition": "Unknown",
     "confidence": 52.0,
     "outcome": "Win",
-    "note": "Row 5: 52% / Checkmark (Win)"
+    "note": "Unknown 52.0% -> Win"
   },
   {
-    "confidence": 52.8,
+    "condition": "Unknown",
+    "confidence": 54.3,
     "outcome": "Lose",
-    "note": "Row 5: 52.8% / X (Lose)"
+    "note": "Unknown 54.3% -> Lose"
   },
   {
-    "confidence": 56.0,
+    "condition": "Unknown",
+    "confidence": 58.6,
     "outcome": "Win",
-    "note": "Row 5: 56% / Checkmark (Win)"
+    "note": "Unknown 58.6% -> Win"
   },
   {
-    "confidence": 50.0,
-    "outcome": "Neutral_Lose",
-    "note": "Row 5: N / L (Lose)"
+    "condition": "Unknown",
+    "confidence": 53.6,
+    "outcome": "Lose",
+    "note": "Unknown 53.6% -> Lose"
   },
   {
-    "confidence": 50.0,
-    "outcome": "Neutral_Lose",
-    "note": "Row 6: N / L (Lose)"
-  },
-  {
-    "confidence": 58.0,
+    "condition": "Unknown",
+    "confidence": 53.3,
     "outcome": "Win",
-    "note": "Row 6: 58% / Checkmark (Win)"
+    "note": "Unknown 53.3% -> Win"
   },
   {
+    "condition": "Unknown",
+    "confidence": 56.8,
+    "outcome": "Lose",
+    "note": "Unknown 56.8% -> Lose"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 55.5,
+    "outcome": "Lose",
+    "note": "Unknown 55.5% -> Lose"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 53.9,
+    "outcome": "Win",
+    "note": "Unknown 53.9% -> Win"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 54.0,
+    "outcome": "Lose",
+    "note": "Unknown 54.0% -> Lose"
+  },
+  {
+    "condition": "Unknown",
     "confidence": 57.9,
     "outcome": "Lose",
-    "note": "Row 6: 57.9% / X (Lose)"
+    "note": "Unknown 57.9% -> Lose"
   },
   {
+    "condition": "Unknown",
+    "confidence": 56.0,
+    "outcome": "Lose",
+    "note": "Unknown 56.0% -> Lose"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Unknown 50.0% -> Neutral"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 52.2,
+    "outcome": "Win",
+    "note": "Unknown 52.2% -> Win"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 52.9,
+    "outcome": "Lose",
+    "note": "Unknown 52.9% -> Lose"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 57.6,
+    "outcome": "Win",
+    "note": "Unknown 57.6% -> Win"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 59.5,
+    "outcome": "Win",
+    "note": "Unknown 59.5% -> Win"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 58.9,
+    "outcome": "Win",
+    "note": "Unknown 58.9% -> Win"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 61.9,
+    "outcome": "Lose",
+    "note": "Unknown 61.9% -> Lose"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 56.0,
+    "outcome": "Win",
+    "note": "Unknown 56.0% -> Win"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Unknown 50.0% -> Neutral"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 57.8,
+    "outcome": "Win",
+    "note": "Unknown 57.8% -> Win"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 56.7,
+    "outcome": "Win",
+    "note": "Unknown 56.7% -> Win"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 60.4,
+    "outcome": "Win",
+    "note": "Unknown 60.4% -> Win"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 66.2,
+    "outcome": "Win",
+    "note": "Unknown 66.2% -> Win"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 62.4,
+    "outcome": "Lose",
+    "note": "Unknown 62.4% -> Lose"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 55.6,
+    "outcome": "Lose",
+    "note": "Unknown 55.6% -> Lose"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Unknown 50.0% -> Neutral"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 57.5,
+    "outcome": "Lose",
+    "note": "Unknown 57.5% -> Lose"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 55.5,
+    "outcome": "Lose",
+    "note": "Unknown 55.5% -> Lose"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 53.1,
+    "outcome": "Lose",
+    "note": "Unknown 53.1% -> Lose"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 53.6,
+    "outcome": "Lose",
+    "note": "Unknown 53.6% -> Lose"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 52.7,
+    "outcome": "Win",
+    "note": "Unknown 52.7% -> Win"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 55.4,
+    "outcome": "Win",
+    "note": "Unknown 55.4% -> Win"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 57.9,
+    "outcome": "Win",
+    "note": "Unknown 57.9% -> Win"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 58.1,
+    "outcome": "Win",
+    "note": "Unknown 58.1% -> Win"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 53.1,
+    "outcome": "Lose",
+    "note": "Unknown 53.1% -> Lose"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Unknown 50.0% -> Neutral"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 61.3,
+    "outcome": "Win",
+    "note": "Unknown 61.3% -> Win"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Unknown 50.0% -> Neutral"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 55.0,
+    "outcome": "Win",
+    "note": "Unknown 55.0% -> Win"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 52.7,
+    "outcome": "Win",
+    "note": "Unknown 52.7% -> Win"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 53.9,
+    "outcome": "Win",
+    "note": "Unknown 53.9% -> Win"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 54.9,
+    "outcome": "Win",
+    "note": "Unknown 54.9% -> Win"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 56.0,
+    "outcome": "Win",
+    "note": "Unknown 56.0% -> Win"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Unknown 50.0% -> Neutral"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 55.9,
+    "outcome": "Lose",
+    "note": "Unknown 55.9% -> Lose"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 52.8,
+    "outcome": "Win",
+    "note": "Unknown 52.8% -> Win"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 53.8,
+    "outcome": "Lose",
+    "note": "Unknown 53.8% -> Lose"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Unknown 50.0% -> Neutral"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 57.2,
+    "outcome": "Win",
+    "note": "Unknown 57.2% -> Win"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 58.2,
+    "outcome": "Lose",
+    "note": "Unknown 58.2% -> Lose"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 52.9,
+    "outcome": "Win",
+    "note": "Unknown 52.9% -> Win"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Unknown 50.0% -> Neutral"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 56.2,
+    "outcome": "Lose",
+    "note": "Unknown 56.2% -> Lose"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 54.5,
+    "outcome": "Win",
+    "note": "Unknown 54.5% -> Win"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 52.8,
+    "outcome": "Lose",
+    "note": "Unknown 52.8% -> Lose"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Unknown 50.0% -> Neutral"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 54.6,
+    "outcome": "Win",
+    "note": "Unknown 54.6% -> Win"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Unknown 50.0% -> Neutral"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 54.8,
+    "outcome": "Lose",
+    "note": "Unknown 54.8% -> Lose"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Unknown 50.0% -> Neutral"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 55.3,
+    "outcome": "Win",
+    "note": "Unknown 55.3% -> Win"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Unknown 50.0% -> Neutral"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 54.0,
+    "outcome": "Lose",
+    "note": "Unknown 54.0% -> Lose"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Unknown 50.0% -> Neutral"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 53.7,
+    "outcome": "Win",
+    "note": "Unknown 53.7% -> Win"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 56.0,
+    "outcome": "Lose",
+    "note": "Unknown 56.0% -> Lose"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Unknown 50.0% -> Neutral"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 53.7,
+    "outcome": "Win",
+    "note": "Unknown 53.7% -> Win"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 54.2,
+    "outcome": "Lose",
+    "note": "Unknown 54.2% -> Lose"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 52.2,
+    "outcome": "Win",
+    "note": "Unknown 52.2% -> Win"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Unknown 50.0% -> Neutral"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 52.6,
+    "outcome": "Lose",
+    "note": "Unknown 52.6% -> Lose"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 52.6,
+    "outcome": "Win",
+    "note": "Unknown 52.6% -> Win"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Unknown 50.0% -> Neutral"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 52.8,
+    "outcome": "Win",
+    "note": "Unknown 52.8% -> Win"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Unknown 50.0% -> Neutral"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 54.0,
+    "outcome": "Lose",
+    "note": "Unknown 54.0% -> Lose"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 52.9,
+    "outcome": "Lose",
+    "note": "Unknown 52.9% -> Lose"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Unknown 50.0% -> Neutral"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 53.3,
+    "outcome": "Lose",
+    "note": "Unknown 53.3% -> Lose"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 52.6,
+    "outcome": "Lose",
+    "note": "Unknown 52.6% -> Lose"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Unknown 50.0% -> Neutral"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 53.2,
+    "outcome": "Win",
+    "note": "Unknown 53.2% -> Win"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Unknown 50.0% -> Neutral"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 52.1,
+    "outcome": "Lose",
+    "note": "Unknown 52.1% -> Lose"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Unknown 50.0% -> Neutral"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 63.2,
+    "outcome": "Lose",
+    "note": "Unknown 63.2% -> Lose"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 62.2,
+    "outcome": "Win",
+    "note": "Unknown 62.2% -> Win"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 59.2,
+    "outcome": "Win",
+    "note": "Unknown 59.2% -> Win"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 62.9,
+    "outcome": "Win",
+    "note": "Unknown 62.9% -> Win"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Unknown 50.0% -> Neutral"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 52.3,
+    "outcome": "Win",
+    "note": "Unknown 52.3% -> Win"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 53.2,
+    "outcome": "Lose",
+    "note": "Unknown 53.2% -> Lose"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Unknown 50.0% -> Neutral"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 53.6,
+    "outcome": "Lose",
+    "note": "Unknown 53.6% -> Lose"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Unknown 50.0% -> Neutral"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 53.1,
+    "outcome": "Win",
+    "note": "Unknown 53.1% -> Win"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 52.3,
+    "outcome": "Lose",
+    "note": "Unknown 52.3% -> Lose"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Unknown 50.0% -> Neutral"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 53.6,
+    "outcome": "Win",
+    "note": "Unknown 53.6% -> Win"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Unknown 50.0% -> Neutral"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 53.4,
+    "outcome": "Lose",
+    "note": "Unknown 53.4% -> Lose"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Unknown 50.0% -> Neutral"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 53.9,
+    "outcome": "Win",
+    "note": "Unknown 53.9% -> Win"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Unknown 50.0% -> Neutral"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 54.6,
+    "outcome": "Lose",
+    "note": "Unknown 54.6% -> Lose"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 53.7,
+    "outcome": "Lose",
+    "note": "Unknown 53.7% -> Lose"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Unknown 50.0% -> Neutral"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 53.4,
+    "outcome": "Lose",
+    "note": "Unknown 53.4% -> Lose"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 53.6,
+    "outcome": "Lose",
+    "note": "Unknown 53.6% -> Lose"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Unknown 50.0% -> Neutral"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 56.6,
+    "outcome": "Lose",
+    "note": "Unknown 56.6% -> Lose"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 54.1,
+    "outcome": "Lose",
+    "note": "Unknown 54.1% -> Lose"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Unknown 50.0% -> Neutral"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 54.5,
+    "outcome": "Win",
+    "note": "Unknown 54.5% -> Win"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 52.6,
+    "outcome": "Win",
+    "note": "Unknown 52.6% -> Win"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 57.3,
+    "outcome": "Lose",
+    "note": "Unknown 57.3% -> Lose"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 54.1,
+    "outcome": "Lose",
+    "note": "Unknown 54.1% -> Lose"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 59.1,
+    "outcome": "Win",
+    "note": "Unknown 59.1% -> Win"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 59.6,
+    "outcome": "Lose",
+    "note": "Unknown 59.6% -> Lose"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 65.0,
+    "outcome": "Lose",
+    "note": "Unknown 65.0% -> Lose"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 62.3,
+    "outcome": "Lose",
+    "note": "Unknown 62.3% -> Lose"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 54.7,
+    "outcome": "Lose",
+    "note": "Unknown 54.7% -> Lose"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 53.8,
+    "outcome": "Win",
+    "note": "Unknown 53.8% -> Win"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 54.8,
+    "outcome": "Lose",
+    "note": "Unknown 54.8% -> Lose"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 62.3,
+    "outcome": "Win",
+    "note": "Unknown 62.3% -> Win"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 53.5,
+    "outcome": "Lose",
+    "note": "Unknown 53.5% -> Lose"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 60.1,
+    "outcome": "Win",
+    "note": "Unknown 60.1% -> Win"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 52.7,
+    "outcome": "Win",
+    "note": "Unknown 52.7% -> Win"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 53.2,
+    "outcome": "Win",
+    "note": "Unknown 53.2% -> Win"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 53.9,
+    "outcome": "Lose",
+    "note": "Unknown 53.9% -> Lose"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Unknown 50.0% -> Neutral"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 54.1,
+    "outcome": "Win",
+    "note": "Unknown 54.1% -> Win"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Unknown 50.0% -> Neutral"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 54.4,
+    "outcome": "Lose",
+    "note": "Unknown 54.4% -> Lose"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Unknown 50.0% -> Neutral"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 52.9,
+    "outcome": "Win",
+    "note": "Unknown 52.9% -> Win"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 57.5,
+    "outcome": "Lose",
+    "note": "Unknown 57.5% -> Lose"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 55.1,
+    "outcome": "Lose",
+    "note": "Unknown 55.1% -> Lose"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Unknown 50.0% -> Neutral"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 54.3,
+    "outcome": "Lose",
+    "note": "Unknown 54.3% -> Lose"
+  },
+  {
+    "condition": "Unknown",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Unknown 50.0% -> Neutral"
+  },
+  {
+    "condition": "Small",
+    "confidence": 52.8,
+    "outcome": "Win",
+    "note": "Small 52.8% -> Win"
+  },
+  {
+    "condition": "Small",
+    "confidence": 61.6,
+    "outcome": "Win",
+    "note": "Small 61.6% -> Win"
+  },
+  {
+    "condition": "Small",
+    "confidence": 56.8,
+    "outcome": "Win",
+    "note": "Small 56.8% -> Win"
+  },
+  {
+    "condition": "Small",
+    "confidence": 55.2,
+    "outcome": "Lose",
+    "note": "Small 55.2% -> Lose"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Small",
+    "confidence": 60.1,
+    "outcome": "Lose",
+    "note": "Small 60.1% -> Lose"
+  },
+  {
+    "condition": "Small",
+    "confidence": 62.7,
+    "outcome": "Lose",
+    "note": "Small 62.7% -> Lose"
+  },
+  {
+    "condition": "Small",
+    "confidence": 58.1,
+    "outcome": "Win",
+    "note": "Small 58.1% -> Win"
+  },
+  {
+    "condition": "Small",
+    "confidence": 61.3,
+    "outcome": "Lose",
+    "note": "Small 61.3% -> Lose"
+  },
+  {
+    "condition": "Small",
+    "confidence": 62.9,
+    "outcome": "Lose",
+    "note": "Small 62.9% -> Lose"
+  },
+  {
+    "condition": "Small",
+    "confidence": 60.8,
+    "outcome": "Win",
+    "note": "Small 60.8% -> Win"
+  },
+  {
+    "condition": "Small",
+    "confidence": 58.8,
+    "outcome": "Win",
+    "note": "Small 58.8% -> Win"
+  },
+  {
+    "condition": "Small",
+    "confidence": 53.7,
+    "outcome": "Win",
+    "note": "Small 53.7% -> Win"
+  },
+  {
+    "condition": "Small",
+    "confidence": 52.3,
+    "outcome": "Lose",
+    "note": "Small 52.3% -> Lose"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Big",
+    "confidence": 52.2,
+    "outcome": "Win",
+    "note": "Big 52.2% -> Win"
+  },
+  {
+    "condition": "Big",
+    "confidence": 53.9,
+    "outcome": "Lose",
+    "note": "Big 53.9% -> Lose"
+  },
+  {
+    "condition": "Big",
+    "confidence": 66.6,
+    "outcome": "Lose",
+    "note": "Big 66.6% -> Lose"
+  },
+  {
+    "condition": "Small",
+    "confidence": 63.0,
+    "outcome": "Win",
+    "note": "Small 63.0% -> Win"
+  },
+  {
+    "condition": "Small",
+    "confidence": 52.9,
+    "outcome": "Win",
+    "note": "Small 52.9% -> Win"
+  },
+  {
+    "condition": "Small",
+    "confidence": 54.6,
+    "outcome": "Lose",
+    "note": "Small 54.6% -> Lose"
+  },
+  {
+    "condition": "Big",
+    "confidence": 52.1,
+    "outcome": "Win",
+    "note": "Big 52.1% -> Win"
+  },
+  {
+    "condition": "Big",
+    "confidence": 63.0,
+    "outcome": "Lose",
+    "note": "Big 63.0% -> Lose"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Small",
+    "confidence": 65.4,
+    "outcome": "Win",
+    "note": "Small 65.4% -> Win"
+  },
+  {
+    "condition": "Small",
+    "confidence": 53.7,
+    "outcome": "Win",
+    "note": "Small 53.7% -> Win"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Big",
+    "confidence": 60.7,
+    "outcome": "Win",
+    "note": "Big 60.7% -> Win"
+  },
+  {
+    "condition": "Big",
+    "confidence": 56.7,
+    "outcome": "Lose",
+    "note": "Big 56.7% -> Lose"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Big",
+    "confidence": 60.5,
+    "outcome": "Win",
+    "note": "Big 60.5% -> Win"
+  },
+  {
+    "condition": "Big",
+    "confidence": 53.7,
+    "outcome": "Lose",
+    "note": "Big 53.7% -> Lose"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Small",
+    "confidence": 63.9,
+    "outcome": "Win",
+    "note": "Small 63.9% -> Win"
+  },
+  {
+    "condition": "Big",
+    "confidence": 54.9,
+    "outcome": "Lose",
+    "note": "Big 54.9% -> Lose"
+  },
+  {
+    "condition": "Big",
+    "confidence": 52.0,
+    "outcome": "Lose",
+    "note": "Big 52.0% -> Lose"
+  },
+  {
+    "condition": "Big",
+    "confidence": 52.2,
+    "outcome": "Lose",
+    "note": "Big 52.2% -> Lose"
+  },
+  {
+    "condition": "Big",
+    "confidence": 52.4,
+    "outcome": "Lose",
+    "note": "Big 52.4% -> Lose"
+  },
+  {
+    "condition": "Big",
+    "confidence": 52.4,
+    "outcome": "Lose",
+    "note": "Big 52.4% -> Lose"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Small",
+    "confidence": 52.5,
+    "outcome": "Win",
+    "note": "Small 52.5% -> Win"
+  },
+  {
+    "condition": "Small",
+    "confidence": 53.1,
+    "outcome": "Win",
+    "note": "Small 53.1% -> Win"
+  },
+  {
+    "condition": "Small",
+    "confidence": 54.0,
+    "outcome": "Lose",
+    "note": "Small 54.0% -> Lose"
+  },
+  {
+    "condition": "Big",
+    "confidence": 68.1,
+    "outcome": "Win",
+    "note": "Big 68.1% -> Win"
+  },
+  {
+    "condition": "Big",
+    "confidence": 57.5,
+    "outcome": "Lose",
+    "note": "Big 57.5% -> Lose"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Small",
+    "confidence": 67.9,
+    "outcome": "Lose",
+    "note": "Small 67.9% -> Lose"
+  },
+  {
+    "condition": "Big",
+    "confidence": 70.2,
+    "outcome": "Win",
+    "note": "Big 70.2% -> Win"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Small",
+    "confidence": 56.1,
+    "outcome": "Win",
+    "note": "Small 56.1% -> Win"
+  },
+  {
+    "condition": "Small",
+    "confidence": 59.5,
+    "outcome": "Win",
+    "note": "Small 59.5% -> Win"
+  },
+  {
+    "condition": "Small",
+    "confidence": 56.4,
+    "outcome": "Lose",
+    "note": "Small 56.4% -> Lose"
+  },
+  {
+    "condition": "Big",
+    "confidence": 54.2,
+    "outcome": "Win",
+    "note": "Big 54.2% -> Win"
+  },
+  {
+    "condition": "Small",
+    "confidence": 57.6,
+    "outcome": "Lose",
+    "note": "Small 57.6% -> Lose"
+  },
+  {
+    "condition": "Small",
+    "confidence": 56.3,
+    "outcome": "Win",
+    "note": "Small 56.3% -> Win"
+  },
+  {
+    "condition": "Small",
+    "confidence": 54.1,
+    "outcome": "Lose",
+    "note": "Small 54.1% -> Lose"
+  },
+  {
+    "condition": "Small",
+    "confidence": 52.9,
+    "outcome": "Lose",
+    "note": "Small 52.9% -> Lose"
+  },
+  {
+    "condition": "Small",
+    "confidence": 57.0,
+    "outcome": "Win",
+    "note": "Small 57.0% -> Win"
+  },
+  {
+    "condition": "Small",
+    "confidence": 52.7,
+    "outcome": "Lose",
+    "note": "Small 52.7% -> Lose"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Small",
+    "confidence": 54.8,
+    "outcome": "Lose",
+    "note": "Small 54.8% -> Lose"
+  },
+  {
+    "condition": "Big",
+    "confidence": 61.0,
+    "outcome": "Lose",
+    "note": "Big 61.0% -> Lose"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Big",
+    "confidence": 53.0,
+    "outcome": "Win",
+    "note": "Big 53.0% -> Win"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Small",
+    "confidence": 56.9,
+    "outcome": "Lose",
+    "note": "Small 56.9% -> Lose"
+  },
+  {
+    "condition": "Small",
+    "confidence": 55.8,
+    "outcome": "Lose",
+    "note": "Small 55.8% -> Lose"
+  },
+  {
+    "condition": "Small",
+    "confidence": 53.1,
+    "outcome": "Win",
+    "note": "Small 53.1% -> Win"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Small",
+    "confidence": 53.0,
+    "outcome": "Win",
+    "note": "Small 53.0% -> Win"
+  },
+  {
+    "condition": "Small",
+    "confidence": 56.1,
+    "outcome": "Win",
+    "note": "Small 56.1% -> Win"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Big",
+    "confidence": 54.0,
+    "outcome": "Lose",
+    "note": "Big 54.0% -> Lose"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Big",
+    "confidence": 52.2,
+    "outcome": "Lose",
+    "note": "Big 52.2% -> Lose"
+  },
+  {
+    "condition": "Big",
+    "confidence": 52.2,
+    "outcome": "Win",
+    "note": "Big 52.2% -> Win"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Small",
+    "confidence": 58.1,
+    "outcome": "Win",
+    "note": "Small 58.1% -> Win"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Small",
+    "confidence": 56.6,
+    "outcome": "Lose",
+    "note": "Small 56.6% -> Lose"
+  },
+  {
+    "condition": "Small",
+    "confidence": 60.2,
+    "outcome": "Lose",
+    "note": "Small 60.2% -> Lose"
+  },
+  {
+    "condition": "Small",
+    "confidence": 56.8,
+    "outcome": "Lose",
+    "note": "Small 56.8% -> Lose"
+  },
+  {
+    "condition": "Small",
+    "confidence": 54.2,
+    "outcome": "Win",
+    "note": "Small 54.2% -> Win"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Small",
     "confidence": 56.3,
     "outcome": "Lose",
-    "note": "Row 6: 56.3% / X (Lose)"
+    "note": "Small 56.3% -> Lose"
   },
   {
-    "confidence": 59.0,
-    "outcome": "Lose",
-    "note": "Row 6: 59% / X (Lose)"
-  },
-  {
-    "confidence": 50.0,
-    "outcome": "Neutral_Lose",
-    "note": "Row 6: N / L (Lose)"
-  },
-  {
-    "confidence": 57.7,
+    "condition": "Big",
+    "confidence": 57.0,
     "outcome": "Win",
-    "note": "Row 6: 57.7% / Checkmark (Win)"
+    "note": "Big 57.0% -> Win"
   },
   {
-    "confidence": 55.7,
+    "condition": "Big",
+    "confidence": 50.0,
     "outcome": "Lose",
-    "note": "Row 6: 55.7% / X (Lose)"
+    "note": "Big 50.0% -> Lose"
   },
   {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Big",
+    "confidence": 52.8,
+    "outcome": "Lose",
+    "note": "Big 52.8% -> Lose"
+  },
+  {
+    "condition": "Big",
+    "confidence": 54.0,
+    "outcome": "Win",
+    "note": "Big 54.0% -> Win"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Small",
+    "confidence": 58.6,
+    "outcome": "Win",
+    "note": "Small 58.6% -> Win"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Big",
+    "confidence": 53.0,
+    "outcome": "Lose",
+    "note": "Big 53.0% -> Lose"
+  },
+  {
+    "condition": "Big",
+    "confidence": 59.0,
+    "outcome": "Win",
+    "note": "Big 59.0% -> Win"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Big",
+    "confidence": 64.6,
+    "outcome": "Win",
+    "note": "Big 64.6% -> Win"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Big",
+    "confidence": 64.1,
+    "outcome": "Win",
+    "note": "Big 64.1% -> Win"
+  },
+  {
+    "condition": "Small",
+    "confidence": 52.5,
+    "outcome": "Lose",
+    "note": "Small 52.5% -> Lose"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Big",
+    "confidence": 54.2,
+    "outcome": "Lose",
+    "note": "Big 54.2% -> Lose"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Big",
+    "confidence": 57.8,
+    "outcome": "Lose",
+    "note": "Big 57.8% -> Lose"
+  },
+  {
+    "condition": "Big",
+    "confidence": 60.2,
+    "outcome": "Lose",
+    "note": "Big 60.2% -> Lose"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Small",
+    "confidence": 56.1,
+    "outcome": "Lose",
+    "note": "Small 56.1% -> Lose"
+  },
+  {
+    "condition": "Big",
+    "confidence": 55.6,
+    "outcome": "Lose",
+    "note": "Big 55.6% -> Lose"
+  },
+  {
+    "condition": "Big",
+    "confidence": 58.9,
+    "outcome": "Win",
+    "note": "Big 58.9% -> Win"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Big",
+    "confidence": 63.4,
+    "outcome": "Win",
+    "note": "Big 63.4% -> Win"
+  },
+  {
+    "condition": "Small",
+    "confidence": 53.5,
+    "outcome": "Win",
+    "note": "Small 53.5% -> Win"
+  },
+  {
+    "condition": "Big",
+    "confidence": 69.9,
+    "outcome": "Lose",
+    "note": "Big 69.9% -> Lose"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Small",
+    "confidence": 57.4,
+    "outcome": "Lose",
+    "note": "Small 57.4% -> Lose"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Big",
+    "confidence": 57.3,
+    "outcome": "Win",
+    "note": "Big 57.3% -> Win"
+  },
+  {
+    "condition": "Big",
+    "confidence": 52.4,
+    "outcome": "Win",
+    "note": "Big 52.4% -> Win"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Big",
+    "confidence": 55.8,
+    "outcome": "Win",
+    "note": "Big 55.8% -> Win"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Big",
+    "confidence": 57.9,
+    "outcome": "Lose",
+    "note": "Big 57.9% -> Lose"
+  },
+  {
+    "condition": "Small",
+    "confidence": 52.3,
+    "outcome": "Win",
+    "note": "Small 52.3% -> Win"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Small",
+    "confidence": 54.3,
+    "outcome": "Lose",
+    "note": "Small 54.3% -> Lose"
+  },
+  {
+    "condition": "Big",
+    "confidence": 52.2,
+    "outcome": "Lose",
+    "note": "Big 52.2% -> Lose"
+  },
+  {
+    "condition": "Big",
+    "confidence": 54.2,
+    "outcome": "Win",
+    "note": "Big 54.2% -> Win"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Small",
+    "confidence": 52.9,
+    "outcome": "Lose",
+    "note": "Small 52.9% -> Lose"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Big",
+    "confidence": 59.7,
+    "outcome": "Win",
+    "note": "Big 59.7% -> Win"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Small",
+    "confidence": 53.5,
+    "outcome": "Win",
+    "note": "Small 53.5% -> Win"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Small",
+    "confidence": 52.9,
+    "outcome": "Lose",
+    "note": "Small 52.9% -> Lose"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Small",
+    "confidence": 61.0,
+    "outcome": "Lose",
+    "note": "Small 61.0% -> Lose"
+  },
+  {
+    "condition": "Small",
+    "confidence": 61.5,
+    "outcome": "Win",
+    "note": "Small 61.5% -> Win"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Small",
+    "confidence": 55.1,
+    "outcome": "Lose",
+    "note": "Small 55.1% -> Lose"
+  },
+  {
+    "condition": "Big",
+    "confidence": 52.4,
+    "outcome": "Lose",
+    "note": "Big 52.4% -> Lose"
+  },
+  {
+    "condition": "Big",
+    "confidence": 54.5,
+    "outcome": "Lose",
+    "note": "Big 54.5% -> Lose"
+  },
+  {
+    "condition": "Small",
+    "confidence": 52.7,
+    "outcome": "Lose",
+    "note": "Small 52.7% -> Lose"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Big",
+    "confidence": 54.0,
+    "outcome": "Win",
+    "note": "Big 54.0% -> Win"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Big",
+    "confidence": 53.4,
+    "outcome": "Win",
+    "note": "Big 53.4% -> Win"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Big",
+    "confidence": 55.5,
+    "outcome": "Win",
+    "note": "Big 55.5% -> Win"
+  },
+  {
+    "condition": "Small",
+    "confidence": 52.1,
+    "outcome": "Lose",
+    "note": "Small 52.1% -> Lose"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Big",
+    "confidence": 52.8,
+    "outcome": "Lose",
+    "note": "Big 52.8% -> Lose"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Big",
+    "confidence": 52.2,
+    "outcome": "Win",
+    "note": "Big 52.2% -> Win"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Small",
+    "confidence": 56.6,
+    "outcome": "Lose",
+    "note": "Small 56.6% -> Lose"
+  },
+  {
+    "condition": "Small",
+    "confidence": 53.2,
+    "outcome": "Win",
+    "note": "Small 53.2% -> Win"
+  },
+  {
+    "condition": "Small",
+    "confidence": 54.9,
+    "outcome": "Lose",
+    "note": "Small 54.9% -> Lose"
+  },
+  {
+    "condition": "Small",
+    "confidence": 53.8,
+    "outcome": "Win",
+    "note": "Small 53.8% -> Win"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Small",
+    "confidence": 56.2,
+    "outcome": "Lose",
+    "note": "Small 56.2% -> Lose"
+  },
+  {
+    "condition": "Small",
+    "confidence": 54.2,
+    "outcome": "Win",
+    "note": "Small 54.2% -> Win"
+  },
+  {
+    "condition": "Small",
+    "confidence": 54.0,
+    "outcome": "Lose",
+    "note": "Small 54.0% -> Lose"
+  },
+  {
+    "condition": "Small",
+    "confidence": 54.1,
+    "outcome": "Win",
+    "note": "Small 54.1% -> Win"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Small",
+    "confidence": 56.6,
+    "outcome": "Win",
+    "note": "Small 56.6% -> Win"
+  },
+  {
+    "condition": "Big",
+    "confidence": 56.5,
+    "outcome": "Win",
+    "note": "Big 56.5% -> Win"
+  },
+  {
+    "condition": "Small",
+    "confidence": 59.1,
+    "outcome": "Lose",
+    "note": "Small 59.1% -> Lose"
+  },
+  {
+    "condition": "Small",
+    "confidence": 55.1,
+    "outcome": "Win",
+    "note": "Small 55.1% -> Win"
+  },
+  {
+    "condition": "Small",
+    "confidence": 52.7,
+    "outcome": "Lose",
+    "note": "Small 52.7% -> Lose"
+  },
+  {
+    "condition": "Small",
+    "confidence": 54.6,
+    "outcome": "Win",
+    "note": "Small 54.6% -> Win"
+  },
+  {
+    "condition": "Big",
+    "confidence": 54.6,
+    "outcome": "Win",
+    "note": "Big 54.6% -> Win"
+  },
+  {
+    "condition": "Small",
+    "confidence": 57.2,
+    "outcome": "Win",
+    "note": "Small 57.2% -> Win"
+  },
+  {
+    "condition": "Big",
+    "confidence": 58.0,
+    "outcome": "Lose",
+    "note": "Big 58.0% -> Lose"
+  },
+  {
+    "condition": "Big",
+    "confidence": 54.4,
+    "outcome": "Win",
+    "note": "Big 54.4% -> Win"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Small",
+    "confidence": 55.8,
+    "outcome": "Lose",
+    "note": "Small 55.8% -> Lose"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Small",
+    "confidence": 59.5,
+    "outcome": "Win",
+    "note": "Small 59.5% -> Win"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Big",
+    "confidence": 54.5,
+    "outcome": "Win",
+    "note": "Big 54.5% -> Win"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Big",
+    "confidence": 54.1,
+    "outcome": "Lose",
+    "note": "Big 54.1% -> Lose"
+  },
+  {
+    "condition": "Big",
+    "confidence": 54.6,
+    "outcome": "Lose",
+    "note": "Big 54.6% -> Lose"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Big",
+    "confidence": 53.3,
+    "outcome": "Win",
+    "note": "Big 53.3% -> Win"
+  },
+  {
+    "condition": "Small",
+    "confidence": 56.0,
+    "outcome": "Win",
+    "note": "Small 56.0% -> Win"
+  },
+  {
+    "condition": "Big",
+    "confidence": 56.5,
+    "outcome": "Win",
+    "note": "Big 56.5% -> Win"
+  },
+  {
+    "condition": "Small",
+    "confidence": 58.8,
+    "outcome": "Lose",
+    "note": "Small 58.8% -> Lose"
+  },
+  {
+    "condition": "Small",
+    "confidence": 54.5,
+    "outcome": "Win",
+    "note": "Small 54.5% -> Win"
+  },
+  {
+    "condition": "Small",
+    "confidence": 52.3,
+    "outcome": "Lose",
+    "note": "Small 52.3% -> Lose"
+  },
+  {
+    "condition": "Small",
+    "confidence": 55.3,
+    "outcome": "Lose",
+    "note": "Small 55.3% -> Lose"
+  },
+  {
+    "condition": "Small",
+    "confidence": 54.5,
+    "outcome": "Lose",
+    "note": "Small 54.5% -> Lose"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Small",
+    "confidence": 54.5,
+    "outcome": "Lose",
+    "note": "Small 54.5% -> Lose"
+  },
+  {
+    "condition": "Small",
+    "confidence": 53.7,
+    "outcome": "Lose",
+    "note": "Small 53.7% -> Lose"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Small",
+    "confidence": 53.3,
+    "outcome": "Lose",
+    "note": "Small 53.3% -> Lose"
+  },
+  {
+    "condition": "Small",
+    "confidence": 65.2,
+    "outcome": "Win",
+    "note": "Small 65.2% -> Win"
+  },
+  {
+    "condition": "Small",
+    "confidence": 62.2,
+    "outcome": "Win",
+    "note": "Small 62.2% -> Win"
+  },
+  {
+    "condition": "Small",
+    "confidence": 58.6,
+    "outcome": "Win",
+    "note": "Small 58.6% -> Win"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Small",
+    "confidence": 53.1,
+    "outcome": "Lose",
+    "note": "Small 53.1% -> Lose"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Small",
+    "confidence": 65.4,
+    "outcome": "Lose",
+    "note": "Small 65.4% -> Lose"
+  },
+  {
+    "condition": "Small",
+    "confidence": 62.4,
+    "outcome": "Win",
+    "note": "Small 62.4% -> Win"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Small",
+    "confidence": 53.0,
+    "outcome": "Lose",
+    "note": "Small 53.0% -> Lose"
+  },
+  {
+    "condition": "Small",
+    "confidence": 52.8,
+    "outcome": "Win",
+    "note": "Small 52.8% -> Win"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Big",
+    "confidence": 52.9,
+    "outcome": "Lose",
+    "note": "Big 52.9% -> Lose"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Small",
+    "confidence": 52.9,
+    "outcome": "Win",
+    "note": "Small 52.9% -> Win"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Big",
+    "confidence": 52.7,
+    "outcome": "Win",
+    "note": "Big 52.7% -> Win"
+  },
+  {
+    "condition": "Big",
+    "confidence": 53.1,
+    "outcome": "Win",
+    "note": "Big 53.1% -> Win"
+  },
+  {
+    "condition": "Big",
+    "confidence": 52.1,
+    "outcome": "Win",
+    "note": "Big 52.1% -> Win"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Small",
+    "confidence": 53.1,
+    "outcome": "Lose",
+    "note": "Small 53.1% -> Lose"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Small",
+    "confidence": 61.1,
+    "outcome": "Win",
+    "note": "Small 61.1% -> Win"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Small",
+    "confidence": 53.1,
+    "outcome": "Win",
+    "note": "Small 53.1% -> Win"
+  },
+  {
+    "condition": "Big",
+    "confidence": 54.3,
+    "outcome": "Lose",
+    "note": "Big 54.3% -> Lose"
+  },
+  {
+    "condition": "Big",
+    "confidence": 53.0,
+    "outcome": "Lose",
+    "note": "Big 53.0% -> Lose"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Small",
+    "confidence": 53.4,
+    "outcome": "Lose",
+    "note": "Small 53.4% -> Lose"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Small",
+    "confidence": 59.2,
+    "outcome": "Win",
+    "note": "Small 59.2% -> Win"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Big",
+    "confidence": 53.5,
+    "outcome": "Win",
+    "note": "Big 53.5% -> Win"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Small",
+    "confidence": 65.0,
+    "outcome": "Lose",
+    "note": "Small 65.0% -> Lose"
+  },
+  {
+    "condition": "Small",
+    "confidence": 57.1,
+    "outcome": "Lose",
+    "note": "Small 57.1% -> Lose"
+  },
+  {
+    "condition": "Small",
+    "confidence": 53.6,
+    "outcome": "Win",
+    "note": "Small 53.6% -> Win"
+  },
+  {
+    "condition": "Small",
+    "confidence": 52.6,
+    "outcome": "Lose",
+    "note": "Small 52.6% -> Lose"
+  },
+  {
+    "condition": "Big",
+    "confidence": 58.2,
+    "outcome": "Win",
+    "note": "Big 58.2% -> Win"
+  },
+  {
+    "condition": "Big",
+    "confidence": 58.8,
+    "outcome": "Lose",
+    "note": "Big 58.8% -> Lose"
+  },
+  {
+    "condition": "Big",
+    "confidence": 56.4,
+    "outcome": "Win",
+    "note": "Big 56.4% -> Win"
+  },
+  {
+    "condition": "Big",
+    "confidence": 53.3,
+    "outcome": "Lose",
+    "note": "Big 53.3% -> Lose"
+  },
+  {
+    "condition": "Big",
+    "confidence": 55.9,
+    "outcome": "Lose",
+    "note": "Big 55.9% -> Lose"
+  },
+  {
+    "condition": "Big",
+    "confidence": 56.2,
+    "outcome": "Lose",
+    "note": "Big 56.2% -> Lose"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Big",
+    "confidence": 52.2,
+    "outcome": "Win",
+    "note": "Big 52.2% -> Win"
+  },
+  {
+    "condition": "Small",
+    "confidence": 54.1,
+    "outcome": "Win",
+    "note": "Small 54.1% -> Win"
+  },
+  {
+    "condition": "Small",
+    "confidence": 52.4,
+    "outcome": "Win",
+    "note": "Small 52.4% -> Win"
+  },
+  {
+    "condition": "Big",
+    "confidence": 56.1,
+    "outcome": "Win",
+    "note": "Big 56.1% -> Win"
+  },
+  {
+    "condition": "Big",
+    "confidence": 52.5,
+    "outcome": "Lose",
+    "note": "Big 52.5% -> Lose"
+  },
+  {
+    "condition": "Big",
+    "confidence": 52.4,
+    "outcome": "Lose",
+    "note": "Big 52.4% -> Lose"
+  },
+  {
+    "condition": "Big",
+    "confidence": 55.6,
+    "outcome": "Win",
+    "note": "Big 55.6% -> Win"
+  },
+  {
+    "condition": "Big",
+    "confidence": 52.2,
+    "outcome": "Lose",
+    "note": "Big 52.2% -> Lose"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Big",
+    "confidence": 55.3,
+    "outcome": "Lose",
+    "note": "Big 55.3% -> Lose"
+  },
+  {
+    "condition": "Big",
+    "confidence": 55.4,
+    "outcome": "Win",
+    "note": "Big 55.4% -> Win"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Big",
+    "confidence": 52.1,
+    "outcome": "Lose",
+    "note": "Big 52.1% -> Lose"
+  },
+  {
+    "condition": "Big",
+    "confidence": 52.1,
+    "outcome": "Win",
+    "note": "Big 52.1% -> Win"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Small",
+    "confidence": 68.2,
+    "outcome": "Lose",
+    "note": "Small 68.2% -> Lose"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Big",
+    "confidence": 56.6,
+    "outcome": "Win",
+    "note": "Big 56.6% -> Win"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Small",
+    "confidence": 54.5,
+    "outcome": "Win",
+    "note": "Small 54.5% -> Win"
+  },
+  {
+    "condition": "Big",
+    "confidence": 53.3,
+    "outcome": "Win",
+    "note": "Big 53.3% -> Win"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Big",
+    "confidence": 53.8,
+    "outcome": "Lose",
+    "note": "Big 53.8% -> Lose"
+  },
+  {
+    "condition": "Big",
+    "confidence": 55.5,
+    "outcome": "Win",
+    "note": "Big 55.5% -> Win"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Small",
+    "confidence": 55.4,
+    "outcome": "Lose",
+    "note": "Small 55.4% -> Lose"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Small",
+    "confidence": 54.9,
+    "outcome": "Lose",
+    "note": "Small 54.9% -> Lose"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Big",
+    "confidence": 56.3,
+    "outcome": "Win",
+    "note": "Big 56.3% -> Win"
+  },
+  {
+    "condition": "Big",
+    "confidence": 52.3,
+    "outcome": "Win",
+    "note": "Big 52.3% -> Win"
+  },
+  {
+    "condition": "Small",
+    "confidence": 52.7,
+    "outcome": "Lose",
+    "note": "Small 52.7% -> Lose"
+  },
+  {
+    "condition": "Big",
+    "confidence": 52.1,
+    "outcome": "Win",
+    "note": "Big 52.1% -> Win"
+  },
+  {
+    "condition": "Big",
+    "confidence": 53.0,
+    "outcome": "Win",
+    "note": "Big 53.0% -> Win"
+  },
+  {
+    "condition": "Big",
+    "confidence": 53.7,
+    "outcome": "Win",
+    "note": "Big 53.7% -> Win"
+  },
+  {
+    "condition": "Small",
+    "confidence": 63.4,
+    "outcome": "Win",
+    "note": "Small 63.4% -> Win"
+  },
+  {
+    "condition": "Small",
+    "confidence": 57.3,
+    "outcome": "Lose",
+    "note": "Small 57.3% -> Lose"
+  },
+  {
+    "condition": "Small",
+    "confidence": 62.6,
+    "outcome": "Win",
+    "note": "Small 62.6% -> Win"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Small",
+    "confidence": 53.4,
+    "outcome": "Win",
+    "note": "Small 53.4% -> Win"
+  },
+  {
+    "condition": "Big",
+    "confidence": 53.5,
+    "outcome": "Win",
+    "note": "Big 53.5% -> Win"
+  },
+  {
+    "condition": "Small",
+    "confidence": 66.0,
+    "outcome": "Win",
+    "note": "Small 66.0% -> Win"
+  },
+  {
+    "condition": "Big",
+    "confidence": 55.8,
+    "outcome": "Win",
+    "note": "Big 55.8% -> Win"
+  },
+  {
+    "condition": "Small",
+    "confidence": 62.6,
+    "outcome": "Lose",
+    "note": "Small 62.6% -> Lose"
+  },
+  {
+    "condition": "Small",
+    "confidence": 60.3,
+    "outcome": "Win",
+    "note": "Small 60.3% -> Win"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Big",
+    "confidence": 56.5,
+    "outcome": "Lose",
+    "note": "Big 56.5% -> Lose"
+  },
+  {
+    "condition": "Small",
+    "confidence": 55.8,
+    "outcome": "Lose",
+    "note": "Small 55.8% -> Lose"
+  },
+  {
+    "condition": "Big",
+    "confidence": 52.2,
+    "outcome": "Lose",
+    "note": "Big 52.2% -> Lose"
+  },
+  {
+    "condition": "Big",
+    "confidence": 53.5,
+    "outcome": "Win",
+    "note": "Big 53.5% -> Win"
+  },
+  {
+    "condition": "Small",
+    "confidence": 56.5,
+    "outcome": "Win",
+    "note": "Small 56.5% -> Win"
+  },
+  {
+    "condition": "Big",
+    "confidence": 58.8,
+    "outcome": "Win",
+    "note": "Big 58.8% -> Win"
+  },
+  {
+    "condition": "Small",
+    "confidence": 59.9,
+    "outcome": "Win",
+    "note": "Small 59.9% -> Win"
+  },
+  {
+    "condition": "Big",
+    "confidence": 63.2,
+    "outcome": "Lose",
+    "note": "Big 63.2% -> Lose"
+  },
+  {
+    "condition": "Big",
+    "confidence": 56.2,
+    "outcome": "Win",
+    "note": "Big 56.2% -> Win"
+  },
+  {
+    "condition": "Big",
+    "confidence": 53.0,
+    "outcome": "Lose",
+    "note": "Big 53.0% -> Lose"
+  },
+  {
+    "condition": "Big",
+    "confidence": 56.0,
+    "outcome": "Lose",
+    "note": "Big 56.0% -> Lose"
+  },
+  {
+    "condition": "Big",
+    "confidence": 56.1,
+    "outcome": "Lose",
+    "note": "Big 56.1% -> Lose"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Big",
+    "confidence": 52.5,
+    "outcome": "Win",
+    "note": "Big 52.5% -> Win"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Big",
+    "confidence": 61.9,
+    "outcome": "Win",
+    "note": "Big 61.9% -> Win"
+  },
+  {
+    "condition": "Small",
+    "confidence": 57.1,
+    "outcome": "Win",
+    "note": "Small 57.1% -> Win"
+  },
+  {
+    "condition": "Big",
+    "confidence": 66.9,
+    "outcome": "Win",
+    "note": "Big 66.9% -> Win"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Big",
+    "confidence": 70.0,
+    "outcome": "Lose",
+    "note": "Big 70.0% -> Lose"
+  },
+  {
+    "condition": "Big",
+    "confidence": 63.5,
+    "outcome": "Win",
+    "note": "Big 63.5% -> Win"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Big",
+    "confidence": 63.3,
+    "outcome": "Lose",
+    "note": "Big 63.3% -> Lose"
+  },
+  {
+    "condition": "Big",
+    "confidence": 63.3,
+    "outcome": "Win",
+    "note": "Big 63.3% -> Win"
+  },
+  {
+    "condition": "Big",
+    "confidence": 56.4,
+    "outcome": "Lose",
+    "note": "Big 56.4% -> Lose"
+  },
+  {
+    "condition": "Big",
+    "confidence": 60.6,
+    "outcome": "Win",
+    "note": "Big 60.6% -> Win"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Small",
+    "confidence": 52.1,
+    "outcome": "Win",
+    "note": "Small 52.1% -> Win"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Small",
+    "confidence": 55.8,
+    "outcome": "Win",
+    "note": "Small 55.8% -> Win"
+  },
+  {
+    "condition": "Big",
+    "confidence": 57.1,
+    "outcome": "Lose",
+    "note": "Big 57.1% -> Lose"
+  },
+  {
+    "condition": "Big",
+    "confidence": 56.2,
+    "outcome": "Win",
+    "note": "Big 56.2% -> Win"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Small",
+    "confidence": 54.0,
+    "outcome": "Win",
+    "note": "Small 54.0% -> Win"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Big",
+    "confidence": 56.8,
+    "outcome": "Lose",
+    "note": "Big 56.8% -> Lose"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Small",
+    "confidence": 54.9,
+    "outcome": "Win",
+    "note": "Small 54.9% -> Win"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Big",
+    "confidence": 59.8,
+    "outcome": "Lose",
+    "note": "Big 59.8% -> Lose"
+  },
+  {
+    "condition": "Big",
+    "confidence": 59.7,
+    "outcome": "Win",
+    "note": "Big 59.7% -> Win"
+  },
+  {
+    "condition": "Big",
+    "confidence": 55.8,
+    "outcome": "Win",
+    "note": "Big 55.8% -> Win"
+  },
+  {
+    "condition": "Small",
+    "confidence": 55.9,
+    "outcome": "Lose",
+    "note": "Small 55.9% -> Lose"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Big",
+    "confidence": 53.0,
+    "outcome": "Win",
+    "note": "Big 53.0% -> Win"
+  },
+  {
+    "condition": "Big",
+    "confidence": 54.6,
+    "outcome": "Win",
+    "note": "Big 54.6% -> Win"
+  },
+  {
+    "condition": "Small",
+    "confidence": 57.1,
+    "outcome": "Lose",
+    "note": "Small 57.1% -> Lose"
+  },
+  {
+    "condition": "Small",
+    "confidence": 58.1,
+    "outcome": "Lose",
+    "note": "Small 58.1% -> Lose"
+  },
+  {
+    "condition": "Small",
+    "confidence": 57.6,
+    "outcome": "Win",
+    "note": "Small 57.6% -> Win"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Small",
+    "confidence": 58.3,
+    "outcome": "Lose",
+    "note": "Small 58.3% -> Lose"
+  },
+  {
+    "condition": "Big",
+    "confidence": 53.7,
+    "outcome": "Lose",
+    "note": "Big 53.7% -> Lose"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Big",
+    "confidence": 56.7,
+    "outcome": "Win",
+    "note": "Big 56.7% -> Win"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Small",
+    "confidence": 58.9,
+    "outcome": "Win",
+    "note": "Small 58.9% -> Win"
+  },
+  {
+    "condition": "Small",
+    "confidence": 57.0,
+    "outcome": "Lose",
+    "note": "Small 57.0% -> Lose"
+  },
+  {
+    "condition": "Small",
+    "confidence": 67.3,
+    "outcome": "Win",
+    "note": "Small 67.3% -> Win"
+  },
+  {
+    "condition": "Small",
+    "confidence": 54.5,
+    "outcome": "Lose",
+    "note": "Small 54.5% -> Lose"
+  },
+  {
+    "condition": "Small",
+    "confidence": 73.0,
+    "outcome": "Lose",
+    "note": "Small 73.0% -> Lose"
+  },
+  {
+    "condition": "Small",
+    "confidence": 64.0,
+    "outcome": "Win",
+    "note": "Small 64.0% -> Win"
+  },
+  {
+    "condition": "Small",
+    "confidence": 56.6,
+    "outcome": "Win",
+    "note": "Small 56.6% -> Win"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Small",
+    "confidence": 58.8,
+    "outcome": "Lose",
+    "note": "Small 58.8% -> Lose"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Small",
+    "confidence": 56.3,
+    "outcome": "Lose",
+    "note": "Small 56.3% -> Lose"
+  },
+  {
+    "condition": "Big",
+    "confidence": 53.7,
+    "outcome": "Lose",
+    "note": "Big 53.7% -> Lose"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Small",
+    "confidence": 56.7,
+    "outcome": "Lose",
+    "note": "Small 56.7% -> Lose"
+  },
+  {
+    "condition": "Small",
+    "confidence": 54.0,
+    "outcome": "Lose",
+    "note": "Small 54.0% -> Lose"
+  },
+  {
+    "condition": "Big",
+    "confidence": 52.9,
+    "outcome": "Win",
+    "note": "Big 52.9% -> Win"
+  },
+  {
+    "condition": "Big",
+    "confidence": 53.7,
+    "outcome": "Lose",
+    "note": "Big 53.7% -> Lose"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Big",
+    "confidence": 55.4,
+    "outcome": "Win",
+    "note": "Big 55.4% -> Win"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Small",
+    "confidence": 55.8,
+    "outcome": "Lose",
+    "note": "Small 55.8% -> Lose"
+  },
+  {
+    "condition": "Small",
+    "confidence": 61.3,
+    "outcome": "Win",
+    "note": "Small 61.3% -> Win"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Big",
+    "confidence": 55.4,
+    "outcome": "Win",
+    "note": "Big 55.4% -> Win"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Small",
+    "confidence": 62.3,
+    "outcome": "Lose",
+    "note": "Small 62.3% -> Lose"
+  },
+  {
+    "condition": "Small",
+    "confidence": 57.0,
+    "outcome": "Lose",
+    "note": "Small 57.0% -> Lose"
+  },
+  {
+    "condition": "Small",
+    "confidence": 54.6,
+    "outcome": "Win",
+    "note": "Small 54.6% -> Win"
+  },
+  {
+    "condition": "Small",
+    "confidence": 56.0,
+    "outcome": "Win",
+    "note": "Small 56.0% -> Win"
+  },
+  {
+    "condition": "Small",
+    "confidence": 56.7,
+    "outcome": "Win",
+    "note": "Small 56.7% -> Win"
+  },
+  {
+    "condition": "Small",
+    "confidence": 56.8,
+    "outcome": "Win",
+    "note": "Small 56.8% -> Win"
+  },
+  {
+    "condition": "Small",
+    "confidence": 58.3,
+    "outcome": "Lose",
+    "note": "Small 58.3% -> Lose"
+  },
+  {
+    "condition": "Big",
+    "confidence": 53.2,
+    "outcome": "Lose",
+    "note": "Big 53.2% -> Lose"
+  },
+  {
+    "condition": "Big",
+    "confidence": 55.8,
+    "outcome": "Win",
+    "note": "Big 55.8% -> Win"
+  },
+  {
+    "condition": "Small",
+    "confidence": 57.2,
+    "outcome": "Lose",
+    "note": "Small 57.2% -> Lose"
+  },
+  {
+    "condition": "Small",
+    "confidence": 53.5,
+    "outcome": "Win",
+    "note": "Small 53.5% -> Win"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Small",
+    "confidence": 54.7,
+    "outcome": "Lose",
+    "note": "Small 54.7% -> Lose"
+  },
+  {
+    "condition": "Big",
+    "confidence": 52.4,
+    "outcome": "Lose",
+    "note": "Big 52.4% -> Lose"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Small",
+    "confidence": 55.1,
+    "outcome": "Lose",
+    "note": "Small 55.1% -> Lose"
+  },
+  {
+    "condition": "Small",
+    "confidence": 54.2,
+    "outcome": "Lose",
+    "note": "Small 54.2% -> Lose"
+  },
+  {
+    "condition": "Big",
+    "confidence": 52.3,
+    "outcome": "Lose",
+    "note": "Big 52.3% -> Lose"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Small",
+    "confidence": 53.2,
+    "outcome": "Lose",
+    "note": "Small 53.2% -> Lose"
+  },
+  {
+    "condition": "Small",
+    "confidence": 59.4,
+    "outcome": "Win",
+    "note": "Small 59.4% -> Win"
+  },
+  {
+    "condition": "Small",
+    "confidence": 55.5,
+    "outcome": "Lose",
+    "note": "Small 55.5% -> Lose"
+  },
+  {
+    "condition": "Small",
+    "confidence": 56.6,
+    "outcome": "Win",
+    "note": "Small 56.6% -> Win"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Small",
+    "confidence": 60.6,
+    "outcome": "Win",
+    "note": "Small 60.6% -> Win"
+  },
+  {
+    "condition": "Small",
+    "confidence": 52.5,
+    "outcome": "Win",
+    "note": "Small 52.5% -> Win"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Big",
+    "confidence": 53.4,
+    "outcome": "Lose",
+    "note": "Big 53.4% -> Lose"
+  },
+  {
+    "condition": "Big",
+    "confidence": 53.7,
+    "outcome": "Lose",
+    "note": "Big 53.7% -> Lose"
+  },
+  {
+    "condition": "Small",
+    "confidence": 52.7,
+    "outcome": "Win",
+    "note": "Small 52.7% -> Win"
+  },
+  {
+    "condition": "Small",
+    "confidence": 55.1,
+    "outcome": "Lose",
+    "note": "Small 55.1% -> Lose"
+  },
+  {
+    "condition": "Big",
+    "confidence": 52.9,
+    "outcome": "Win",
+    "note": "Big 52.9% -> Win"
+  },
+  {
+    "condition": "Small",
+    "confidence": 53.8,
+    "outcome": "Win",
+    "note": "Small 53.8% -> Win"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Big",
+    "confidence": 56.7,
+    "outcome": "Lose",
+    "note": "Big 56.7% -> Lose"
+  },
+  {
+    "condition": "Small",
+    "confidence": 55.3,
+    "outcome": "Lose",
+    "note": "Small 55.3% -> Lose"
+  },
+  {
+    "condition": "Big",
+    "confidence": 53.0,
+    "outcome": "Lose",
+    "note": "Big 53.0% -> Lose"
+  },
+  {
+    "condition": "Big",
+    "confidence": 57.4,
+    "outcome": "Lose",
+    "note": "Big 57.4% -> Lose"
+  },
+  {
+    "condition": "Big",
+    "confidence": 56.5,
+    "outcome": "Lose",
+    "note": "Big 56.5% -> Lose"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Big",
+    "confidence": 59.0,
+    "outcome": "Win",
+    "note": "Big 59.0% -> Win"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Big",
+    "confidence": 52.1,
+    "outcome": "Win",
+    "note": "Big 52.1% -> Win"
+  },
+  {
+    "condition": "Big",
+    "confidence": 59.7,
+    "outcome": "Lose",
+    "note": "Big 59.7% -> Lose"
+  },
+  {
+    "condition": "Big",
+    "confidence": 57.3,
+    "outcome": "Lose",
+    "note": "Big 57.3% -> Lose"
+  },
+  {
+    "condition": "Big",
+    "confidence": 62.3,
+    "outcome": "Win",
+    "note": "Big 62.3% -> Win"
+  },
+  {
+    "condition": "Big",
+    "confidence": 59.4,
+    "outcome": "Lose",
+    "note": "Big 59.4% -> Lose"
+  },
+  {
+    "condition": "Big",
+    "confidence": 62.9,
+    "outcome": "Win",
+    "note": "Big 62.9% -> Win"
+  },
+  {
+    "condition": "Small",
+    "confidence": 53.2,
+    "outcome": "Win",
+    "note": "Small 53.2% -> Win"
+  },
+  {
+    "condition": "Big",
+    "confidence": 62.2,
+    "outcome": "Win",
+    "note": "Big 62.2% -> Win"
+  },
+  {
+    "condition": "Small",
+    "confidence": 62.3,
+    "outcome": "Win",
+    "note": "Small 62.3% -> Win"
+  },
+  {
+    "condition": "Big",
+    "confidence": 66.7,
+    "outcome": "Win",
+    "note": "Big 66.7% -> Win"
+  },
+  {
+    "condition": "Small",
+    "confidence": 65.0,
+    "outcome": "Win",
+    "note": "Small 65.0% -> Win"
+  },
+  {
+    "condition": "Big",
+    "confidence": 66.6,
+    "outcome": "Win",
+    "note": "Big 66.6% -> Win"
+  },
+  {
+    "condition": "Small",
+    "confidence": 65.7,
+    "outcome": "Lose",
+    "note": "Small 65.7% -> Lose"
+  },
+  {
+    "condition": "Small",
+    "confidence": 54.5,
+    "outcome": "Win",
+    "note": "Small 54.5% -> Win"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Big",
+    "confidence": 56.1,
+    "outcome": "Lose",
+    "note": "Big 56.1% -> Lose"
+  },
+  {
+    "condition": "Small",
+    "confidence": 55.4,
+    "outcome": "Win",
+    "note": "Small 55.4% -> Win"
+  },
+  {
+    "condition": "Small",
+    "confidence": 57.9,
+    "outcome": "Win",
+    "note": "Small 57.9% -> Win"
+  },
+  {
+    "condition": "Small",
+    "confidence": 59.7,
+    "outcome": "Lose",
+    "note": "Small 59.7% -> Lose"
+  },
+  {
+    "condition": "Big",
+    "confidence": 52.0,
+    "outcome": "Lose",
+    "note": "Big 52.0% -> Lose"
+  },
+  {
+    "condition": "Big",
+    "confidence": 56.5,
+    "outcome": "Lose",
+    "note": "Big 56.5% -> Lose"
+  },
+  {
+    "condition": "Big",
+    "confidence": 64.1,
+    "outcome": "Lose",
+    "note": "Big 64.1% -> Lose"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Small",
+    "confidence": 53.8,
+    "outcome": "Win",
+    "note": "Small 53.8% -> Win"
+  },
+  {
+    "condition": "Small",
+    "confidence": 55.2,
+    "outcome": "Lose",
+    "note": "Small 55.2% -> Lose"
+  },
+  {
+    "condition": "Big",
+    "confidence": 58.8,
+    "outcome": "Win",
+    "note": "Big 58.8% -> Win"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Big",
+    "confidence": 56.3,
+    "outcome": "Win",
+    "note": "Big 56.3% -> Win"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Small",
+    "confidence": 55.1,
+    "outcome": "Lose",
+    "note": "Small 55.1% -> Lose"
+  },
+  {
+    "condition": "Big",
+    "confidence": 53.0,
+    "outcome": "Win",
+    "note": "Big 53.0% -> Win"
+  },
+  {
+    "condition": "Big",
+    "confidence": 54.2,
+    "outcome": "Win",
+    "note": "Big 54.2% -> Win"
+  },
+  {
+    "condition": "Big",
+    "confidence": 55.2,
+    "outcome": "Win",
+    "note": "Big 55.2% -> Win"
+  },
+  {
+    "condition": "Small",
+    "confidence": 56.0,
+    "outcome": "Lose",
+    "note": "Small 56.0% -> Lose"
+  },
+  {
+    "condition": "Small",
+    "confidence": 53.7,
+    "outcome": "Win",
+    "note": "Small 53.7% -> Win"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Big",
+    "confidence": 52.7,
+    "outcome": "Win",
+    "note": "Big 52.7% -> Win"
+  },
+  {
+    "condition": "Big",
+    "confidence": 53.2,
+    "outcome": "Lose",
+    "note": "Big 53.2% -> Lose"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Big",
+    "confidence": 59.1,
+    "outcome": "Win",
+    "note": "Big 59.1% -> Win"
+  },
+  {
+    "condition": "Small",
+    "confidence": 59.0,
+    "outcome": "Win",
+    "note": "Small 59.0% -> Win"
+  },
+  {
+    "condition": "Small",
+    "confidence": 63.2,
+    "outcome": "Lose",
+    "note": "Small 63.2% -> Lose"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Big",
+    "confidence": 50.0,
+    "outcome": "Lose",
+    "note": "Big 50.0% -> Lose"
+  },
+  {
+    "condition": "Big",
+    "confidence": 57.2,
+    "outcome": "Win",
+    "note": "Big 57.2% -> Win"
+  },
+  {
+    "condition": "Big",
+    "confidence": 52.5,
+    "outcome": "Lose",
+    "note": "Big 52.5% -> Lose"
+  },
+  {
+    "condition": "Big",
+    "confidence": 58.4,
+    "outcome": "Lose",
+    "note": "Big 58.4% -> Lose"
+  },
+  {
+    "condition": "Big",
+    "confidence": 57.3,
+    "outcome": "Lose",
+    "note": "Big 57.3% -> Lose"
+  },
+  {
+    "condition": "Big",
+    "confidence": 52.8,
+    "outcome": "Lose",
+    "note": "Big 52.8% -> Lose"
+  },
+  {
+    "condition": "Small",
+    "confidence": 52.8,
+    "outcome": "Win",
+    "note": "Small 52.8% -> Win"
+  },
+  {
+    "condition": "Small",
+    "confidence": 56.4,
+    "outcome": "Lose",
+    "note": "Small 56.4% -> Lose"
+  },
+  {
+    "condition": "Big",
+    "confidence": 52.6,
+    "outcome": "Win",
+    "note": "Big 52.6% -> Win"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Big",
+    "confidence": 58.8,
+    "outcome": "Lose",
+    "note": "Big 58.8% -> Lose"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Small",
+    "confidence": 56.3,
+    "outcome": "Win",
+    "note": "Small 56.3% -> Win"
+  },
+  {
+    "condition": "Big",
+    "confidence": 59.4,
+    "outcome": "Win",
+    "note": "Big 59.4% -> Win"
+  },
+  {
+    "condition": "Small",
+    "confidence": 59.8,
+    "outcome": "Lose",
+    "note": "Small 59.8% -> Lose"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Big",
+    "confidence": 58.3,
+    "outcome": "Win",
+    "note": "Big 58.3% -> Win"
+  },
+  {
+    "condition": "Big",
+    "confidence": 59.5,
+    "outcome": "Lose",
+    "note": "Big 59.5% -> Lose"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Small",
+    "confidence": 56.4,
+    "outcome": "Lose",
+    "note": "Small 56.4% -> Lose"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Big",
+    "confidence": 58.2,
+    "outcome": "Win",
+    "note": "Big 58.2% -> Win"
+  },
+  {
+    "condition": "Big",
+    "confidence": 60.7,
+    "outcome": "Win",
+    "note": "Big 60.7% -> Win"
+  },
+  {
+    "condition": "Big",
+    "confidence": 58.4,
+    "outcome": "Win",
+    "note": "Big 58.4% -> Win"
+  },
+  {
+    "condition": "Small",
+    "confidence": 56.1,
+    "outcome": "Win",
+    "note": "Small 56.1% -> Win"
+  },
+  {
+    "condition": "Small",
+    "confidence": 54.0,
+    "outcome": "Lose",
+    "note": "Small 54.0% -> Lose"
+  },
+  {
+    "condition": "Small",
+    "confidence": 62.6,
+    "outcome": "Win",
+    "note": "Small 62.6% -> Win"
+  },
+  {
+    "condition": "Big",
+    "confidence": 54.8,
+    "outcome": "Win",
+    "note": "Big 54.8% -> Win"
+  },
+  {
+    "condition": "Small",
+    "confidence": 64.8,
+    "outcome": "Win",
+    "note": "Small 64.8% -> Win"
+  },
+  {
+    "condition": "Big",
+    "confidence": 60.3,
+    "outcome": "Win",
+    "note": "Big 60.3% -> Win"
+  },
+  {
+    "condition": "Small",
+    "confidence": 68.8,
+    "outcome": "Win",
+    "note": "Small 68.8% -> Win"
+  },
+  {
+    "condition": "Big",
+    "confidence": 62.4,
+    "outcome": "Win",
+    "note": "Big 62.4% -> Win"
+  },
+  {
+    "condition": "Small",
+    "confidence": 68.9,
+    "outcome": "Lose",
+    "note": "Small 68.9% -> Lose"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Small",
+    "confidence": 52.8,
+    "outcome": "Lose",
+    "note": "Small 52.8% -> Lose"
+  },
+  {
+    "condition": "Small",
+    "confidence": 61.0,
+    "outcome": "Win",
+    "note": "Small 61.0% -> Win"
+  },
+  {
+    "condition": "Big",
+    "confidence": 58.4,
+    "outcome": "Lose",
+    "note": "Big 58.4% -> Lose"
+  },
+  {
+    "condition": "Big",
+    "confidence": 57.2,
+    "outcome": "Win",
+    "note": "Big 57.2% -> Win"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Big",
+    "confidence": 52.0,
+    "outcome": "Lose",
+    "note": "Big 52.0% -> Lose"
+  },
+  {
+    "condition": "Big",
+    "confidence": 57.5,
+    "outcome": "Lose",
+    "note": "Big 57.5% -> Lose"
+  },
+  {
+    "condition": "Small",
+    "confidence": 54.8,
+    "outcome": "Lose",
+    "note": "Small 54.8% -> Lose"
+  },
+  {
+    "condition": "Big",
+    "confidence": 52.4,
+    "outcome": "Lose",
+    "note": "Big 52.4% -> Lose"
+  },
+  {
+    "condition": "Big",
+    "confidence": 58.8,
+    "outcome": "Win",
+    "note": "Big 58.8% -> Win"
+  },
+  {
+    "condition": "Small",
     "confidence": 57.5,
     "outcome": "Win",
-    "note": "Automated test"
+    "note": "Small 57.5% -> Win"
+  },
+  {
+    "condition": "Big",
+    "confidence": 62.4,
+    "outcome": "Win",
+    "note": "Big 62.4% -> Win"
+  },
+  {
+    "condition": "Small",
+    "confidence": 62.0,
+    "outcome": "Lose",
+    "note": "Small 62.0% -> Lose"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Big",
+    "confidence": 52.3,
+    "outcome": "Win",
+    "note": "Big 52.3% -> Win"
+  },
+  {
+    "condition": "Small",
+    "confidence": 56.0,
+    "outcome": "Win",
+    "note": "Small 56.0% -> Win"
+  },
+  {
+    "condition": "Big",
+    "confidence": 60.6,
+    "outcome": "Lose",
+    "note": "Big 60.6% -> Lose"
+  },
+  {
+    "condition": "Big",
+    "confidence": 56.8,
+    "outcome": "Lose",
+    "note": "Big 56.8% -> Lose"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Small",
+    "confidence": 57.2,
+    "outcome": "Lose",
+    "note": "Small 57.2% -> Lose"
+  },
+  {
+    "condition": "Big",
+    "confidence": 52.4,
+    "outcome": "Win",
+    "note": "Big 52.4% -> Win"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Big",
+    "confidence": 58.0,
+    "outcome": "Win",
+    "note": "Big 58.0% -> Win"
+  },
+  {
+    "condition": "Big",
+    "confidence": 59.7,
+    "outcome": "Win",
+    "note": "Big 59.7% -> Win"
+  },
+  {
+    "condition": "Big",
+    "confidence": 61.7,
+    "outcome": "Lose",
+    "note": "Big 61.7% -> Lose"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Small",
+    "confidence": 56.4,
+    "outcome": "Win",
+    "note": "Small 56.4% -> Win"
+  },
+  {
+    "condition": "Big",
+    "confidence": 60.7,
+    "outcome": "Win",
+    "note": "Big 60.7% -> Win"
+  },
+  {
+    "condition": "Small",
+    "confidence": 59.5,
+    "outcome": "Win",
+    "note": "Small 59.5% -> Win"
+  },
+  {
+    "condition": "Small",
+    "confidence": 52.5,
+    "outcome": "Lose",
+    "note": "Small 52.5% -> Lose"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Big",
+    "confidence": 56.4,
+    "outcome": "Lose",
+    "note": "Big 56.4% -> Lose"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Big",
+    "confidence": 56.9,
+    "outcome": "Lose",
+    "note": "Big 56.9% -> Lose"
+  },
+  {
+    "condition": "Big",
+    "confidence": 54.2,
+    "outcome": "Lose",
+    "note": "Big 54.2% -> Lose"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Small",
+    "confidence": 52.5,
+    "outcome": "Win",
+    "note": "Small 52.5% -> Win"
+  },
+  {
+    "condition": "Small",
+    "confidence": 57.9,
+    "outcome": "Lose",
+    "note": "Small 57.9% -> Lose"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Big",
+    "confidence": 57.6,
+    "outcome": "Lose",
+    "note": "Big 57.6% -> Lose"
+  },
+  {
+    "condition": "Big",
+    "confidence": 55.6,
+    "outcome": "Win",
+    "note": "Big 55.6% -> Win"
+  },
+  {
+    "condition": "Big",
+    "confidence": 52.1,
+    "outcome": "Win",
+    "note": "Big 52.1% -> Win"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Big",
+    "confidence": 58.0,
+    "outcome": "Win",
+    "note": "Big 58.0% -> Win"
+  },
+  {
+    "condition": "Small",
+    "confidence": 53.0,
+    "outcome": "Lose",
+    "note": "Small 53.0% -> Lose"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Big",
+    "confidence": 53.3,
+    "outcome": "Win",
+    "note": "Big 53.3% -> Win"
+  },
+  {
+    "condition": "Big",
+    "confidence": 53.9,
+    "outcome": "Win",
+    "note": "Big 53.9% -> Win"
+  },
+  {
+    "condition": "Big",
+    "confidence": 54.9,
+    "outcome": "Lose",
+    "note": "Big 54.9% -> Lose"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Big",
+    "confidence": 52.8,
+    "outcome": "Win",
+    "note": "Big 52.8% -> Win"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Big",
+    "confidence": 53.9,
+    "outcome": "Win",
+    "note": "Big 53.9% -> Win"
+  },
+  {
+    "condition": "Small",
+    "confidence": 53.9,
+    "outcome": "Win",
+    "note": "Small 53.9% -> Win"
+  },
+  {
+    "condition": "Big",
+    "confidence": 56.1,
+    "outcome": "Win",
+    "note": "Big 56.1% -> Win"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Big",
+    "confidence": 53.6,
+    "outcome": "Win",
+    "note": "Big 53.6% -> Win"
+  },
+  {
+    "condition": "Small",
+    "confidence": 53.8,
+    "outcome": "Win",
+    "note": "Small 53.8% -> Win"
+  },
+  {
+    "condition": "Big",
+    "confidence": 55.6,
+    "outcome": "Lose",
+    "note": "Big 55.6% -> Lose"
+  },
+  {
+    "condition": "Big",
+    "confidence": 53.1,
+    "outcome": "Win",
+    "note": "Big 53.1% -> Win"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Small",
+    "confidence": 53.4,
+    "outcome": "Win",
+    "note": "Small 53.4% -> Win"
+  },
+  {
+    "condition": "Big",
+    "confidence": 54.9,
+    "outcome": "Lose",
+    "note": "Big 54.9% -> Lose"
+  },
+  {
+    "condition": "Big",
+    "confidence": 53.2,
+    "outcome": "Win",
+    "note": "Big 53.2% -> Win"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Big",
+    "confidence": 54.7,
+    "outcome": "Win",
+    "note": "Big 54.7% -> Win"
+  },
+  {
+    "condition": "Big",
+    "confidence": 55.9,
+    "outcome": "Win",
+    "note": "Big 55.9% -> Win"
+  },
+  {
+    "condition": "Big",
+    "confidence": 57.0,
+    "outcome": "Lose",
+    "note": "Big 57.0% -> Lose"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Small",
+    "confidence": 54.1,
+    "outcome": "Win",
+    "note": "Small 54.1% -> Win"
+  },
+  {
+    "condition": "Big",
+    "confidence": 56.3,
+    "outcome": "Lose",
+    "note": "Big 56.3% -> Lose"
+  },
+  {
+    "condition": "Big",
+    "confidence": 54.2,
+    "outcome": "Win",
+    "note": "Big 54.2% -> Win"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Big",
+    "confidence": 54.9,
+    "outcome": "Win",
+    "note": "Big 54.9% -> Win"
+  },
+  {
+    "condition": "Small",
+    "confidence": 55.4,
+    "outcome": "Lose",
+    "note": "Small 55.4% -> Lose"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Big",
+    "confidence": 55.3,
+    "outcome": "Win",
+    "note": "Big 55.3% -> Win"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Big",
+    "confidence": 54.2,
+    "outcome": "Lose",
+    "note": "Big 54.2% -> Lose"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Small",
+    "confidence": 54.5,
+    "outcome": "Win",
+    "note": "Small 54.5% -> Win"
+  },
+  {
+    "condition": "Small",
+    "confidence": 56.1,
+    "outcome": "Lose",
+    "note": "Small 56.1% -> Lose"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Big",
+    "confidence": 53.6,
+    "outcome": "Lose",
+    "note": "Big 53.6% -> Lose"
+  },
+  {
+    "condition": "Small",
+    "confidence": 53.2,
+    "outcome": "Win",
+    "note": "Small 53.2% -> Win"
+  },
+  {
+    "condition": "Big",
+    "confidence": 57.2,
+    "outcome": "Win",
+    "note": "Big 57.2% -> Win"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Big",
+    "confidence": 54.2,
+    "outcome": "Lose",
+    "note": "Big 54.2% -> Lose"
+  },
+  {
+    "condition": "Big",
+    "confidence": 65.6,
+    "outcome": "Lose",
+    "note": "Big 65.6% -> Lose"
+  },
+  {
+    "condition": "Big",
+    "confidence": 55.4,
+    "outcome": "Win",
+    "note": "Big 55.4% -> Win"
+  },
+  {
+    "condition": "Big",
+    "confidence": 61.3,
+    "outcome": "Win",
+    "note": "Big 61.3% -> Win"
+  },
+  {
+    "condition": "Big",
+    "confidence": 61.8,
+    "outcome": "Win",
+    "note": "Big 61.8% -> Win"
+  },
+  {
+    "condition": "Big",
+    "confidence": 65.9,
+    "outcome": "Win",
+    "note": "Big 65.9% -> Win"
+  },
+  {
+    "condition": "Big",
+    "confidence": 56.3,
+    "outcome": "Win",
+    "note": "Big 56.3% -> Win"
+  },
+  {
+    "condition": "Big",
+    "confidence": 57.2,
+    "outcome": "Lose",
+    "note": "Big 57.2% -> Lose"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Big",
+    "confidence": 55.3,
+    "outcome": "Lose",
+    "note": "Big 55.3% -> Lose"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Big",
+    "confidence": 54.2,
+    "outcome": "Lose",
+    "note": "Big 54.2% -> Lose"
+  },
+  {
+    "condition": "Big",
+    "confidence": 53.3,
+    "outcome": "Lose",
+    "note": "Big 53.3% -> Lose"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Big",
+    "confidence": 54.2,
+    "outcome": "Lose",
+    "note": "Big 54.2% -> Lose"
+  },
+  {
+    "condition": "Big",
+    "confidence": 53.3,
+    "outcome": "Win",
+    "note": "Big 53.3% -> Win"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Big",
+    "confidence": 54.3,
+    "outcome": "Win",
+    "note": "Big 54.3% -> Win"
+  },
+  {
+    "condition": "Small",
+    "confidence": 54.3,
+    "outcome": "Win",
+    "note": "Small 54.3% -> Win"
+  },
+  {
+    "condition": "Big",
+    "confidence": 56.0,
+    "outcome": "Win",
+    "note": "Big 56.0% -> Win"
+  },
+  {
+    "condition": "Small",
+    "confidence": 56.4,
+    "outcome": "Lose",
+    "note": "Small 56.4% -> Lose"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Small",
+    "confidence": 53.8,
+    "outcome": "Win",
+    "note": "Small 53.8% -> Win"
+  },
+  {
+    "condition": "Big",
+    "confidence": 55.3,
+    "outcome": "Win",
+    "note": "Big 55.3% -> Win"
+  },
+  {
+    "condition": "Small",
+    "confidence": 55.5,
+    "outcome": "Win",
+    "note": "Small 55.5% -> Win"
+  },
+  {
+    "condition": "Big",
+    "confidence": 57.0,
+    "outcome": "Lose",
+    "note": "Big 57.0% -> Lose"
+  },
+  {
+    "condition": "Big",
+    "confidence": 53.6,
+    "outcome": "Lose",
+    "note": "Big 53.6% -> Lose"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Big",
+    "confidence": 59.2,
+    "outcome": "Lose",
+    "note": "Big 59.2% -> Lose"
+  },
+  {
+    "condition": "Big",
+    "confidence": 56.7,
+    "outcome": "Win",
+    "note": "Big 56.7% -> Win"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Big",
+    "confidence": 53.9,
+    "outcome": "Lose",
+    "note": "Big 53.9% -> Lose"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Small",
+    "confidence": 54.3,
+    "outcome": "Lose",
+    "note": "Small 54.3% -> Lose"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Big",
+    "confidence": 55.8,
+    "outcome": "Win",
+    "note": "Big 55.8% -> Win"
+  },
+  {
+    "condition": "Big",
+    "confidence": 57.8,
+    "outcome": "Win",
+    "note": "Big 57.8% -> Win"
+  },
+  {
+    "condition": "Big",
+    "confidence": 58.5,
+    "outcome": "Win",
+    "note": "Big 58.5% -> Win"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Small",
+    "confidence": 55.7,
+    "outcome": "Win",
+    "note": "Small 55.7% -> Win"
+  },
+  {
+    "condition": "Big",
+    "confidence": 58.8,
+    "outcome": "Win",
+    "note": "Big 58.8% -> Win"
+  },
+  {
+    "condition": "Small",
+    "confidence": 59.6,
+    "outcome": "Lose",
+    "note": "Small 59.6% -> Lose"
+  },
+  {
+    "condition": "Small",
+    "confidence": 52.4,
+    "outcome": "Win",
+    "note": "Small 52.4% -> Win"
+  },
+  {
+    "condition": "Small",
+    "confidence": 55.6,
+    "outcome": "Win",
+    "note": "Small 55.6% -> Win"
+  },
+  {
+    "condition": "Small",
+    "confidence": 53.6,
+    "outcome": "Lose",
+    "note": "Small 53.6% -> Lose"
+  },
+  {
+    "condition": "Small",
+    "confidence": 56.9,
+    "outcome": "Lose",
+    "note": "Small 56.9% -> Lose"
+  },
+  {
+    "condition": "Small",
+    "confidence": 54.4,
+    "outcome": "Win",
+    "note": "Small 54.4% -> Win"
+  },
+  {
+    "condition": "Small",
+    "confidence": 56.9,
+    "outcome": "Win",
+    "note": "Small 56.9% -> Win"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Small",
+    "confidence": 52.1,
+    "outcome": "Lose",
+    "note": "Small 52.1% -> Lose"
+  },
+  {
+    "condition": "Small",
+    "confidence": 56.5,
+    "outcome": "Win",
+    "note": "Small 56.5% -> Win"
+  },
+  {
+    "condition": "Big",
+    "confidence": 56.3,
+    "outcome": "Win",
+    "note": "Big 56.3% -> Win"
+  },
+  {
+    "condition": "Small",
+    "confidence": 57.3,
+    "outcome": "Lose",
+    "note": "Small 57.3% -> Lose"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Big",
+    "confidence": 57.3,
+    "outcome": "Win",
+    "note": "Big 57.3% -> Win"
+  },
+  {
+    "condition": "Big",
+    "confidence": 58.6,
+    "outcome": "Win",
+    "note": "Big 58.6% -> Win"
+  },
+  {
+    "condition": "Big",
+    "confidence": 59.9,
+    "outcome": "Lose",
+    "note": "Big 59.9% -> Lose"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Big",
+    "confidence": 55.5,
+    "outcome": "Win",
+    "note": "Big 55.5% -> Win"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Big",
+    "confidence": 52.3,
+    "outcome": "Win",
+    "note": "Big 52.3% -> Win"
+  },
+  {
+    "condition": "Big",
+    "confidence": 57.1,
+    "outcome": "Lose",
+    "note": "Big 57.1% -> Lose"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
+  },
+  {
+    "condition": "Big",
+    "confidence": 55.4,
+    "outcome": "Lose",
+    "note": "Big 55.4% -> Lose"
+  },
+  {
+    "condition": "Neutral",
+    "confidence": 50.0,
+    "outcome": "Neutral",
+    "note": "Neutral 50.0% -> Neutral"
   }
 ]
