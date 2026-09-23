@@ -1,94 +1,94 @@
 {
-  "trained_samples": 317,
+  "trained_samples": 836,
   "evaluation_window": 35,
   "weights": {
-    "markov": 0.245,
-    "patterns": 0.166,
-    "statistics": 0.589
+    "markov": 0.328,
+    "patterns": 0.379,
+    "statistics": 0.292
   },
   "accuracy": {
-    "consensus": 51.4,
-    "markov": 60.0,
-    "patterns": 48.6,
-    "statistics": 100.0
+    "consensus": 57.1,
+    "markov": 52.6,
+    "patterns": 57.1,
+    "statistics": 50.0
   },
   "last_verification": {
-    "period": "20260918100051235",
+    "period": "20260918100051724",
     "number": 6,
     "actual": "BIG",
-    "predicted": "BIG",
-    "hit": true
+    "predicted": "SMALL",
+    "hit": false
   },
   "recent_verifications": [
     {
-      "period": "20260918100051226",
+      "period": "20260918100051715",
+      "number": 6,
+      "actual": "BIG",
+      "predicted": "BIG",
+      "hit": true
+    },
+    {
+      "period": "20260918100051716",
       "number": 2,
       "actual": "SMALL",
       "predicted": "SMALL",
       "hit": true
     },
     {
-      "period": "20260918100051227",
-      "number": 9,
-      "actual": "BIG",
+      "period": "20260918100051717",
+      "number": 0,
+      "actual": "SMALL",
       "predicted": "BIG",
-      "hit": true
-    },
-    {
-      "period": "20260918100051228",
-      "number": 5,
-      "actual": "BIG",
-      "predicted": "SMALL",
       "hit": false
     },
     {
-      "period": "20260918100051229",
+      "period": "20260918100051718",
       "number": 8,
       "actual": "BIG",
       "predicted": "SMALL",
       "hit": false
     },
     {
-      "period": "20260918100051230",
-      "number": 0,
-      "actual": "SMALL",
+      "period": "20260918100051719",
+      "number": 8,
+      "actual": "BIG",
       "predicted": "BIG",
+      "hit": true
+    },
+    {
+      "period": "20260918100051720",
+      "number": 6,
+      "actual": "BIG",
+      "predicted": "SMALL",
       "hit": false
     },
     {
-      "period": "20260918100051231",
-      "number": 5,
+      "period": "20260918100051721",
+      "number": 8,
       "actual": "BIG",
       "predicted": "BIG",
       "hit": true
     },
     {
-      "period": "20260918100051232",
-      "number": 0,
-      "actual": "SMALL",
-      "predicted": "SMALL",
-      "hit": true
-    },
-    {
-      "period": "20260918100051233",
+      "period": "20260918100051722",
       "number": 6,
       "actual": "BIG",
       "predicted": "BIG",
       "hit": true
     },
     {
-      "period": "20260918100051234",
-      "number": 3,
-      "actual": "SMALL",
-      "predicted": "SMALL",
-      "hit": true
-    },
-    {
-      "period": "20260918100051235",
-      "number": 6,
+      "period": "20260918100051723",
+      "number": 8,
       "actual": "BIG",
       "predicted": "BIG",
       "hit": true
+    },
+    {
+      "period": "20260918100051724",
+      "number": 6,
+      "actual": "BIG",
+      "predicted": "SMALL",
+      "hit": false
     }
   ]
 }

@@ -363,10 +363,11 @@ def clear_history():
 
 
 if __name__ == "__main__":
-    PORT = 5092
+    PORT = int(os.environ.get("PORT", 5092))
     print(f"\n========================================================")
     print(f" 92PKR Big/Small AI Predictor running at:")
     print(f" Local PC:       http://127.0.0.1:{PORT}")
     print(f" Phone / Mobile: http://192.168.1.78:{PORT}")
     print(f"========================================================\n")
     app.run(host="0.0.0.0", port=PORT, debug=False)
+
