@@ -86,7 +86,7 @@ class AdaptiveTrainer:
                     if sig == actual_outcome:
                         model_hits[key] += 1
 
-            # Check consensus prediction
+            # Check consensus prediction with Sniper Quality Filter
             def to_score(sig, conf):
                 if sig == "BIG": return conf / 100.0
                 if sig == "SMALL": return 1.0 - (conf / 100.0)
@@ -97,7 +97,16 @@ class AdaptiveTrainer:
             s_s = to_score(s_sig, s_res.get("confidence", 50.0))
 
             total_big = (s_m * current_weights["markov"]) + (s_p * current_weights["patterns"]) + (s_s * current_weights["statistics"])
-            cons_pred = "BIG" if total_big > 0.5 else ("SMALL" if total_big < 0.5 else "NEUTRAL")
+            raw_conf = round(max(total_big, 1.0 - total_big) * 100.0, 1)
+
+            # Conflict & Quality Filter check
+            is_conflict = (m_sig in ["BIG", "SMALL"] and p_sig in ["BIG", "SMALL"] and m_sig != p_sig)
+            streak_len = p_res.get("current_streak", {}).get("count", 1)
+
+            if is_conflict or raw_conf < 57.5 or streak_len >= 4 or (streak_len == 2 and p_sig == "NEUTRAL"):
+                cons_pred = "NEUTRAL"
+            else:
+                cons_pred = "BIG" if total_big > 0.5 else ("SMALL" if total_big < 0.5 else "NEUTRAL")
 
             if cons_pred != "NEUTRAL":
                 model_valid["consensus"] += 1
@@ -178,7 +187,8 @@ class AdaptiveTrainer:
                 "display": f"{last_10_wins}/{last_10_count} Wins" if last_10_count > 0 else "0/10 Wins"
             },
             "last_verification": last_eval,
-            "recent_verifications": last_10_active
+            "recent_verifications": eval_details[-12:] if eval_details else [],
+            "active_verifications": last_10_active
         }
 
 

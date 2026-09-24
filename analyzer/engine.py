@@ -85,7 +85,7 @@ class PredictionEngine:
             is_conflict = True
 
         streak_info = patterns_res.get("current_streak", {})
-        streak_len = streak_info.get("length", 1)
+        streak_len = streak_info.get("count", streak_info.get("length", 1))
 
         diff = total_big_score - 0.5
         raw_outcome = "BIG" if total_big_score > 0.5 else ("SMALL" if total_big_score < 0.5 else "NEUTRAL / SKIP")
@@ -94,18 +94,46 @@ class PredictionEngine:
         # 3. Apply Empirical Calibration from User Tested Notes (790 Records)
         calibration = self.calibrator.calibrate(raw_confidence, raw_outcome, is_conflict=is_conflict, streak_len=streak_len)
 
-        # 4. 7/10 SNIPER QUALITY FILTER
+        # 4. 7/10 SNIPER TARGET FILTER
         # Removes the exact errors identified in the user's test records:
         # - Error 1: 50.0% - 53.9% noise coin-flips (52.6% win rate -> 88 losses)
         # - Error 2: 54.0% - 57.4% transition trap (45.7% win rate -> 127 losses)
         # - Error 3: Conflicting model signals
         # - Error 4: Dragon streak exhaustion (streak >= 5)
+        # - Error 5: 2-pair pivot fork (streak == 2) where random flips cause loss clusters
         calib_status = calibration.get("status", "NORMAL")
         calib_wr = calibration.get("calibrated_win_rate", 50.0)
         zone = calibration.get("zone", "")
 
+        rolling_stats = training_info.get("rolling_10", {})
+        rolling_wr = rolling_stats.get("win_rate", 50.0)
+        rolling_count = rolling_stats.get("total", 0)
+        defense_mode = (rolling_count >= 3 and rolling_wr < 70.0)
+
+        skip_bet = False
+        skip_reason = ""
+
+        if is_conflict:
+            skip_bet = True
+            skip_reason = "Model disagreement (Markov vs Pattern conflict)"
+        elif streak_len >= 4:
+            skip_bet = True
+            skip_reason = f"Dragon exhaustion trap ({streak_len}x streak snap risk)"
+        elif streak_len == 2 and p_sig == "Neutral":
+            skip_bet = True
+            skip_reason = f"Double {streak_info.get('type', '')} pair fork (50/50 pivot)"
+        elif raw_confidence < 57.5:
+            skip_bet = True
+            skip_reason = f"Confidence {raw_confidence}% below 57.5% sniper threshold"
+        elif calib_status in ["SKIP_RECOMMENDED", "TRAP_DETECTED", "LOW_EDGE_NOISE", "TRANSITION_RISK", "OVEREXTENDED"]:
+            skip_bet = True
+            skip_reason = f"Calibration filter: {calib_status}"
+        elif defense_mode and raw_confidence < 62.0:
+            skip_bet = True
+            skip_reason = f"Defense Mode Active: 7/10 Target recovery requires >= 62% conviction"
+
         if sniper_mode:
-            if is_conflict or raw_confidence < 57.5 or streak_len >= 5 or calib_status in ["SKIP_RECOMMENDED", "TRAP_DETECTED", "LOW_EDGE_NOISE", "TRANSITION_RISK"]:
+            if skip_bet or raw_outcome == "NEUTRAL / SKIP":
                 outcome = "NEUTRAL / SKIP"
                 confidence = 50.0
                 sniper_status = "WAITING_FOR_A_PLUS"

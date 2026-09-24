@@ -31,7 +31,7 @@ class PatternAnalyzer:
             else:
                 break
 
-        # Check for alternating / chop in the last 4-6 draws
+        # Check for alternating / chop in the last 6 draws
         chop_count = 0
         for i in range(len(sizes) - 1, 0, -1):
             if sizes[i] != sizes[i - 1]:
@@ -44,64 +44,58 @@ class PatternAnalyzer:
         pattern_name = "Normal Run"
         pattern_detail = ""
 
-        if chop_count >= 2:
-            # Alternating Chop mode (e.g. B-S-B or S-B-S)
-            pattern_name = f"Alternating Chop ({chop_count}x flips)"
-            streak_signal = "Small" if current_type == "Big" else "Big"
-            streak_conf = min(85.0, 56.0 + chop_count * 5.0)
-            pattern_detail = f"Alternating chop detected ({chop_count} switches). Continuation favors flip to {streak_signal}."
-        elif streak_count >= 3:
-            # Dragon streak
-            pattern_name = f"Dragon Streak ({streak_count}x {current_type})"
-            if streak_count >= 6:
-                # Strong exhaustion zone: mean-reversion favored
-                streak_signal = "Small" if current_type == "Big" else "Big"
-                streak_conf = min(82.0, 62.0 + (streak_count - 5) * 3.0)
-                pattern_detail = f"Extended dragon ({streak_count}x {current_type}) near resistance. Reversal to {streak_signal} favored."
-            else:
-                # Ride the dragon trend
-                streak_signal = current_type
-                streak_conf = min(80.0, 58.0 + streak_count * 4.0)
-                pattern_detail = f"Dragon trend active ({streak_count}x {current_type}). Momentum favors {streak_signal}."
-        elif streak_count == 2:
-            pattern_name = f"Double {current_type} Pair"
-            # In casino patterns, double often tests either 3rd continuation or 2-2 switch
-            # Look at historical what happened after 2x current_type
-            two_type_followed_same = 0
-            two_type_followed_flip = 0
-            for i in range(len(sizes) - 2):
-                if sizes[i] == current_type and sizes[i + 1] == current_type:
-                    if sizes[i + 2] == current_type:
-                        two_type_followed_same += 1
-                    else:
-                        two_type_followed_flip += 1
-            
-            if two_type_followed_same > two_type_followed_flip:
-                streak_signal = current_type
-                streak_conf = 62.0
-                pattern_detail = f"Double {current_type} historically continued to 3rd draw ({two_type_followed_same} vs {two_type_followed_flip})."
-            elif two_type_followed_flip > two_type_followed_same:
-                streak_signal = "Small" if current_type == "Big" else "Big"
-                streak_conf = 62.0
-                pattern_detail = f"Double {current_type} historically flipped to 2-2 pair ({two_type_followed_flip} vs {two_type_followed_same})."
-            else:
-                streak_signal = current_type
-                streak_conf = 55.0
-                pattern_detail = f"Double {current_type} balanced. Slight momentum to {streak_signal}."
-        else:
-            # streak_count == 1 (first appearance after switch)
-            pattern_name = f"Single {current_type} Switch"
-            streak_signal = current_type
-            streak_conf = 54.0
-            pattern_detail = f"Fresh switch to {current_type}."
+        # Check post-break transition: did the last draw just break a streak of >= 2?
+        just_broke_streak = False
+        if len(sizes) >= 3 and sizes[-1] != sizes[-2] and sizes[-2] == sizes[-3]:
+            just_broke_streak = True
 
-        # 2. Historical N-Gram Matching (last 2 and 3 draws)
+        if just_broke_streak and streak_count == 1:
+            # Fresh break after a streak: high-entropy transition pivot
+            pattern_name = f"Post-Streak Break ({sizes[-2]} -> {current_type})"
+            streak_signal = "Neutral"
+            streak_conf = 50.0
+            pattern_detail = f"Fresh break after {sizes[-2]} streak. Transition pivot: wait 1 draw for regime confirmation."
+        elif chop_count >= 2:
+            # Alternating Chop regime (e.g. B-S-B or S-B-S)
+            # In real PRNG, chop runs break rapidly. Pumping confidence into chop continuation is a fatal gambler's fallacy!
+            pattern_name = f"Alternating Chop ({chop_count}x flips)"
+            streak_signal = "Neutral"
+            streak_conf = 50.0
+            pattern_detail = f"Alternating chop ({chop_count} switches) is high-entropy noise. Filtered to protect 7/10 target."
+        elif streak_count in [3, 4]:
+            # Confirmed momentum dragon streak (3x or 4x) - ride the established trend!
+            pattern_name = f"Dragon Streak ({streak_count}x {current_type})"
+            streak_signal = current_type
+            streak_conf = min(72.0, 62.0 + (streak_count - 3) * 4.0)
+            pattern_detail = f"Confirmed {streak_count}x {current_type} dragon. Strong momentum favors {current_type} continuation."
+        elif streak_count >= 5:
+            # Dragon exhaustion zone: mean-reversion risk is extremely high
+            pattern_name = f"Extended Dragon ({streak_count}x {current_type})"
+            streak_signal = "Neutral"
+            streak_conf = 50.0
+            pattern_detail = f"Extended dragon ({streak_count}x {current_type}) reached exhaustion threshold. Do not chase."
+        elif streak_count == 2:
+            # Double pair: fork in the road (either 3rd continuation or 2-2 flip).
+            # Do NOT bet on reversal against the pair!
+            pattern_name = f"Double {current_type} Pair"
+            streak_signal = "Neutral"
+            streak_conf = 50.0
+            pattern_detail = f"Double {current_type} pair pivot. 50/50 continuation/flip ratio: wait for 3rd confirmation."
+        else:
+            # streak_count == 1 (single switch)
+            pattern_name = f"Single {current_type}"
+            streak_signal = "Neutral"
+            streak_conf = 50.0
+            pattern_detail = f"Single {current_type} switch: insufficient momentum for entry."
+
+        # 2. Historical N-Gram Matching with Laplace Regularization & Minimum Sample Threshold
         ngram_signal = "Neutral"
         ngram_conf = 50.0
         ngram_text = ""
 
-        for n in [3, 2]:
-            if total > n + 1:
+        # Only evaluate n-grams if there are at least 30 historical records
+        if total >= 30:
+            for n in [3, 2]:
                 target_ngram = sizes[-n:]
                 matches_big = 0
                 matches_small = 0
@@ -116,38 +110,44 @@ class PatternAnalyzer:
                             matches_small += 1
 
                 total_matches = matches_big + matches_small
-                if total_matches >= 2:
-                    if matches_big > matches_small:
-                        ngram_signal = "Big"
-                        ngram_conf = round(matches_big / total_matches * 100, 1)
-                    elif matches_small > matches_big:
-                        ngram_signal = "Small"
-                        ngram_conf = round(matches_small / total_matches * 100, 1)
-                    ngram_text = f"Pattern [{'->'.join(target_ngram)}] appeared {total_matches}x in history: {matches_big} Big, {matches_small} Small."
-                    break
+                # Require at least 6 prior occurrences to avoid overfitting on micro-samples
+                if total_matches >= 6:
+                    # Laplace smoothing: (count + 1) / (total + 2)
+                    p_big = (matches_big + 1.0) / (total_matches + 2.0)
+                    p_small = 1.0 - p_big
+                    diff = p_big - 0.5
 
-        # Blend
-        if ngram_signal != "Neutral" and streak_signal != "Neutral":
-            if ngram_signal == streak_signal:
+                    if abs(diff) >= 0.08:  # Significant skew
+                        if p_big > 0.5:
+                            ngram_signal = "Big"
+                            ngram_conf = min(72.0, round(p_big * 100, 1))
+                        else:
+                            ngram_signal = "Small"
+                            ngram_conf = min(72.0, round(p_small * 100, 1))
+                        ngram_text = f"Pattern [{'->'.join(target_ngram)}] appeared {total_matches}x: {matches_big} Big, {matches_small} Small (Laplace {round(max(p_big, p_small)*100, 1)}%)."
+                        break
+
+        # Blend Streak + N-Gram:
+        # N-Gram should NEVER invent a bet when the streak/regime says Neutral!
+        # It is only used to slightly enhance confidence when it agrees with an active streak.
+        if streak_signal != "Neutral" and ngram_signal != "Neutral":
+            if streak_signal == ngram_signal:
                 final_sig = streak_signal
-                final_conf = min(88.0, max(streak_conf, ngram_conf) + 3.0)
-                final_exp = f"{pattern_detail} Confirmed by history: {ngram_text}"
+                final_conf = min(75.0, streak_conf + 3.0)
+                final_exp = f"{pattern_detail} Confirmed by history pattern: {ngram_text}"
             else:
-                final_sig = streak_signal
-                final_conf = max(52.0, (streak_conf + (100.0 - ngram_conf)) / 2)
-                final_exp = f"{pattern_detail} (History sequence shows {ngram_signal} {ngram_conf}%)."
+                # Disagreement between streak momentum and n-gram -> stay cautious!
+                final_sig = "Neutral"
+                final_conf = 50.0
+                final_exp = f"{pattern_detail} Pattern conflict: {ngram_text}"
         elif streak_signal != "Neutral":
             final_sig = streak_signal
             final_conf = streak_conf
             final_exp = pattern_detail
-        elif ngram_signal != "Neutral":
-            final_sig = ngram_signal
-            final_conf = ngram_conf
-            final_exp = ngram_text
         else:
             final_sig = "Neutral"
             final_conf = 50.0
-            final_exp = "Normal balanced flow."
+            final_exp = pattern_detail if pattern_detail else "Market in balanced transition flow."
 
         return {
             "signal": final_sig,

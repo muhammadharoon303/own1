@@ -359,7 +359,7 @@ function renderDashboard(data) {
     }
   }
 
-  // Recent prediction streak (W / L badges)
+  // Recent prediction streak (W / L / N badges)
   const streakStrip = document.getElementById("predictionStreakStrip");
   const winRateText = document.getElementById("recentWinRateText");
   const recVerifs = training.recent_verifications || [];
@@ -367,11 +367,12 @@ function renderDashboard(data) {
     if (recVerifs.length > 0) {
       streakStrip.innerHTML = recVerifs.map(v => {
         if (v.hit === true) {
-          return `<span class="px-2 py-0.5 rounded font-mono font-black text-xs bg-emerald-950 text-emerald-300 border border-emerald-500/60" title="Period: ${v.period} | Result: ${v.number} ${v.actual}">W</span>`;
+          return `<span class="px-2 py-0.5 rounded font-mono font-black text-xs bg-emerald-950 text-emerald-300 border border-emerald-500/60 shadow-sm" title="Period: ${v.period} | Result: ${v.number} ${v.actual}">✓ W</span>`;
         } else if (v.hit === false) {
-          return `<span class="px-2 py-0.5 rounded font-mono font-black text-xs bg-rose-950 text-rose-300 border border-rose-500/60" title="Period: ${v.period} | Result: ${v.number} ${v.actual}">L</span>`;
+          return `<span class="px-2 py-0.5 rounded font-mono font-black text-xs bg-rose-950 text-rose-300 border border-rose-500/60 shadow-sm" title="Period: ${v.period} | Result: ${v.number} ${v.actual}">✗ L</span>`;
+        } else {
+          return `<span class="px-2 py-0.5 rounded font-mono font-black text-xs bg-slate-900 text-slate-400 border border-slate-700 shadow-sm" title="Period: ${v.period} | Filtered: ${v.number} ${v.actual}">⏸ N</span>`;
         }
-        return "";
       }).join("");
     } else {
       streakStrip.innerHTML = `<span class="text-[11px] text-slate-500">Awaiting round verification...</span>`;
