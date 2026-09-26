@@ -36,7 +36,7 @@ class PredictionEngine:
             return f"{prefix}{str(next_val).zfill(len(digits))}"
         return str(len(history) + 1)
 
-    def predict(self, history: List[Dict[str, Any]], sniper_mode: bool = True) -> Dict[str, Any]:
+    def predict(self, history: List[Dict[str, Any]]) -> Dict[str, Any]:
         if not history:
             return {
                 "status": "empty",
@@ -75,80 +75,21 @@ class PredictionEngine:
         total_big_score = (s_markov * w_markov) + (s_patterns * w_patterns) + (s_stats * w_stats)
         total_small_score = 1.0 - total_big_score
 
-        # Check for model conflict and streak exhaustion
-        m_sig = markov_res.get("signal", "Neutral")
-        p_sig = patterns_res.get("signal", "Neutral")
-        s_sig = stats_res.get("signal", "Neutral")
-
-        is_conflict = False
-        if m_sig in ["Big", "Small"] and p_sig in ["Big", "Small"] and m_sig != p_sig:
-            is_conflict = True
-
-        streak_info = patterns_res.get("current_streak", {})
-        streak_len = streak_info.get("count", streak_info.get("length", 1))
-
+        # Determine Consensus Signal & Confidence
         diff = total_big_score - 0.5
-        raw_outcome = "BIG" if total_big_score > 0.5 else ("SMALL" if total_big_score < 0.5 else "NEUTRAL / SKIP")
-        raw_confidence = min(94.0, max(50.0, round(max(total_big_score, total_small_score) * 100, 1)))
-
-        # 3. Apply Empirical Calibration from User Tested Notes (790 Records)
-        calibration = self.calibrator.calibrate(raw_confidence, raw_outcome, is_conflict=is_conflict, streak_len=streak_len)
-
-        # 4. 7/10 SNIPER TARGET FILTER
-        # Removes the exact errors identified in the user's test records:
-        # - Error 1: 50.0% - 53.9% noise coin-flips (52.6% win rate -> 88 losses)
-        # - Error 2: 54.0% - 57.4% transition trap (45.7% win rate -> 127 losses)
-        # - Error 3: Conflicting model signals
-        # - Error 4: Dragon streak exhaustion (streak >= 5)
-        # - Error 5: 2-pair pivot fork (streak == 2) where random flips cause loss clusters
-        calib_status = calibration.get("status", "NORMAL")
-        calib_wr = calibration.get("calibrated_win_rate", 50.0)
-        zone = calibration.get("zone", "")
-
-        rolling_stats = training_info.get("rolling_10", {})
-        rolling_wr = rolling_stats.get("win_rate", 50.0)
-        rolling_count = rolling_stats.get("total", 0)
-        defense_mode = (rolling_count >= 3 and rolling_wr < 70.0)
-
-        skip_bet = False
-        skip_reason = ""
-
-        if is_conflict:
-            skip_bet = True
-            skip_reason = "Model disagreement (Markov vs Pattern conflict)"
-        elif streak_len >= 4:
-            skip_bet = True
-            skip_reason = f"Dragon exhaustion trap ({streak_len}x streak snap risk)"
-        elif streak_len == 2 and p_sig == "Neutral":
-            skip_bet = True
-            skip_reason = f"Double {streak_info.get('type', '')} pair fork (50/50 pivot)"
-        elif raw_confidence < 57.5:
-            skip_bet = True
-            skip_reason = f"Confidence {raw_confidence}% below 57.5% sniper threshold"
-        elif calib_status in ["SKIP_RECOMMENDED", "TRAP_DETECTED", "LOW_EDGE_NOISE", "TRANSITION_RISK", "OVEREXTENDED"]:
-            skip_bet = True
-            skip_reason = f"Calibration filter: {calib_status}"
-        elif defense_mode and raw_confidence < 62.0:
-            skip_bet = True
-            skip_reason = f"Defense Mode Active: 7/10 Target recovery requires >= 62% conviction"
-
-        if sniper_mode:
-            if skip_bet or raw_outcome == "NEUTRAL / SKIP":
-                outcome = "NEUTRAL / SKIP"
-                confidence = 50.0
-                sniper_status = "WAITING_FOR_A_PLUS"
-            else:
-                outcome = raw_outcome
-                confidence = raw_confidence
-                sniper_status = "SNIPER_CONFIRMED"
+        # Broaden neutral margin (48.0% - 52.0%) to prevent forcing coin-flips
+        if abs(diff) < 0.020:
+            outcome = "NEUTRAL / SKIP"
+            confidence = 50.0
+        elif total_big_score > 0.5:
+            outcome = "BIG"
+            confidence = min(94.0, max(52.0, round(total_big_score * 100, 1)))
         else:
-            if abs(diff) < 0.020:
-                outcome = "NEUTRAL / SKIP"
-                confidence = 50.0
-            else:
-                outcome = raw_outcome
-                confidence = raw_confidence
-            sniper_status = "STANDARD"
+            outcome = "SMALL"
+            confidence = min(94.0, max(52.0, round(total_small_score * 100, 1)))
+
+        # 3. Apply Empirical Calibration from User Tested Notes
+        calibration = self.calibrator.calibrate(confidence, outcome)
 
         # Target Numbers & Color inference
         hot_nums = stats_res.get("hot_numbers", [])
@@ -185,23 +126,30 @@ class PredictionEngine:
 
         predicted_color = max(color_vote.items(), key=lambda x: x[1])[0]
 
-        # Staking advice based on Sniper 7/10 Filter & Calibration
-        if outcome == "NEUTRAL / SKIP":
-            stake_level = "⏸️ 7/10 Filter: WAIT / SKIP (N)"
-            stake_badge = "secondary"
-            if is_conflict:
-                stake_action = "MODELS DISAGREE: Markov & Pattern point in opposing directions. Skip this round to protect your 70% win-rate target."
-            elif streak_len >= 5:
-                stake_action = "🚨 DRAGON SNAP TRAP: 5+ streak reaching exhaustion point. Skip continuation to avoid mean-reversion loss."
-            elif raw_confidence < 57.5:
-                stake_action = f"FILTERED NOISE ({raw_confidence}%): 790 tests prove 51%-57% has ~45%-52% coin-flip rate. Filtered out to guarantee 7/10 wins."
-            else:
-                stake_action = "DO NOT BET: Market in transition. Waiting for confirmed 7/10 Sniper Entry."
-        else:
-            stake_level = f"🎯 7/10 SNIPER ENTRY ({calib_wr}% Calibrated)"
-            stake_badge = "success"
-            stake_action = f"🏆 A+ HIGH CONVICTION SETUP: Models unanimous! Empirically verified {calib_wr}% win rate. Standard Level 1 Entry."
+        # Risk & Staking advice based on empirical calibration + online hit rate
+        zone = calibration.get("zone", "")
+        calib_wr = calibration.get("calibrated_win_rate", 50.0)
 
+        if zone == "REVERSAL_TRAP":
+            stake_level = "🚨 Reversal Trap (>60%)"
+            stake_badge = "danger"
+            stake_action = f"TRAP ALERT: User tests show >60% signals have a 75% failure rate! Naive streak is overextended. Level 1 only or SKIP."
+        elif zone == "NEUTRAL_SKIP":
+            stake_level = "⏸️ Neutral / Skip (N)"
+            stake_badge = "secondary"
+            stake_action = "DO NOT BET: Real data proves N (disagreement) leads to losses (N/L). Wait for aligned signal."
+        elif zone == "PRIME_WINDOW":
+            stake_level = f"🏆 Prime Sweet-Spot ({calib_wr}% Win Rate)"
+            stake_badge = "success"
+            stake_action = f"TOP ACCURACY TIER: {calib_wr}% verified win rate in user tracked notes! Genuine trend momentum without exhaustion."
+        elif zone == "EXHAUSTION_TRAP":
+            stake_level = "⚠️ Exhaustion Warning (58-60%)"
+            stake_badge = "warning"
+            stake_action = f"Exhaustion Zone: Accuracy drops to {calib_wr}%. Long streaks often reverse here. Do not increase stake."
+        else:
+            stake_level = f"Low Edge / Coin-Flip ({calib_wr}%)"
+            stake_badge = "warning"
+            stake_action = f"Minimal edge ({calib_wr}% historical accuracy). Bet lowest base unit or observe."
 
         last_record = history[-1] if history else {}
         last_period = str(last_record.get("period", "0"))
@@ -214,11 +162,6 @@ class PredictionEngine:
             "prediction": {
                 "outcome": outcome,
                 "confidence": confidence,
-                "sniper_status": sniper_status,
-                "raw_outcome": raw_outcome,
-                "raw_confidence": raw_confidence,
-                "is_conflict": is_conflict,
-                "streak_length": streak_len,
                 "calibrated_win_rate": calib_wr,
                 "calibration_zone": zone,
                 "calibration_status": calibration.get("status", "NORMAL"),

@@ -1,132 +1,94 @@
 {
-  "trained_samples": 92,
+  "trained_samples": 382,
   "evaluation_window": 35,
   "weights": {
-    "markov": 0.193,
-    "patterns": 0.192,
-    "statistics": 0.615
+    "markov": 0.253,
+    "patterns": 0.309,
+    "statistics": 0.438
   },
   "accuracy": {
-    "consensus": 50.0,
-    "markov": 44.8,
-    "patterns": 33.3,
-    "statistics": 80.0
-  },
-  "rolling_10": {
-    "wins": 1,
-    "total": 2,
-    "win_rate": 50.0,
-    "target_wins": 7,
-    "target_met": null,
-    "display": "1/2 Wins"
+    "consensus": 51.4,
+    "markov": 54.3,
+    "patterns": 60.0,
+    "statistics": 71.4
   },
   "last_verification": {
-    "period": "20260924100051210",
+    "period": "20260926100051933",
     "number": 1,
     "actual": "SMALL",
-    "predicted": "NEUTRAL",
-    "hit": null
+    "predicted": "BIG",
+    "hit": false
   },
   "recent_verifications": [
     {
-      "period": "20260924100051199",
-      "number": 6,
-      "actual": "BIG",
-      "predicted": "NEUTRAL",
-      "hit": null
+      "period": "20260926100051924",
+      "number": 3,
+      "actual": "SMALL",
+      "predicted": "BIG",
+      "hit": false
     },
     {
-      "period": "20260924100051200",
+      "period": "20260926100051925",
       "number": 8,
       "actual": "BIG",
-      "predicted": "NEUTRAL",
-      "hit": null
+      "predicted": "BIG",
+      "hit": true
     },
     {
-      "period": "20260924100051201",
-      "number": 7,
-      "actual": "BIG",
-      "predicted": "NEUTRAL",
-      "hit": null
-    },
-    {
-      "period": "20260924100051202",
-      "number": 3,
-      "actual": "SMALL",
-      "predicted": "NEUTRAL",
-      "hit": null
-    },
-    {
-      "period": "20260924100051203",
-      "number": 6,
-      "actual": "BIG",
-      "predicted": "NEUTRAL",
-      "hit": null
-    },
-    {
-      "period": "20260924100051204",
-      "number": 6,
-      "actual": "BIG",
-      "predicted": "NEUTRAL",
-      "hit": null
-    },
-    {
-      "period": "20260924100051205",
-      "number": 0,
-      "actual": "SMALL",
-      "predicted": "NEUTRAL",
-      "hit": null
-    },
-    {
-      "period": "20260924100051206",
-      "number": 3,
-      "actual": "SMALL",
-      "predicted": "NEUTRAL",
-      "hit": null
-    },
-    {
-      "period": "20260924100051207",
-      "number": 7,
-      "actual": "BIG",
-      "predicted": "NEUTRAL",
-      "hit": null
-    },
-    {
-      "period": "20260924100051208",
-      "number": 5,
-      "actual": "BIG",
-      "predicted": "NEUTRAL",
-      "hit": null
-    },
-    {
-      "period": "20260924100051209",
-      "number": 1,
-      "actual": "SMALL",
-      "predicted": "NEUTRAL",
-      "hit": null
-    },
-    {
-      "period": "20260924100051210",
-      "number": 1,
-      "actual": "SMALL",
-      "predicted": "NEUTRAL",
-      "hit": null
-    }
-  ],
-  "active_verifications": [
-    {
-      "period": "20260924100051183",
+      "period": "20260926100051926",
       "number": 7,
       "actual": "BIG",
       "predicted": "SMALL",
       "hit": false
     },
     {
-      "period": "20260924100051185",
-      "number": 2,
+      "period": "20260926100051927",
+      "number": 8,
+      "actual": "BIG",
+      "predicted": "SMALL",
+      "hit": false
+    },
+    {
+      "period": "20260926100051928",
+      "number": 5,
+      "actual": "BIG",
+      "predicted": "SMALL",
+      "hit": false
+    },
+    {
+      "period": "20260926100051929",
+      "number": 0,
       "actual": "SMALL",
       "predicted": "SMALL",
       "hit": true
+    },
+    {
+      "period": "20260926100051930",
+      "number": 4,
+      "actual": "SMALL",
+      "predicted": "SMALL",
+      "hit": true
+    },
+    {
+      "period": "20260926100051931",
+      "number": 8,
+      "actual": "BIG",
+      "predicted": "BIG",
+      "hit": true
+    },
+    {
+      "period": "20260926100051932",
+      "number": 3,
+      "actual": "SMALL",
+      "predicted": "BIG",
+      "hit": false
+    },
+    {
+      "period": "20260926100051933",
+      "number": 1,
+      "actual": "SMALL",
+      "predicted": "BIG",
+      "hit": false
     }
   ]
 }

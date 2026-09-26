@@ -285,17 +285,16 @@ function renderDashboard(data) {
 
   if (prediction) {
     const outcome = prediction.outcome;
-    if (outcome === "BIG") {
-      liveForecast.innerText = "BIG";
-      liveForecast.className = "text-6xl font-black tracking-widest py-1 transition-all duration-300 badge-big";
-    } else if (outcome === "SMALL") {
-      liveForecast.innerText = "SMALL";
-      liveForecast.className = "text-6xl font-black tracking-widest py-1 transition-all duration-300 badge-small";
-    } else {
-      liveForecast.innerText = "WAIT / SKIP";
-      liveForecast.className = "text-4xl sm:text-5xl font-black tracking-wide py-2 transition-all duration-300 badge-neutral";
-    }
+    liveForecast.innerText = outcome;
+    liveForecast.className = "text-6xl font-black tracking-widest py-1 transition-all duration-300";
 
+    if (outcome === "BIG") {
+      liveForecast.classList.add("badge-big");
+    } else if (outcome === "SMALL") {
+      liveForecast.classList.add("badge-small");
+    } else {
+      liveForecast.classList.add("badge-neutral");
+    }
 
     liveConfPercent.innerText = `${prediction.confidence}%`;
     liveConfBar.style.width = `${prediction.confidence}%`;
@@ -359,7 +358,7 @@ function renderDashboard(data) {
     }
   }
 
-  // Recent prediction streak (W / L / N badges)
+  // Recent prediction streak (W / L badges)
   const streakStrip = document.getElementById("predictionStreakStrip");
   const winRateText = document.getElementById("recentWinRateText");
   const recVerifs = training.recent_verifications || [];
@@ -367,12 +366,11 @@ function renderDashboard(data) {
     if (recVerifs.length > 0) {
       streakStrip.innerHTML = recVerifs.map(v => {
         if (v.hit === true) {
-          return `<span class="px-2 py-0.5 rounded font-mono font-black text-xs bg-emerald-950 text-emerald-300 border border-emerald-500/60 shadow-sm" title="Period: ${v.period} | Result: ${v.number} ${v.actual}">✓ W</span>`;
+          return `<span class="px-2 py-0.5 rounded font-mono font-black text-xs bg-emerald-950 text-emerald-300 border border-emerald-500/60" title="Period: ${v.period} | Result: ${v.number} ${v.actual}">W</span>`;
         } else if (v.hit === false) {
-          return `<span class="px-2 py-0.5 rounded font-mono font-black text-xs bg-rose-950 text-rose-300 border border-rose-500/60 shadow-sm" title="Period: ${v.period} | Result: ${v.number} ${v.actual}">✗ L</span>`;
-        } else {
-          return `<span class="px-2 py-0.5 rounded font-mono font-black text-xs bg-slate-900 text-slate-400 border border-slate-700 shadow-sm" title="Period: ${v.period} | Filtered: ${v.number} ${v.actual}">⏸ N</span>`;
+          return `<span class="px-2 py-0.5 rounded font-mono font-black text-xs bg-rose-950 text-rose-300 border border-rose-500/60" title="Period: ${v.period} | Result: ${v.number} ${v.actual}">L</span>`;
         }
+        return "";
       }).join("");
     } else {
       streakStrip.innerHTML = `<span class="text-[11px] text-slate-500">Awaiting round verification...</span>`;
@@ -382,30 +380,6 @@ function renderDashboard(data) {
   if (winRateText && training.accuracy) {
     const consAcc = training.accuracy.consensus || 50;
     winRateText.innerText = `${consAcc}% Win Rate`;
-  }
-
-  // 7/10 Target Monitor HUD (Rolling 10 periods)
-  const rolling10 = training.rolling_10 || {};
-  const elTargetBadge = document.getElementById("target710ScoreBadge");
-  const elTargetBar = document.getElementById("target710ProgressBar");
-  const elTargetText = document.getElementById("target710PercentText");
-
-  if (elTargetBadge && rolling10.total !== undefined) {
-    elTargetBadge.innerText = rolling10.display || "0/10 Wins";
-    if (rolling10.wins >= 7) {
-      elTargetBadge.className = "font-mono text-xs px-2.5 py-0.5 rounded-full font-black bg-emerald-950 text-emerald-300 border border-emerald-500 shadow animate-pulse";
-    } else if (rolling10.wins >= 5) {
-      elTargetBadge.className = "font-mono text-xs px-2.5 py-0.5 rounded-full font-black bg-amber-950 text-amber-300 border border-amber-600 shadow";
-    } else {
-      elTargetBadge.className = "font-mono text-xs px-2.5 py-0.5 rounded-full font-black bg-rose-950 text-rose-300 border border-rose-600 shadow";
-    }
-  }
-
-  if (elTargetBar && rolling10.win_rate !== undefined) {
-    elTargetBar.style.width = `${Math.min(100, Math.max(10, rolling10.win_rate))}%`;
-  }
-  if (elTargetText && rolling10.win_rate !== undefined) {
-    elTargetText.innerText = `${rolling10.win_rate}% Win Rate (Target: 70%)`;
   }
 
   // Dynamic self-trained weights
