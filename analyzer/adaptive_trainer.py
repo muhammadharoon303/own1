@@ -35,11 +35,11 @@ class AdaptiveTrainer:
             print(f"Error saving weights: {e}")
 
     def evaluate_and_train(self, history: List[Dict[str, Any]],
-                           markov_analyzer, pattern_analyzer, stats_analyzer) -> Dict[str, Any]:
+                           markov_analyzer, pattern_analyzer, stats_analyzer, digit_predictor=None) -> Dict[str, Any]:
         """
         Performs walk-forward training across historical draws:
         1. Tests each sub-model on previous rounds.
-        2. Calculates hit-rate (accuracy) of Markov, Pattern, and Stats over recent 30 rounds.
+        2. Calculates hit-rate (accuracy) of Markov, Pattern, Stats, and Target Digits.
         3. Dynamically re-weights the models proportional to their actual recent success!
         """
         n = len(history)
@@ -47,7 +47,7 @@ class AdaptiveTrainer:
             return {
                 "trained_samples": n,
                 "weights": self.load_weights(),
-                "accuracy": {"overall": 50.0, "markov": 50.0, "patterns": 50.0, "statistics": 50.0},
+                "accuracy": {"overall": 50.0, "markov": 50.0, "patterns": 50.0, "statistics": 50.0, "digit_accuracy": 50.0},
                 "last_verification": None,
                 "recent_history_eval": []
             }
@@ -56,8 +56,8 @@ class AdaptiveTrainer:
         eval_window = min(35, n - 2)
         start_idx = n - eval_window
 
-        model_hits = {"markov": 0, "patterns": 0, "statistics": 0, "consensus": 0}
-        model_valid = {"markov": 0, "patterns": 0, "statistics": 0, "consensus": 0}
+        model_hits = {"markov": 0, "patterns": 0, "statistics": 0, "consensus": 0, "digit": 0, "primary": 0}
+        model_valid = {"markov": 0, "patterns": 0, "statistics": 0, "consensus": 0, "digit": 0, "primary": 0}
         eval_details = []
 
         current_weights = self.load_weights()
@@ -107,12 +107,45 @@ class AdaptiveTrainer:
             else:
                 hit = None
 
+            # Target digit prediction evaluation
+            top_nums = []
+            prim_num = None
+            digit_hit = None
+            primary_hit = None
+            if digit_predictor and cons_pred != "NEUTRAL":
+                try:
+                    d_res = digit_predictor.predict_target_numbers(sub_hist, cons_pred, top_k=3)
+                    top_nums = d_res.get("top_numbers", [])
+                    prim_num = d_res.get("primary_number")
+                    act_num_raw = actual_next.get("number")
+                    if act_num_raw is not None and str(act_num_raw).isdigit():
+                        act_num = int(act_num_raw)
+                        model_valid["digit"] += 1
+                        if prim_num is not None:
+                            model_valid["primary"] += 1
+                        if act_num in top_nums:
+                            model_hits["digit"] += 1
+                            digit_hit = True
+                        else:
+                            digit_hit = False
+                        if act_num == prim_num:
+                            model_hits["primary"] += 1
+                            primary_hit = True
+                        else:
+                            primary_hit = False
+                except Exception:
+                    pass
+
             eval_details.append({
                 "period": actual_next.get("period"),
                 "number": actual_next.get("number"),
                 "actual": actual_outcome,
                 "predicted": cons_pred,
-                "hit": hit
+                "hit": hit,
+                "predicted_top_numbers": top_nums,
+                "primary_number": prim_num,
+                "digit_hit": digit_hit,
+                "primary_hit": primary_hit
             })
 
         # Calculate accuracy percentages
@@ -125,6 +158,8 @@ class AdaptiveTrainer:
         acc_patterns = get_acc("patterns")
         acc_stats = get_acc("statistics")
         acc_consensus = get_acc("consensus")
+        acc_digit = get_acc("digit")
+        acc_primary = get_acc("primary")
 
         # ADAPTIVE WEIGHT OPTIMIZATION:
         # Give higher weight to models with higher recent hit-rate using Softmax / Normalized power
@@ -160,7 +195,9 @@ class AdaptiveTrainer:
                 "consensus": acc_consensus,
                 "markov": acc_markov,
                 "patterns": acc_patterns,
-                "statistics": acc_stats
+                "statistics": acc_stats,
+                "target_numbers": acc_digit,
+                "primary_target": acc_primary
             },
             "last_verification": last_eval,
             "recent_verifications": eval_details[-10:]  # last 10 verification badges

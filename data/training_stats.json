@@ -1,94 +1,184 @@
 {
-  "trained_samples": 199,
+  "trained_samples": 141,
   "evaluation_window": 35,
   "weights": {
-    "markov": 0.242,
-    "patterns": 0.286,
-    "statistics": 0.472
+    "markov": 0.398,
+    "patterns": 0.259,
+    "statistics": 0.342
   },
   "accuracy": {
-    "consensus": 51.4,
-    "markov": 44.0,
-    "patterns": 48.6,
-    "statistics": 62.5
+    "consensus": 42.9,
+    "markov": 57.1,
+    "patterns": 40.0,
+    "statistics": 50.0,
+    "target_numbers": 25.7,
+    "primary_target": 2.9
   },
   "last_verification": {
-    "period": "20260926100011076",
-    "number": 9,
-    "actual": "BIG",
+    "period": "20260926100011120",
+    "number": 2,
+    "actual": "SMALL",
     "predicted": "SMALL",
-    "hit": false
+    "hit": true,
+    "predicted_top_numbers": [
+      1,
+      3,
+      2
+    ],
+    "primary_number": 1,
+    "digit_hit": true,
+    "primary_hit": false
   },
   "recent_verifications": [
     {
-      "period": "20260926100011067",
-      "number": 7,
-      "actual": "BIG",
-      "predicted": "BIG",
-      "hit": true
-    },
-    {
-      "period": "20260926100011068",
-      "number": 7,
-      "actual": "BIG",
-      "predicted": "SMALL",
-      "hit": false
-    },
-    {
-      "period": "20260926100011069",
-      "number": 6,
-      "actual": "BIG",
-      "predicted": "BIG",
-      "hit": true
-    },
-    {
-      "period": "20260926100011070",
+      "period": "20260926100052228",
       "number": 8,
       "actual": "BIG",
       "predicted": "SMALL",
-      "hit": false
+      "hit": false,
+      "predicted_top_numbers": [
+        1,
+        0,
+        2
+      ],
+      "primary_number": 1,
+      "digit_hit": false,
+      "primary_hit": false
     },
     {
-      "period": "20260926100011071",
+      "period": "20260926100052229",
+      "number": 1,
+      "actual": "SMALL",
+      "predicted": "BIG",
+      "hit": false,
+      "predicted_top_numbers": [
+        9,
+        5,
+        6
+      ],
+      "primary_number": 9,
+      "digit_hit": false,
+      "primary_hit": false
+    },
+    {
+      "period": "20260926100011113",
+      "number": 0,
+      "actual": "SMALL",
+      "predicted": "SMALL",
+      "hit": true,
+      "predicted_top_numbers": [
+        2,
+        0,
+        4
+      ],
+      "primary_number": 2,
+      "digit_hit": true,
+      "primary_hit": false
+    },
+    {
+      "period": "20260926100011114",
+      "number": 2,
+      "actual": "SMALL",
+      "predicted": "SMALL",
+      "hit": true,
+      "predicted_top_numbers": [
+        1,
+        0,
+        2
+      ],
+      "primary_number": 1,
+      "digit_hit": true,
+      "primary_hit": false
+    },
+    {
+      "period": "20260926100011115",
+      "number": 8,
+      "actual": "BIG",
+      "predicted": "SMALL",
+      "hit": false,
+      "predicted_top_numbers": [
+        0,
+        4,
+        2
+      ],
+      "primary_number": 0,
+      "digit_hit": false,
+      "primary_hit": false
+    },
+    {
+      "period": "20260926100011116",
+      "number": 0,
+      "actual": "SMALL",
+      "predicted": "BIG",
+      "hit": false,
+      "predicted_top_numbers": [
+        9,
+        5,
+        6
+      ],
+      "primary_number": 9,
+      "digit_hit": false,
+      "primary_hit": false
+    },
+    {
+      "period": "20260926100011117",
+      "number": 2,
+      "actual": "SMALL",
+      "predicted": "SMALL",
+      "hit": true,
+      "predicted_top_numbers": [
+        1,
+        0,
+        2
+      ],
+      "primary_number": 1,
+      "digit_hit": true,
+      "primary_hit": false
+    },
+    {
+      "period": "20260926100011118",
       "number": 9,
       "actual": "BIG",
       "predicted": "SMALL",
-      "hit": false
+      "hit": false,
+      "predicted_top_numbers": [
+        0,
+        4,
+        2
+      ],
+      "primary_number": 0,
+      "digit_hit": false,
+      "primary_hit": false
     },
     {
-      "period": "20260926100011072",
+      "period": "20260926100011119",
       "number": 5,
       "actual": "BIG",
       "predicted": "SMALL",
-      "hit": false
+      "hit": false,
+      "predicted_top_numbers": [
+        4,
+        1,
+        0
+      ],
+      "primary_number": 4,
+      "digit_hit": false,
+      "primary_hit": false
     },
     {
-      "period": "20260926100011073",
-      "number": 0,
+      "period": "20260926100011120",
+      "number": 2,
       "actual": "SMALL",
       "predicted": "SMALL",
-      "hit": true
-    },
-    {
-      "period": "20260926100011074",
-      "number": 0,
-      "actual": "SMALL",
-      "predicted": "SMALL",
-      "hit": true
-    },
-    {
-      "period": "20260926100011075",
-      "number": 1,
-      "actual": "SMALL",
-      "predicted": "SMALL",
-      "hit": true
-    },
-    {
-      "period": "20260926100011076",
-      "number": 9,
-      "actual": "BIG",
-      "predicted": "SMALL",
-      "hit": false
+      "hit": true,
+      "predicted_top_numbers": [
+        1,
+        3,
+        2
+      ],
+      "primary_number": 1,
+      "digit_hit": true,
+      "primary_hit": false
     }
   ]
 }

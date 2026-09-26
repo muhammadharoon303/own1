@@ -5,7 +5,12 @@ Combines:
 2. Recency-weighted 1st and 2nd order conditional digit transition matrices.
 3. Parity (Even/Odd) and Color (Red/Green/Violet) Markov likelihood filters.
 4. Harmonic Cycle & Gap Return Distribution.
-Generates dynamically updating Primary, Secondary, and Cover numbers with exact probabilities.
+Generates:
+- Primary Gold Pick (Single highest-conviction number with high edge)
+- Secondary & Cover targets
+- Full 5-number probability spectrum
+- Cold/Avoid digits to eliminate
+- Special Badges: Mirror, Adjacent Neighbor, and Velocity Hot
 """
 from typing import List, Dict, Any
 from collections import Counter, defaultdict
@@ -34,6 +39,8 @@ class DynamicDigitPredictor:
                 "secondary_number": default_nums[1],
                 "cover_number": default_nums[2],
                 "probabilities": {str(n): 33.3 for n in default_nums},
+                "all_group_probabilities": {str(n): 20.0 for n in (range(5, 10) if predicted_size == "BIG" else range(5))},
+                "cold_avoid_numbers": [6, 9] if predicted_size == "BIG" else [0, 4],
                 "predicted_color": "Green" if default_nums[0] in [1, 3, 7, 9] else "Red",
                 "explanation": "Default baseline targets (awaiting history)."
             }
@@ -52,6 +59,8 @@ class DynamicDigitPredictor:
                 "secondary_number": default_nums[1],
                 "cover_number": default_nums[2],
                 "probabilities": {str(n): 33.3 for n in default_nums},
+                "all_group_probabilities": {str(n): 20.0 for n in (range(5, 10) if predicted_size == "BIG" else range(5))},
+                "cold_avoid_numbers": [6, 9] if predicted_size == "BIG" else [0, 4],
                 "predicted_color": "Green",
                 "explanation": "Insufficient history for dynamic transitions."
             }
@@ -74,11 +83,9 @@ class DynamicDigitPredictor:
         for k in range(n - 1):
             prev_s = sizes[k]
             next_s = sizes[k + 1]
-            # Match current regime: was it a switch or continuation?
             if (prev_s != next_s) == is_size_switch:
                 delta = (numbers[k + 1] - numbers[k]) % 10
-                # Exponential recency weighting: recent draws count 3.0x
-                rec_w = 1.0 + (k / max(1, n)) * 2.5
+                rec_w = 1.0 + (k / max(1, n)) * 3.0
                 jump_weights[delta] += rec_w
 
         tot_jumps = sum(jump_weights.values()) or 1.0
@@ -87,13 +94,13 @@ class DynamicDigitPredictor:
         t1_weights = Counter()
         for k in range(n - 1):
             if numbers[k] == last_num:
-                rec_w = 1.0 + (k / max(1, n)) * 3.0
+                rec_w = 1.0 + (k / max(1, n)) * 3.5
                 t1_weights[numbers[k + 1]] += rec_w
 
         t2_weights = Counter()
         for k in range(n - 2):
             if numbers[k] == prev_num and numbers[k + 1] == last_num:
-                rec_w = 1.5 + (k / max(1, n)) * 3.5
+                rec_w = 1.5 + (k / max(1, n)) * 4.0
                 t2_weights[numbers[k + 2]] += rec_w
 
         # 4. Parity (Even / Odd) Markov Likelihood
@@ -125,56 +132,61 @@ class DynamicDigitPredictor:
         for d in candidate_pool:
             delta = (d - last_num) % 10
 
-            # Component A: Conditioned Jump probability
+            # Jump likelihood
             p_jump = jump_weights.get(delta, 0.4) / tot_jumps
 
-            # Component B: 1st & 2nd Order Conditional Transitions
+            # 1st & 2nd Order Transitions
             s_t1 = t1_weights.get(d, 0.0)
             s_t2 = t2_weights.get(d, 0.0)
 
-            # Component C: Parity Likelihood
+            # Parity matching
             parity_prob = p_even_ratio if d % 2 == 0 else (1.0 - p_even_ratio)
 
-            # Component D: Harmonic Cycle Gap
+            # Harmonic Cycle Gap
             gap = gaps.get(d, 10)
             if 3 <= gap <= 10:
-                cycle_score = 1.6  # prime return window
+                cycle_score = 1.8  # prime return window
             elif gap > 15:
-                cycle_score = 1.3  # overdue pull
+                cycle_score = 1.4  # overdue pull
             elif gap <= 1:
                 cycle_score = 0.5  # cooldown
             else:
                 cycle_score = 1.0
 
-            # Component E: Mirror / Polar Offset
-            mirror_bonus = 3.0 if (is_size_switch and d == mirror_digit) else 0.0
-            adjacent_bonus = 1.5 if (not is_size_switch and delta in [1, 2, 8, 9]) else 0.0
+            # Mirror & Adjacent Offsets
+            mirror_bonus = 3.5 if (is_size_switch and d == mirror_digit) else 0.0
+            adjacent_bonus = 2.0 if (not is_size_switch and delta in [1, 2, 8, 9]) else 0.0
 
-            # Component F: Rolling Velocity
+            # Rolling Velocity
             s_roll = roll_counts.get(d, 0)
 
             total_score = (
-                (p_jump * 32.0)
-                + (s_t1 * 3.0)
-                + (s_t2 * 2.5)
+                (p_jump * 34.0)
+                + (s_t1 * 3.5)
+                + (s_t2 * 3.0)
                 + (parity_prob * 3.5)
-                + (cycle_score * 2.0)
-                + (s_roll * 1.5)
+                + (cycle_score * 2.2)
+                + (s_roll * 1.8)
                 + mirror_bonus
                 + adjacent_bonus
             )
             raw_scores[d] = total_score
 
-        # 8. Normalize Top Scores into Probabilities
+        # 8. Sort all candidate digits
         ranked = sorted(raw_scores.items(), key=lambda x: x[1], reverse=True)
         top_digits = [d for d, s in ranked[:top_k]]
         primary = top_digits[0] if top_digits else (7 if predicted_size == "BIG" else 2)
         secondary = top_digits[1] if len(top_digits) > 1 else None
         cover = top_digits[2] if len(top_digits) > 2 else None
+        cold_avoid = [d for d, s in ranked[top_k:]]
 
-        # Convert top scores to relative percentages
+        # Convert top 3 scores to relative percentages
         top_score_sum = sum(s for d, s in ranked[:top_k]) or 1.0
         probabilities = {str(d): round((s / top_score_sum) * 100, 1) for d, s in ranked[:top_k]}
+
+        # Full 5-candidate spectrum probabilities
+        all_score_sum = sum(s for d, s in ranked) or 1.0
+        all_group_probabilities = {str(d): round((s / all_score_sum) * 100, 1) for d, s in ranked}
 
         # Target Color determination
         color_votes = {"Red": 0, "Green": 0, "Violet": 0}
@@ -194,8 +206,11 @@ class DynamicDigitPredictor:
             "primary_number": primary,
             "secondary_number": secondary,
             "cover_number": cover,
+            "cold_avoid_numbers": cold_avoid,
             "probabilities": probabilities,
+            "all_group_probabilities": all_group_probabilities,
             "predicted_color": predicted_color,
             "explanation": exp,
-            "last_drawn": last_num
+            "last_drawn": last_num,
+            "mirror_target": mirror_digit
         }

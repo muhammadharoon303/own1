@@ -324,6 +324,11 @@ function renderDashboard(data) {
       elDigitReason.title = prediction.digit_explanation || "";
     }
 
+    const elColdAvoid = document.getElementById("liveColdAvoid");
+    if (elColdAvoid && prediction.cold_avoid_numbers) {
+      elColdAvoid.innerText = prediction.cold_avoid_numbers.length > 0 ? prediction.cold_avoid_numbers.join(", ") : "None";
+    }
+
     // Color
     const color = prediction.predicted_color || "Red";
     let colorDot = "bg-rose-500";
@@ -365,12 +370,19 @@ function renderDashboard(data) {
   const lastEval = training.last_verification;
   if (lastVerifBox && lastVerifText) {
     if (lastEval && lastEval.hit !== null) {
+      let digitBadge = "";
+      if (lastEval.digit_hit === true) {
+        digitBadge = ` | 🎯 Number [${lastEval.number}] HIT!`;
+      } else if (lastEval.digit_hit === false) {
+        digitBadge = ` | Num: [${lastEval.number}]`;
+      }
+
       if (lastEval.hit === true) {
         lastVerifBox.className = "p-2.5 rounded-xl text-xs font-bold flex items-center justify-between bg-emerald-950/80 border border-emerald-500/60 text-emerald-300 shadow-sm";
-        lastVerifText.innerText = `🏆 WIN (Predicted ${lastEval.predicted}, Came ${lastEval.number} ${lastEval.actual})`;
+        lastVerifText.innerText = `🏆 WIN: ${lastEval.predicted} (Came ${lastEval.number} ${lastEval.actual})${digitBadge}`;
       } else {
         lastVerifBox.className = "p-2.5 rounded-xl text-xs font-bold flex items-center justify-between bg-rose-950/80 border border-rose-500/60 text-rose-300 shadow-sm";
-        lastVerifText.innerText = `❌ MISSED (Predicted ${lastEval.predicted}, Came ${lastEval.number} ${lastEval.actual})`;
+        lastVerifText.innerText = `❌ MISSED: ${lastEval.predicted} (Came ${lastEval.number} ${lastEval.actual})${digitBadge}`;
       }
     } else {
       lastVerifBox.className = "p-2.5 rounded-xl text-xs font-bold flex items-center justify-between bg-slate-900 border border-slate-800 text-slate-400";
@@ -380,6 +392,7 @@ function renderDashboard(data) {
 
   // Recent prediction streak (W / L badges)
   const streakStrip = document.getElementById("predictionStreakStrip");
+  const digitStreakStrip = document.getElementById("digitStreakStrip");
   const winRateText = document.getElementById("recentWinRateText");
   const recVerifs = training.recent_verifications || [];
   if (streakStrip) {
@@ -397,9 +410,37 @@ function renderDashboard(data) {
     }
   }
 
-  if (winRateText && training.accuracy) {
-    const consAcc = training.accuracy.consensus || 50;
+  // Target Number verification streak
+  if (digitStreakStrip) {
+    if (recVerifs.length > 0) {
+      digitStreakStrip.innerHTML = recVerifs.map(v => {
+        if (v.primary_hit === true) {
+          return `<span class="px-1.5 py-0.5 rounded font-mono font-bold text-[10px] bg-amber-950 text-amber-300 border border-amber-500/60" title="★ Exact Primary Match: ${v.number}">★${v.number}</span>`;
+        } else if (v.digit_hit === true) {
+          return `<span class="px-1.5 py-0.5 rounded font-mono font-bold text-[10px] bg-cyan-950 text-cyan-300 border border-cyan-500/60" title="Target Top-3 Match: ${v.number}">🎯${v.number}</span>`;
+        } else if (v.digit_hit === false) {
+          return `<span class="px-1.5 py-0.5 rounded font-mono font-normal text-[10px] bg-slate-900 text-slate-500 border border-slate-800" title="Missed target: Came ${v.number}">-${v.number}</span>`;
+        }
+        return "";
+      }).join("");
+    } else {
+      digitStreakStrip.innerHTML = `<span class="text-[10px] text-slate-500">Tracking target numbers...</span>`;
+    }
+  }
+
+  const accuracy = training.accuracy || {};
+  if (winRateText) {
+    const consAcc = accuracy.consensus || 50;
     winRateText.innerText = `${consAcc}% Win Rate`;
+  }
+
+  const elAccTargetNums = document.getElementById("accTargetNums");
+  const elAccPrimaryNum = document.getElementById("accPrimaryNum");
+  if (elAccTargetNums && accuracy.target_numbers !== undefined) {
+    elAccTargetNums.innerText = `${accuracy.target_numbers}%`;
+  }
+  if (elAccPrimaryNum && accuracy.primary_target !== undefined) {
+    elAccPrimaryNum.innerText = `${accuracy.primary_target}%`;
   }
 
   // Dynamic self-trained weights

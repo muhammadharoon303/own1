@@ -230,6 +230,10 @@
               <span>-</span>
             </div>
             <div id="liveDigitReason" class="text-[9px] text-slate-400 mt-1 font-mono leading-tight truncate" title="Dynamic digit transitions">Dynamic transition ready</div>
+            <div class="flex items-center justify-between text-[9px] font-mono text-slate-400 mt-1.5 pt-1 border-t border-slate-800/60">
+              <span>Avoid / Cold:</span>
+              <span id="liveColdAvoid" class="text-rose-400 font-bold">-</span>
+            </div>
           </div>
           <div class="p-3 rounded-xl bg-slate-900/80 border border-slate-800">
             <span class="text-[11px] text-slate-400 block font-semibold mb-1">Target Color</span>
@@ -277,6 +281,24 @@
           </div>
           <div id="predictionStreakStrip" class="flex space-x-1.5 overflow-x-auto py-1">
             <!-- W / L badges injected dynamically -->
+          </div>
+        </div>
+
+        <!-- Target Number Hit Rate Tracker -->
+        <div class="p-2 rounded-xl bg-slate-900/90 border border-slate-800 space-y-1.5">
+          <div class="flex items-center justify-between text-[11px] font-mono">
+            <span class="text-slate-400 font-bold flex items-center space-x-1">
+              <i data-lucide="target" class="w-3.5 h-3.5 text-cyan-400"></i>
+              <span>Target Numbers Hit Rate (Top-3):</span>
+            </span>
+            <span id="accTargetNums" class="font-extrabold text-cyan-300">--%</span>
+          </div>
+          <div class="flex items-center justify-between text-[10px] font-mono text-slate-400">
+            <span>Primary Pick (★ Single Match):</span>
+            <span id="accPrimaryNum" class="font-bold text-amber-400">--%</span>
+          </div>
+          <div id="digitStreakStrip" class="flex space-x-1.5 overflow-x-auto pt-0.5">
+            <!-- Dynamic Digit Hit badges -->
           </div>
         </div>
 

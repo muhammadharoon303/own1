@@ -49,7 +49,7 @@ class PredictionEngine:
 
         # 1. Run Online Adaptive Trainer: backtests recent rounds & optimizes model weights dynamically
         training_info = self.trainer.evaluate_and_train(
-            history, self.markov, self.patterns, self.stats
+            history, self.markov, self.patterns, self.stats, self.digit_predictor
         )
         weights = training_info.get("weights", {"markov": 0.40, "patterns": 0.40, "statistics": 0.20})
         w_markov = weights.get("markov", 0.40)
@@ -103,6 +103,8 @@ class PredictionEngine:
         predicted_color = digit_res["predicted_color"]
         digit_explanation = digit_res["explanation"]
 
+        cold_avoid_numbers = digit_res.get("cold_avoid_numbers", [])
+
         # Risk & Staking advice based on empirical calibration + online hit rate
         zone = calibration.get("zone", "")
         calib_wr = calibration.get("calibrated_win_rate", 50.0)
@@ -151,7 +153,9 @@ class PredictionEngine:
                 "primary_number": primary_number,
                 "secondary_number": secondary_number,
                 "cover_number": cover_number,
+                "cold_avoid_numbers": cold_avoid_numbers,
                 "digit_probabilities": digit_probabilities,
+                "all_group_probabilities": digit_res.get("all_group_probabilities", {}),
                 "digit_explanation": digit_explanation,
                 "predicted_color": predicted_color,
                 "risk_advice": {
