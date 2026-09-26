@@ -299,14 +299,23 @@ function renderDashboard(data) {
     liveConfPercent.innerText = `${prediction.confidence}%`;
     liveConfBar.style.width = `${prediction.confidence}%`;
 
-    // Dynamic Target Numbers & Primary Highlight
+    // Dynamic Target Numbers & Probabilities
     const primary = prediction.primary_number;
-    liveTopNums.innerHTML = (prediction.top_numbers || []).map(n => {
+    const probs = prediction.digit_probabilities || {};
+    liveTopNums.innerHTML = (prediction.top_numbers || []).map((n, idx) => {
       const isPrimary = (n === primary);
+      const prob = probs[String(n)] ? `${probs[String(n)]}%` : "";
       const cls = isPrimary
-        ? "px-2.5 py-0.5 rounded-lg bg-amber-950/90 text-amber-300 border border-amber-500 shadow-md font-black"
-        : "px-2.5 py-0.5 rounded-lg bg-cyan-950 border border-cyan-700/60 shadow";
-      return `<span class="${cls}" title="${isPrimary ? 'Primary Pick' : 'Target'}">${n}${isPrimary ? '<span class=\"text-[10px] text-amber-400 ml-0.5\">★</span>' : ''}</span>`;
+        ? "px-3 py-1 rounded-xl bg-amber-950 text-amber-300 border border-amber-500 shadow-lg font-black flex flex-col items-center"
+        : (idx === 1
+            ? "px-3 py-1 rounded-xl bg-slate-800 text-slate-200 border border-slate-600 shadow flex flex-col items-center"
+            : "px-3 py-1 rounded-xl bg-cyan-950 text-cyan-300 border border-cyan-800 shadow flex flex-col items-center");
+      return `
+        <div class="${cls}" title="${isPrimary ? 'Primary Recommended Pick' : 'Alternate Cover Target'}">
+          <span class="text-xl leading-tight">${n}${isPrimary ? '<span class=\"text-[11px] text-amber-400 ml-0.5\">★</span>' : ''}</span>
+          <span class="text-[9px] ${isPrimary ? 'text-amber-400 font-bold' : 'text-slate-400'} leading-tight mt-0.5">${prob || (idx === 0 ? 'Pick' : 'Cover')}</span>
+        </div>
+      `;
     }).join(" ") || "-";
 
     const elDigitReason = document.getElementById("liveDigitReason");

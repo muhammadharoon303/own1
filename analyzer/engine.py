@@ -97,6 +97,9 @@ class PredictionEngine:
         digit_res = self.digit_predictor.predict_target_numbers(history, outcome, top_k=3)
         top_numbers = digit_res["top_numbers"]
         primary_number = digit_res["primary_number"]
+        secondary_number = digit_res.get("secondary_number")
+        cover_number = digit_res.get("cover_number")
+        digit_probabilities = digit_res.get("probabilities", {})
         predicted_color = digit_res["predicted_color"]
         digit_explanation = digit_res["explanation"]
 
@@ -146,6 +149,9 @@ class PredictionEngine:
                 "p_small": round(total_small_score * 100, 1),
                 "top_numbers": top_numbers,
                 "primary_number": primary_number,
+                "secondary_number": secondary_number,
+                "cover_number": cover_number,
+                "digit_probabilities": digit_probabilities,
                 "digit_explanation": digit_explanation,
                 "predicted_color": predicted_color,
                 "risk_advice": {

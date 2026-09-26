@@ -1,93 +1,93 @@
 {
-  "trained_samples": 61,
+  "trained_samples": 199,
   "evaluation_window": 35,
   "weights": {
-    "markov": 0.352,
-    "patterns": 0.379,
-    "statistics": 0.268
+    "markov": 0.242,
+    "patterns": 0.286,
+    "statistics": 0.472
   },
   "accuracy": {
-    "consensus": 57.1,
-    "markov": 54.8,
-    "patterns": 57.1,
-    "statistics": 38.5
+    "consensus": 51.4,
+    "markov": 44.0,
+    "patterns": 48.6,
+    "statistics": 62.5
   },
   "last_verification": {
-    "period": "20260926100011049",
-    "number": 0,
-    "actual": "SMALL",
-    "predicted": "BIG",
+    "period": "20260926100011076",
+    "number": 9,
+    "actual": "BIG",
+    "predicted": "SMALL",
     "hit": false
   },
   "recent_verifications": [
     {
-      "period": "20260926100011040",
-      "number": 0,
-      "actual": "SMALL",
-      "predicted": "SMALL",
-      "hit": true
-    },
-    {
-      "period": "20260926100011041",
-      "number": 3,
-      "actual": "SMALL",
-      "predicted": "SMALL",
-      "hit": true
-    },
-    {
-      "period": "20260926100011042",
-      "number": 9,
+      "period": "20260926100011067",
+      "number": 7,
       "actual": "BIG",
       "predicted": "BIG",
       "hit": true
     },
     {
-      "period": "20260926100011043",
+      "period": "20260926100011068",
       "number": 7,
       "actual": "BIG",
       "predicted": "SMALL",
       "hit": false
     },
     {
-      "period": "20260926100011044",
+      "period": "20260926100011069",
+      "number": 6,
+      "actual": "BIG",
+      "predicted": "BIG",
+      "hit": true
+    },
+    {
+      "period": "20260926100011070",
       "number": 8,
       "actual": "BIG",
       "predicted": "SMALL",
       "hit": false
     },
     {
-      "period": "20260926100011045",
+      "period": "20260926100011071",
+      "number": 9,
+      "actual": "BIG",
+      "predicted": "SMALL",
+      "hit": false
+    },
+    {
+      "period": "20260926100011072",
       "number": 5,
       "actual": "BIG",
-      "predicted": "BIG",
-      "hit": true
-    },
-    {
-      "period": "20260926100011046",
-      "number": 2,
-      "actual": "SMALL",
       "predicted": "SMALL",
-      "hit": true
+      "hit": false
     },
     {
-      "period": "20260926100011047",
-      "number": 4,
-      "actual": "SMALL",
-      "predicted": "SMALL",
-      "hit": true
-    },
-    {
-      "period": "20260926100011048",
-      "number": 7,
-      "actual": "BIG",
-      "predicted": "BIG",
-      "hit": true
-    },
-    {
-      "period": "20260926100011049",
+      "period": "20260926100011073",
       "number": 0,
       "actual": "SMALL",
-      "predicted": "BIG",
+      "predicted": "SMALL",
+      "hit": true
+    },
+    {
+      "period": "20260926100011074",
+      "number": 0,
+      "actual": "SMALL",
+      "predicted": "SMALL",
+      "hit": true
+    },
+    {
+      "period": "20260926100011075",
+      "number": 1,
+      "actual": "SMALL",
+      "predicted": "SMALL",
+      "hit": true
+    },
+    {
+      "period": "20260926100011076",
+      "number": 9,
+      "actual": "BIG",
+      "predicted": "SMALL",
       "hit": false
     }
   ]
