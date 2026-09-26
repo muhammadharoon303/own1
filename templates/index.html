@@ -222,10 +222,14 @@
         <!-- Target Numbers & Color -->
         <div class="grid grid-cols-2 gap-3 mb-3">
           <div class="p-3 rounded-xl bg-slate-900/80 border border-slate-800">
-            <span class="text-[11px] text-slate-400 block font-semibold mb-1">Target Numbers</span>
+            <div class="flex items-center justify-between mb-1">
+              <span class="text-[11px] text-slate-400 font-semibold">Target Numbers</span>
+              <span class="text-[9px] font-bold text-amber-400 bg-amber-950/60 px-1.5 py-0.5 rounded border border-amber-800/40">★ Primary</span>
+            </div>
             <div id="liveTopNumbers" class="flex space-x-2 font-mono font-extrabold text-xl text-cyan-300">
               <span>-</span>
             </div>
+            <div id="liveDigitReason" class="text-[9px] text-slate-400 mt-1 font-mono leading-tight truncate" title="Dynamic digit transitions">Dynamic transition ready</div>
           </div>
           <div class="p-3 rounded-xl bg-slate-900/80 border border-slate-800">
             <span class="text-[11px] text-slate-400 block font-semibold mb-1">Target Color</span>

@@ -12,6 +12,7 @@ from .patterns import PatternAnalyzer
 from .statistics import StatisticsAnalyzer
 from .adaptive_trainer import AdaptiveTrainer
 from .confidence_calibrator import ConfidenceCalibrator
+from .digit_predictor import DynamicDigitPredictor
 
 
 class PredictionEngine:
@@ -19,6 +20,7 @@ class PredictionEngine:
         self.markov = MarkovAnalyzer()
         self.patterns = PatternAnalyzer()
         self.stats = StatisticsAnalyzer()
+        self.digit_predictor = DynamicDigitPredictor()
         if data_dir is None:
             data_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data")
         self.trainer = AdaptiveTrainer(data_dir=data_dir)
@@ -91,40 +93,12 @@ class PredictionEngine:
         # 3. Apply Empirical Calibration from User Tested Notes
         calibration = self.calibrator.calibrate(confidence, outcome)
 
-        # Target Numbers & Color inference
-        hot_nums = stats_res.get("hot_numbers", [])
-        num_freq = stats_res.get("number_frequencies", {})
-
-        if outcome == "BIG":
-            candidate_nums = [5, 6, 7, 8, 9]
-        elif outcome == "SMALL":
-            candidate_nums = [0, 1, 2, 3, 4]
-        else:
-            candidate_nums = list(range(10))
-
-        # Rank candidate numbers by recent frequency + overdue bonus
-        ranked_nums = sorted(
-            candidate_nums,
-            key=lambda n: (num_freq.get(n, 0), n in hot_nums),
-            reverse=True
-        )
-        top_numbers = ranked_nums[:3]
-
-        # Target color based on candidate numbers
-        color_vote = {"Red": 0, "Green": 0, "Violet": 0}
-        for n in top_numbers:
-            if n in [2, 4, 6, 8]:
-                color_vote["Red"] += 2
-            elif n in [1, 3, 7, 9]:
-                color_vote["Green"] += 2
-            elif n == 0:
-                color_vote["Red"] += 1
-                color_vote["Violet"] += 2
-            elif n == 5:
-                color_vote["Green"] += 1
-                color_vote["Violet"] += 2
-
-        predicted_color = max(color_vote.items(), key=lambda x: x[1])[0]
+        # Target Numbers & Color inference using DynamicDigitPredictor (updates on every draw)
+        digit_res = self.digit_predictor.predict_target_numbers(history, outcome, top_k=3)
+        top_numbers = digit_res["top_numbers"]
+        primary_number = digit_res["primary_number"]
+        predicted_color = digit_res["predicted_color"]
+        digit_explanation = digit_res["explanation"]
 
         # Risk & Staking advice based on empirical calibration + online hit rate
         zone = calibration.get("zone", "")
@@ -171,6 +145,8 @@ class PredictionEngine:
                 "p_big": round(total_big_score * 100, 1),
                 "p_small": round(total_small_score * 100, 1),
                 "top_numbers": top_numbers,
+                "primary_number": primary_number,
+                "digit_explanation": digit_explanation,
                 "predicted_color": predicted_color,
                 "risk_advice": {
                     "level": stake_level,

@@ -1,91 +1,91 @@
 {
-  "trained_samples": 382,
+  "trained_samples": 61,
   "evaluation_window": 35,
   "weights": {
-    "markov": 0.253,
-    "patterns": 0.309,
-    "statistics": 0.438
+    "markov": 0.352,
+    "patterns": 0.379,
+    "statistics": 0.268
   },
   "accuracy": {
-    "consensus": 51.4,
-    "markov": 54.3,
-    "patterns": 60.0,
-    "statistics": 71.4
+    "consensus": 57.1,
+    "markov": 54.8,
+    "patterns": 57.1,
+    "statistics": 38.5
   },
   "last_verification": {
-    "period": "20260926100051933",
-    "number": 1,
+    "period": "20260926100011049",
+    "number": 0,
     "actual": "SMALL",
     "predicted": "BIG",
     "hit": false
   },
   "recent_verifications": [
     {
-      "period": "20260926100051924",
-      "number": 3,
-      "actual": "SMALL",
-      "predicted": "BIG",
-      "hit": false
-    },
-    {
-      "period": "20260926100051925",
-      "number": 8,
-      "actual": "BIG",
-      "predicted": "BIG",
-      "hit": true
-    },
-    {
-      "period": "20260926100051926",
-      "number": 7,
-      "actual": "BIG",
-      "predicted": "SMALL",
-      "hit": false
-    },
-    {
-      "period": "20260926100051927",
-      "number": 8,
-      "actual": "BIG",
-      "predicted": "SMALL",
-      "hit": false
-    },
-    {
-      "period": "20260926100051928",
-      "number": 5,
-      "actual": "BIG",
-      "predicted": "SMALL",
-      "hit": false
-    },
-    {
-      "period": "20260926100051929",
+      "period": "20260926100011040",
       "number": 0,
       "actual": "SMALL",
       "predicted": "SMALL",
       "hit": true
     },
     {
-      "period": "20260926100051930",
+      "period": "20260926100011041",
+      "number": 3,
+      "actual": "SMALL",
+      "predicted": "SMALL",
+      "hit": true
+    },
+    {
+      "period": "20260926100011042",
+      "number": 9,
+      "actual": "BIG",
+      "predicted": "BIG",
+      "hit": true
+    },
+    {
+      "period": "20260926100011043",
+      "number": 7,
+      "actual": "BIG",
+      "predicted": "SMALL",
+      "hit": false
+    },
+    {
+      "period": "20260926100011044",
+      "number": 8,
+      "actual": "BIG",
+      "predicted": "SMALL",
+      "hit": false
+    },
+    {
+      "period": "20260926100011045",
+      "number": 5,
+      "actual": "BIG",
+      "predicted": "BIG",
+      "hit": true
+    },
+    {
+      "period": "20260926100011046",
+      "number": 2,
+      "actual": "SMALL",
+      "predicted": "SMALL",
+      "hit": true
+    },
+    {
+      "period": "20260926100011047",
       "number": 4,
       "actual": "SMALL",
       "predicted": "SMALL",
       "hit": true
     },
     {
-      "period": "20260926100051931",
-      "number": 8,
+      "period": "20260926100011048",
+      "number": 7,
       "actual": "BIG",
       "predicted": "BIG",
       "hit": true
     },
     {
-      "period": "20260926100051932",
-      "number": 3,
-      "actual": "SMALL",
-      "predicted": "BIG",
-      "hit": false
-    },
-    {
-      "period": "20260926100051933",
-      "number": 1,
+      "period": "20260926100011049",
+      "number": 0,
       "actual": "SMALL",
       "predicted": "BIG",
       "hit": false

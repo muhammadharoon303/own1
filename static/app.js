@@ -299,10 +299,21 @@ function renderDashboard(data) {
     liveConfPercent.innerText = `${prediction.confidence}%`;
     liveConfBar.style.width = `${prediction.confidence}%`;
 
-    // Numbers
-    liveTopNums.innerHTML = (prediction.top_numbers || []).map(n => 
-      `<span class="px-2.5 py-0.5 rounded-lg bg-cyan-950 border border-cyan-700/60 shadow">${n}</span>`
-    ).join(" ") || "-";
+    // Dynamic Target Numbers & Primary Highlight
+    const primary = prediction.primary_number;
+    liveTopNums.innerHTML = (prediction.top_numbers || []).map(n => {
+      const isPrimary = (n === primary);
+      const cls = isPrimary
+        ? "px-2.5 py-0.5 rounded-lg bg-amber-950/90 text-amber-300 border border-amber-500 shadow-md font-black"
+        : "px-2.5 py-0.5 rounded-lg bg-cyan-950 border border-cyan-700/60 shadow";
+      return `<span class="${cls}" title="${isPrimary ? 'Primary Pick' : 'Target'}">${n}${isPrimary ? '<span class=\"text-[10px] text-amber-400 ml-0.5\">★</span>' : ''}</span>`;
+    }).join(" ") || "-";
+
+    const elDigitReason = document.getElementById("liveDigitReason");
+    if (elDigitReason) {
+      elDigitReason.innerText = prediction.digit_explanation || "Dynamic transitions updated";
+      elDigitReason.title = prediction.digit_explanation || "";
+    }
 
     // Color
     const color = prediction.predicted_color || "Red";
