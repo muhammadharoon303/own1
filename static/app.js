@@ -445,7 +445,6 @@ function renderDashboard(data) {
 
   // Dynamic self-trained weights
   const weights = training.weights || {};
-  const accuracy = training.accuracy || {};
   const elWeightM = document.getElementById("weightMarkov");
   const elWeightP = document.getElementById("weightPattern");
   const elWeightS = document.getElementById("weightStats");
