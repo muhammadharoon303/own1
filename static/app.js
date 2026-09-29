@@ -444,11 +444,15 @@ function renderDashboard(data) {
 
   const elAccTargetNums = document.getElementById("accTargetNums");
   const elAccPrimaryNum = document.getElementById("accPrimaryNum");
+  const elAccSafety4 = document.getElementById("accSafety4");
   if (elAccTargetNums && accuracy.target_numbers !== undefined) {
     elAccTargetNums.innerText = `${accuracy.target_numbers}%`;
   }
   if (elAccPrimaryNum && accuracy.primary_target !== undefined) {
     elAccPrimaryNum.innerText = `${accuracy.primary_target}%`;
+  }
+  if (elAccSafety4 && accuracy.safety_cluster_4 !== undefined) {
+    elAccSafety4.innerText = `${accuracy.safety_cluster_4}%`;
   }
 
   // Dynamic self-trained weights

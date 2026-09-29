@@ -61,6 +61,13 @@ class PredictionEngine:
         patterns_res = self.patterns.analyze(history)
         stats_res = self.stats.analyze(history)
 
+        # 3. Bottom-Up Digit Micro-Transition Mass:
+        # Evaluate empirical 10-digit transition probability mass across all numbers (0 to 9)
+        neutral_digit_res = self.digit_predictor.predict_target_numbers(history, predicted_size="NEUTRAL")
+        all_group_probs = neutral_digit_res.get("all_group_probabilities", {})
+        # Total probability mass of Big digits {5, 6, 7, 8, 9} vs Small digits {0, 1, 2, 3, 4}
+        p_digit_big = sum(all_group_probs.get(str(d), 10.0) for d in range(5, 10)) / 100.0
+
         def to_score(res):
             sig = res.get("signal", "Neutral")
             conf = res.get("confidence", 50.0) / 100.0
@@ -74,7 +81,15 @@ class PredictionEngine:
         s_patterns = to_score(patterns_res)
         s_stats = to_score(stats_res)
 
-        total_big_score = (s_markov * w_markov) + (s_patterns * w_patterns) + (s_stats * w_stats)
+        # Unified Fusion: 30% Digit Micro-Transitions + 70% Scaled Macro Models
+        macro_sum = (w_markov + w_patterns + w_stats) or 1.0
+        scale = 0.70 / macro_sum
+        w_m_scaled = w_markov * scale
+        w_p_scaled = w_patterns * scale
+        w_s_scaled = w_stats * scale
+        w_digit = 0.30
+
+        total_big_score = (p_digit_big * w_digit) + (s_markov * w_m_scaled) + (s_patterns * w_p_scaled) + (s_stats * w_s_scaled)
         total_small_score = 1.0 - total_big_score
 
         # Determine Consensus Signal & Confidence
@@ -167,9 +182,17 @@ class PredictionEngine:
             },
             "training_info": training_info,
             "models_breakdown": {
+                "digits": {
+                    "name": "Digit Probability Mass",
+                    "weight": "30%",
+                    "signal": "Big" if p_digit_big > 0.5 else "Small",
+                    "confidence": round(max(p_digit_big, 1.0 - p_digit_big) * 100, 1),
+                    "accuracy": f"{training_info.get('accuracy', {}).get('safety_cluster_4', 40)}%",
+                    "explanation": f"Bottom-up 10-digit transition: Big={round(p_digit_big*100, 1)}%, Small={round((1.0-p_digit_big)*100, 1)}%"
+                },
                 "markov": {
                     "name": "Markov Transition",
-                    "weight": f"{int(w_markov*100)}%",
+                    "weight": f"{int(w_m_scaled*100)}%",
                     "signal": markov_res["signal"],
                     "confidence": markov_res["confidence"],
                     "accuracy": f"{training_info.get('accuracy', {}).get('markov', 50)}%",

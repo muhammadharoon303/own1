@@ -56,8 +56,8 @@ class AdaptiveTrainer:
         eval_window = min(35, n - 2)
         start_idx = n - eval_window
 
-        model_hits = {"markov": 0, "patterns": 0, "statistics": 0, "consensus": 0, "digit": 0, "primary": 0}
-        model_valid = {"markov": 0, "patterns": 0, "statistics": 0, "consensus": 0, "digit": 0, "primary": 0}
+        model_hits = {"markov": 0, "patterns": 0, "statistics": 0, "consensus": 0, "digit": 0, "safety4": 0, "primary": 0}
+        model_valid = {"markov": 0, "patterns": 0, "statistics": 0, "consensus": 0, "digit": 0, "safety4": 0, "primary": 0}
         eval_details = []
 
         current_weights = self.load_weights()
@@ -96,8 +96,28 @@ class AdaptiveTrainer:
             s_p = to_score(p_sig, p_res.get("confidence", 50.0))
             s_s = to_score(s_sig, s_res.get("confidence", 50.0))
 
-            total_big = (s_m * current_weights["markov"]) + (s_p * current_weights["patterns"]) + (s_s * current_weights["statistics"])
-            cons_pred = "BIG" if total_big > 0.5 else ("SMALL" if total_big < 0.5 else "NEUTRAL")
+            p_dig_big = 0.5
+            if digit_predictor:
+                try:
+                    d_neu = digit_predictor.predict_target_numbers(sub_hist, "NEUTRAL")
+                    all_p = d_neu.get("all_group_probabilities", {})
+                    p_dig_big = sum(all_p.get(str(d), 10.0) for d in range(5, 10)) / 100.0
+                except Exception:
+                    p_dig_big = 0.5
+
+            macro_sum = (current_weights.get("markov", 0.35) + current_weights.get("patterns", 0.45) + current_weights.get("statistics", 0.20)) or 1.0
+            scale = 0.70 / macro_sum
+            w_m_scaled = current_weights.get("markov", 0.35) * scale
+            w_p_scaled = current_weights.get("patterns", 0.45) * scale
+            w_s_scaled = current_weights.get("statistics", 0.20) * scale
+            w_digit = 0.30
+
+            total_big = (p_dig_big * w_digit) + (s_m * w_m_scaled) + (s_p * w_p_scaled) + (s_s * w_s_scaled)
+            diff = total_big - 0.5
+            if abs(diff) < 0.02:
+                cons_pred = "NEUTRAL"
+            else:
+                cons_pred = "BIG" if total_big > 0.5 else "SMALL"
 
             if cons_pred != "NEUTRAL":
                 model_valid["consensus"] += 1
@@ -109,18 +129,22 @@ class AdaptiveTrainer:
 
             # Target digit prediction evaluation
             top_nums = []
+            safety4 = []
             prim_num = None
             digit_hit = None
+            safety4_hit = None
             primary_hit = None
             if digit_predictor:
                 try:
                     d_res = digit_predictor.predict_target_numbers(sub_hist, cons_pred, top_k=3)
                     top_nums = d_res.get("top_numbers", [])
+                    safety4 = d_res.get("safety_cluster_4", [])
                     prim_num = d_res.get("primary_number")
                     act_num_raw = actual_next.get("number")
                     if act_num_raw is not None and str(act_num_raw).isdigit():
                         act_num = int(act_num_raw)
                         model_valid["digit"] += 1
+                        model_valid["safety4"] += 1
                         if prim_num is not None:
                             model_valid["primary"] += 1
                         if act_num in top_nums:
@@ -128,6 +152,11 @@ class AdaptiveTrainer:
                             digit_hit = True
                         else:
                             digit_hit = False
+                        if act_num in safety4:
+                            model_hits["safety4"] += 1
+                            safety4_hit = True
+                        else:
+                            safety4_hit = False
                         if act_num == prim_num:
                             model_hits["primary"] += 1
                             primary_hit = True
@@ -143,8 +172,10 @@ class AdaptiveTrainer:
                 "predicted": cons_pred,
                 "hit": hit,
                 "predicted_top_numbers": top_nums,
+                "safety_cluster_4": safety4,
                 "primary_number": prim_num,
                 "digit_hit": digit_hit,
+                "safety4_hit": safety4_hit,
                 "primary_hit": primary_hit
             })
 
@@ -159,6 +190,7 @@ class AdaptiveTrainer:
         acc_stats = get_acc("statistics")
         acc_consensus = get_acc("consensus")
         acc_digit = get_acc("digit")
+        acc_safety4 = get_acc("safety4")
         acc_primary = get_acc("primary")
 
         # ADAPTIVE WEIGHT OPTIMIZATION:
@@ -197,6 +229,7 @@ class AdaptiveTrainer:
                 "patterns": acc_patterns,
                 "statistics": acc_stats,
                 "target_numbers": acc_digit,
+                "safety_cluster_4": acc_safety4,
                 "primary_target": acc_primary
             },
             "last_verification": last_eval,
