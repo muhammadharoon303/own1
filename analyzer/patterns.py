@@ -1,4 +1,4 @@
-﻿"""
+"""
 Pattern Recognition and Streak Analyzer for 92pkr / Big-Small game.
 Evaluates current run length, alternating chop tendencies, streak exhaustion,
 and recency-weighted N-gram historical sequence matching.
@@ -54,18 +54,18 @@ class PatternAnalyzer:
             pattern_detail = f"Alternating chop mode active ({chop_count} switches). High probability of continuation to {streak_signal}."
 
         # REGIME 2: Dragon Streak Momentum vs Exhaustion
-        elif streak_count >= 4:
-            # In WinGo, streaks of 4+ face heavy mean-reversion resistance (75%+ reversal rate)
-            pattern_name = f"Dragon Exhaustion ({streak_count}x {current_type})"
-            streak_signal = opposite_type
-            streak_conf = min(82.0, 62.0 + (streak_count - 3) * 4.0)
-            pattern_detail = f"Dragon streak ({streak_count}x {current_type}) reached exhaustion limit. Mean-reversion favors break to {streak_signal}."
-        elif streak_count == 3:
-            # 3 in a row: Peak trend momentum
+        elif streak_count >= 6:
+            # Extreme dragon streak: high volatility, do not counter-trend blindly
+            pattern_name = f"Extended Dragon ({streak_count}x {current_type})"
+            streak_signal = "Neutral"
+            streak_conf = 50.0
+            pattern_detail = f"Dragon streak ({streak_count}x {current_type}) is extended. Await break confirmation before betting against."
+        elif streak_count in [3, 4, 5]:
+            # Dragon trend momentum active: follow the dragon
             pattern_name = f"Dragon Trend ({streak_count}x {current_type})"
             streak_signal = current_type
             streak_conf = 59.0
-            pattern_detail = f"Dragon momentum confirmed at 3x {current_type}. Follow trend to 4th draw with tight risk."
+            pattern_detail = f"Dragon momentum confirmed at {streak_count}x {current_type}. Follow trend continuation."
 
         # REGIME 3: Double Pair Pattern Analysis (2-2 or 2-1)
         elif streak_count == 2:

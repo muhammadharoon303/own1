@@ -1,183 +1,183 @@
 {
-  "trained_samples": 141,
+  "trained_samples": 120,
   "evaluation_window": 35,
   "weights": {
-    "markov": 0.398,
-    "patterns": 0.259,
-    "statistics": 0.342
+    "markov": 0.318,
+    "patterns": 0.341,
+    "statistics": 0.341
   },
   "accuracy": {
-    "consensus": 42.9,
-    "markov": 57.1,
-    "patterns": 40.0,
+    "consensus": 51.4,
+    "markov": 48.3,
+    "patterns": 50.0,
     "statistics": 50.0,
-    "target_numbers": 25.7,
-    "primary_target": 2.9
+    "target_numbers": 28.6,
+    "primary_target": 8.6
   },
   "last_verification": {
-    "period": "20260926100011120",
-    "number": 2,
-    "actual": "SMALL",
-    "predicted": "SMALL",
+    "period": "20260929100010522",
+    "number": 5,
+    "actual": "BIG",
+    "predicted": "BIG",
     "hit": true,
     "predicted_top_numbers": [
-      1,
-      3,
+      6,
+      8,
       2
     ],
-    "primary_number": 1,
-    "digit_hit": true,
+    "primary_number": 6,
+    "digit_hit": false,
     "primary_hit": false
   },
   "recent_verifications": [
     {
-      "period": "20260926100052228",
-      "number": 8,
-      "actual": "BIG",
-      "predicted": "SMALL",
-      "hit": false,
-      "predicted_top_numbers": [
-        1,
-        0,
-        2
-      ],
-      "primary_number": 1,
-      "digit_hit": false,
-      "primary_hit": false
-    },
-    {
-      "period": "20260926100052229",
-      "number": 1,
-      "actual": "SMALL",
-      "predicted": "BIG",
-      "hit": false,
-      "predicted_top_numbers": [
-        9,
-        5,
-        6
-      ],
-      "primary_number": 9,
-      "digit_hit": false,
-      "primary_hit": false
-    },
-    {
-      "period": "20260926100011113",
-      "number": 0,
-      "actual": "SMALL",
-      "predicted": "SMALL",
-      "hit": true,
-      "predicted_top_numbers": [
-        2,
-        0,
-        4
-      ],
-      "primary_number": 2,
-      "digit_hit": true,
-      "primary_hit": false
-    },
-    {
-      "period": "20260926100011114",
-      "number": 2,
-      "actual": "SMALL",
-      "predicted": "SMALL",
-      "hit": true,
-      "predicted_top_numbers": [
-        1,
-        0,
-        2
-      ],
-      "primary_number": 1,
-      "digit_hit": true,
-      "primary_hit": false
-    },
-    {
-      "period": "20260926100011115",
-      "number": 8,
-      "actual": "BIG",
-      "predicted": "SMALL",
-      "hit": false,
-      "predicted_top_numbers": [
-        0,
-        4,
-        2
-      ],
-      "primary_number": 0,
-      "digit_hit": false,
-      "primary_hit": false
-    },
-    {
-      "period": "20260926100011116",
-      "number": 0,
-      "actual": "SMALL",
-      "predicted": "BIG",
-      "hit": false,
-      "predicted_top_numbers": [
-        9,
-        5,
-        6
-      ],
-      "primary_number": 9,
-      "digit_hit": false,
-      "primary_hit": false
-    },
-    {
-      "period": "20260926100011117",
-      "number": 2,
-      "actual": "SMALL",
-      "predicted": "SMALL",
-      "hit": true,
-      "predicted_top_numbers": [
-        1,
-        0,
-        2
-      ],
-      "primary_number": 1,
-      "digit_hit": true,
-      "primary_hit": false
-    },
-    {
-      "period": "20260926100011118",
-      "number": 9,
-      "actual": "BIG",
-      "predicted": "SMALL",
-      "hit": false,
-      "predicted_top_numbers": [
-        0,
-        4,
-        2
-      ],
-      "primary_number": 0,
-      "digit_hit": false,
-      "primary_hit": false
-    },
-    {
-      "period": "20260926100011119",
+      "period": "20260929100010513",
       "number": 5,
       "actual": "BIG",
-      "predicted": "SMALL",
-      "hit": false,
+      "predicted": "BIG",
+      "hit": true,
       "predicted_top_numbers": [
-        4,
-        1,
-        0
+        9,
+        8,
+        1
       ],
-      "primary_number": 4,
+      "primary_number": 9,
       "digit_hit": false,
       "primary_hit": false
     },
     {
-      "period": "20260926100011120",
-      "number": 2,
+      "period": "20260929100010514",
+      "number": 1,
       "actual": "SMALL",
       "predicted": "SMALL",
       "hit": true,
       "predicted_top_numbers": [
         1,
-        3,
-        2
+        2,
+        5
       ],
       "primary_number": 1,
       "digit_hit": true,
+      "primary_hit": true
+    },
+    {
+      "period": "20260929100010515",
+      "number": 9,
+      "actual": "BIG",
+      "predicted": "BIG",
+      "hit": true,
+      "predicted_top_numbers": [
+        8,
+        9,
+        1
+      ],
+      "primary_number": 8,
+      "digit_hit": true,
+      "primary_hit": false
+    },
+    {
+      "period": "20260929100010516",
+      "number": 8,
+      "actual": "BIG",
+      "predicted": "SMALL",
+      "hit": false,
+      "predicted_top_numbers": [
+        4,
+        2,
+        8
+      ],
+      "primary_number": 4,
+      "digit_hit": true,
+      "primary_hit": false
+    },
+    {
+      "period": "20260929100010517",
+      "number": 5,
+      "actual": "BIG",
+      "predicted": "BIG",
+      "hit": true,
+      "predicted_top_numbers": [
+        8,
+        9,
+        0
+      ],
+      "primary_number": 8,
+      "digit_hit": false,
+      "primary_hit": false
+    },
+    {
+      "period": "20260929100010518",
+      "number": 5,
+      "actual": "BIG",
+      "predicted": "BIG",
+      "hit": true,
+      "predicted_top_numbers": [
+        5,
+        7,
+        1
+      ],
+      "primary_number": 5,
+      "digit_hit": true,
+      "primary_hit": true
+    },
+    {
+      "period": "20260929100010519",
+      "number": 3,
+      "actual": "SMALL",
+      "predicted": "BIG",
+      "hit": false,
+      "predicted_top_numbers": [
+        5,
+        7,
+        1
+      ],
+      "primary_number": 5,
+      "digit_hit": false,
+      "primary_hit": false
+    },
+    {
+      "period": "20260929100010520",
+      "number": 2,
+      "actual": "SMALL",
+      "predicted": "BIG",
+      "hit": false,
+      "predicted_top_numbers": [
+        5,
+        8,
+        2
+      ],
+      "primary_number": 5,
+      "digit_hit": true,
+      "primary_hit": false
+    },
+    {
+      "period": "20260929100010521",
+      "number": 0,
+      "actual": "SMALL",
+      "predicted": "BIG",
+      "hit": false,
+      "predicted_top_numbers": [
+        7,
+        9,
+        0
+      ],
+      "primary_number": 7,
+      "digit_hit": true,
+      "primary_hit": false
+    },
+    {
+      "period": "20260929100010522",
+      "number": 5,
+      "actual": "BIG",
+      "predicted": "BIG",
+      "hit": true,
+      "predicted_top_numbers": [
+        6,
+        8,
+        2
+      ],
+      "primary_number": 6,
+      "digit_hit": false,
       "primary_hit": false
     }
   ]

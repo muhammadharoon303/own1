@@ -153,6 +153,7 @@ class PredictionEngine:
                 "primary_number": primary_number,
                 "secondary_number": secondary_number,
                 "cover_number": cover_number,
+                "safety_cluster_4": digit_res.get("safety_cluster_4", []),
                 "cold_avoid_numbers": cold_avoid_numbers,
                 "digit_probabilities": digit_probabilities,
                 "all_group_probabilities": digit_res.get("all_group_probabilities", {}),

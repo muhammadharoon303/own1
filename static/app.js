@@ -301,19 +301,22 @@ function renderDashboard(data) {
 
     // Dynamic Target Numbers & Probabilities
     const primary = prediction.primary_number;
+    const cover = prediction.cover_number;
     const probs = prediction.digit_probabilities || {};
     liveTopNums.innerHTML = (prediction.top_numbers || []).map((n, idx) => {
       const isPrimary = (n === primary);
+      const isCover = (n === cover && !isPrimary);
       const prob = probs[String(n)] ? `${probs[String(n)]}%` : "";
       const cls = isPrimary
         ? "px-3 py-1 rounded-xl bg-amber-950 text-amber-300 border border-amber-500 shadow-lg font-black flex flex-col items-center"
-        : (idx === 1
-            ? "px-3 py-1 rounded-xl bg-slate-800 text-slate-200 border border-slate-600 shadow flex flex-col items-center"
+        : (isCover
+            ? "px-3 py-1 rounded-xl bg-purple-950 text-purple-300 border border-purple-600 shadow flex flex-col items-center"
             : "px-3 py-1 rounded-xl bg-cyan-950 text-cyan-300 border border-cyan-800 shadow flex flex-col items-center");
+      const tagLabel = isPrimary ? "Pick★" : (isCover ? "Hedge" : "Target");
       return `
-        <div class="${cls}" title="${isPrimary ? 'Primary Recommended Pick' : 'Alternate Cover Target'}">
+        <div class="${cls}" title="${isPrimary ? 'Primary Gold Pick' : (isCover ? 'Opposite Polar Mirror Hedge' : 'Secondary Momentum Target')}">
           <span class="text-xl leading-tight">${n}${isPrimary ? '<span class=\"text-[11px] text-amber-400 ml-0.5\">★</span>' : ''}</span>
-          <span class="text-[9px] ${isPrimary ? 'text-amber-400 font-bold' : 'text-slate-400'} leading-tight mt-0.5">${prob || (idx === 0 ? 'Pick' : 'Cover')}</span>
+          <span class="text-[9px] ${isPrimary ? 'text-amber-400 font-bold' : (isCover ? 'text-purple-300 font-semibold' : 'text-slate-400')} leading-tight mt-0.5">${prob || tagLabel}</span>
         </div>
       `;
     }).join(" ") || "-";
@@ -322,6 +325,11 @@ function renderDashboard(data) {
     if (elDigitReason) {
       elDigitReason.innerText = prediction.digit_explanation || "Dynamic transitions updated";
       elDigitReason.title = prediction.digit_explanation || "";
+    }
+
+    const elSafetyCluster = document.getElementById("liveSafetyCluster");
+    if (elSafetyCluster && prediction.safety_cluster_4) {
+      elSafetyCluster.innerText = prediction.safety_cluster_4.join(", ");
     }
 
     const elColdAvoid = document.getElementById("liveColdAvoid");

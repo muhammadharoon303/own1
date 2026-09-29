@@ -1,0 +1,602 @@
+[
+  {
+    "period": "20260929100030001",
+    "number": 0,
+    "size": "Small",
+    "color": "Violet"
+  },
+  {
+    "period": "20260929100030002",
+    "number": 7,
+    "size": "Big",
+    "color": "Green"
+  },
+  {
+    "period": "20260929100030003",
+    "number": 0,
+    "size": "Small",
+    "color": "Violet"
+  },
+  {
+    "period": "20260929100030004",
+    "number": 2,
+    "size": "Small",
+    "color": "Red"
+  },
+  {
+    "period": "20260929100030005",
+    "number": 2,
+    "size": "Small",
+    "color": "Red"
+  },
+  {
+    "period": "20260929100030006",
+    "number": 9,
+    "size": "Big",
+    "color": "Green"
+  },
+  {
+    "period": "20260929100030007",
+    "number": 2,
+    "size": "Small",
+    "color": "Red"
+  },
+  {
+    "period": "20260929100030008",
+    "number": 0,
+    "size": "Small",
+    "color": "Violet"
+  },
+  {
+    "period": "20260929100030009",
+    "number": 5,
+    "size": "Big",
+    "color": "Violet"
+  },
+  {
+    "period": "20260929100030010",
+    "number": 2,
+    "size": "Small",
+    "color": "Red"
+  },
+  {
+    "period": "20260929100030011",
+    "number": 8,
+    "size": "Big",
+    "color": "Red"
+  },
+  {
+    "period": "20260929100030012",
+    "number": 2,
+    "size": "Small",
+    "color": "Red"
+  },
+  {
+    "period": "20260929100030013",
+    "number": 0,
+    "size": "Small",
+    "color": "Violet"
+  },
+  {
+    "period": "20260929100030014",
+    "number": 4,
+    "size": "Small",
+    "color": "Red"
+  },
+  {
+    "period": "20260929100030015",
+    "number": 7,
+    "size": "Big",
+    "color": "Green"
+  },
+  {
+    "period": "20260929100030016",
+    "number": 0,
+    "size": "Small",
+    "color": "Violet"
+  },
+  {
+    "period": "20260929100030017",
+    "number": 0,
+    "size": "Small",
+    "color": "Violet"
+  },
+  {
+    "period": "20260929100030018",
+    "number": 9,
+    "size": "Big",
+    "color": "Green"
+  },
+  {
+    "period": "20260929100030019",
+    "number": 6,
+    "size": "Big",
+    "color": "Red"
+  },
+  {
+    "period": "20260929100030020",
+    "number": 5,
+    "size": "Big",
+    "color": "Violet"
+  },
+  {
+    "period": "20260929100030021",
+    "number": 0,
+    "size": "Small",
+    "color": "Violet"
+  },
+  {
+    "period": "20260929100030022",
+    "number": 1,
+    "size": "Small",
+    "color": "Green"
+  },
+  {
+    "period": "20260929100030023",
+    "number": 3,
+    "size": "Small",
+    "color": "Green"
+  },
+  {
+    "period": "20260929100030024",
+    "number": 5,
+    "size": "Big",
+    "color": "Violet"
+  },
+  {
+    "period": "20260929100030025",
+    "number": 8,
+    "size": "Big",
+    "color": "Red"
+  },
+  {
+    "period": "20260929100030026",
+    "number": 1,
+    "size": "Small",
+    "color": "Green"
+  },
+  {
+    "period": "20260929100030027",
+    "number": 5,
+    "size": "Big",
+    "color": "Violet"
+  },
+  {
+    "period": "20260929100030028",
+    "number": 6,
+    "size": "Big",
+    "color": "Red"
+  },
+  {
+    "period": "20260929100030029",
+    "number": 9,
+    "size": "Big",
+    "color": "Green"
+  },
+  {
+    "period": "20260929100030030",
+    "number": 1,
+    "size": "Small",
+    "color": "Green"
+  },
+  {
+    "period": "20260929100030031",
+    "number": 1,
+    "size": "Small",
+    "color": "Green"
+  },
+  {
+    "period": "20260929100030032",
+    "number": 6,
+    "size": "Big",
+    "color": "Red"
+  },
+  {
+    "period": "20260929100030033",
+    "number": 2,
+    "size": "Small",
+    "color": "Red"
+  },
+  {
+    "period": "20260929100030034",
+    "number": 9,
+    "size": "Big",
+    "color": "Green"
+  },
+  {
+    "period": "20260929100030035",
+    "number": 8,
+    "size": "Big",
+    "color": "Red"
+  },
+  {
+    "period": "20260929100030036",
+    "number": 9,
+    "size": "Big",
+    "color": "Green"
+  },
+  {
+    "period": "20260929100030037",
+    "number": 5,
+    "size": "Big",
+    "color": "Violet"
+  },
+  {
+    "period": "20260929100030038",
+    "number": 2,
+    "size": "Small",
+    "color": "Red"
+  },
+  {
+    "period": "20260929100030039",
+    "number": 6,
+    "size": "Big",
+    "color": "Red"
+  },
+  {
+    "period": "20260929100030040",
+    "number": 3,
+    "size": "Small",
+    "color": "Green"
+  },
+  {
+    "period": "20260929100030041",
+    "number": 8,
+    "size": "Big",
+    "color": "Red"
+  },
+  {
+    "period": "20260929100030042",
+    "number": 1,
+    "size": "Small",
+    "color": "Green"
+  },
+  {
+    "period": "20260929100030043",
+    "number": 4,
+    "size": "Small",
+    "color": "Red"
+  },
+  {
+    "period": "20260929100030044",
+    "number": 5,
+    "size": "Big",
+    "color": "Violet"
+  },
+  {
+    "period": "20260929100030045",
+    "number": 7,
+    "size": "Big",
+    "color": "Green"
+  },
+  {
+    "period": "20260929100030046",
+    "number": 6,
+    "size": "Big",
+    "color": "Red"
+  },
+  {
+    "period": "20260929100030047",
+    "number": 1,
+    "size": "Small",
+    "color": "Green"
+  },
+  {
+    "period": "20260929100030048",
+    "number": 8,
+    "size": "Big",
+    "color": "Red"
+  },
+  {
+    "period": "20260929100030049",
+    "number": 8,
+    "size": "Big",
+    "color": "Red"
+  },
+  {
+    "period": "20260929100030050",
+    "number": 8,
+    "size": "Big",
+    "color": "Red"
+  },
+  {
+    "period": "20260929100030051",
+    "number": 5,
+    "size": "Big",
+    "color": "Violet"
+  },
+  {
+    "period": "20260929100030052",
+    "number": 9,
+    "size": "Big",
+    "color": "Green"
+  },
+  {
+    "period": "20260929100030053",
+    "number": 1,
+    "size": "Small",
+    "color": "Green"
+  },
+  {
+    "period": "20260929100030054",
+    "number": 3,
+    "size": "Small",
+    "color": "Green"
+  },
+  {
+    "period": "20260929100030055",
+    "number": 8,
+    "size": "Big",
+    "color": "Red"
+  },
+  {
+    "period": "20260929100030056",
+    "number": 1,
+    "size": "Small",
+    "color": "Green"
+  },
+  {
+    "period": "20260929100030057",
+    "number": 7,
+    "size": "Big",
+    "color": "Green"
+  },
+  {
+    "period": "20260929100030058",
+    "number": 6,
+    "size": "Big",
+    "color": "Red"
+  },
+  {
+    "period": "20260929100030059",
+    "number": 7,
+    "size": "Big",
+    "color": "Green"
+  },
+  {
+    "period": "20260929100030060",
+    "number": 6,
+    "size": "Big",
+    "color": "Red"
+  },
+  {
+    "period": "20260929100030061",
+    "number": 9,
+    "size": "Big",
+    "color": "Green"
+  },
+  {
+    "period": "20260929100030062",
+    "number": 8,
+    "size": "Big",
+    "color": "Red"
+  },
+  {
+    "period": "20260929100030063",
+    "number": 5,
+    "size": "Big",
+    "color": "Violet"
+  },
+  {
+    "period": "20260929100030064",
+    "number": 5,
+    "size": "Big",
+    "color": "Violet"
+  },
+  {
+    "period": "20260929100030065",
+    "number": 0,
+    "size": "Small",
+    "color": "Violet"
+  },
+  {
+    "period": "20260929100030066",
+    "number": 0,
+    "size": "Small",
+    "color": "Violet"
+  },
+  {
+    "period": "20260929100030067",
+    "number": 3,
+    "size": "Small",
+    "color": "Green"
+  },
+  {
+    "period": "20260929100030068",
+    "number": 1,
+    "size": "Small",
+    "color": "Green"
+  },
+  {
+    "period": "20260929100030069",
+    "number": 1,
+    "size": "Small",
+    "color": "Green"
+  },
+  {
+    "period": "20260929100030070",
+    "number": 2,
+    "size": "Small",
+    "color": "Red"
+  },
+  {
+    "period": "20260929100030071",
+    "number": 6,
+    "size": "Big",
+    "color": "Red"
+  },
+  {
+    "period": "20260929100030072",
+    "number": 4,
+    "size": "Small",
+    "color": "Red"
+  },
+  {
+    "period": "20260929100030073",
+    "number": 8,
+    "size": "Big",
+    "color": "Red"
+  },
+  {
+    "period": "20260929100030074",
+    "number": 2,
+    "size": "Small",
+    "color": "Red"
+  },
+  {
+    "period": "20260929100030075",
+    "number": 1,
+    "size": "Small",
+    "color": "Green"
+  },
+  {
+    "period": "20260929100030076",
+    "number": 1,
+    "size": "Small",
+    "color": "Green"
+  },
+  {
+    "period": "20260929100030077",
+    "number": 5,
+    "size": "Big",
+    "color": "Violet"
+  },
+  {
+    "period": "20260929100030078",
+    "number": 9,
+    "size": "Big",
+    "color": "Green"
+  },
+  {
+    "period": "20260929100030079",
+    "number": 5,
+    "size": "Big",
+    "color": "Violet"
+  },
+  {
+    "period": "20260929100030080",
+    "number": 2,
+    "size": "Small",
+    "color": "Red"
+  },
+  {
+    "period": "20260929100030081",
+    "number": 2,
+    "size": "Small",
+    "color": "Red"
+  },
+  {
+    "period": "20260929100030082",
+    "number": 2,
+    "size": "Small",
+    "color": "Red"
+  },
+  {
+    "period": "20260929100030083",
+    "number": 6,
+    "size": "Big",
+    "color": "Red"
+  },
+  {
+    "period": "20260929100030084",
+    "number": 1,
+    "size": "Small",
+    "color": "Green"
+  },
+  {
+    "period": "20260929100030085",
+    "number": 3,
+    "size": "Small",
+    "color": "Green"
+  },
+  {
+    "period": "20260929100030086",
+    "number": 0,
+    "size": "Small",
+    "color": "Violet"
+  },
+  {
+    "period": "20260929100030087",
+    "number": 1,
+    "size": "Small",
+    "color": "Green"
+  },
+  {
+    "period": "20260929100030088",
+    "number": 7,
+    "size": "Big",
+    "color": "Green"
+  },
+  {
+    "period": "20260929100030089",
+    "number": 5,
+    "size": "Big",
+    "color": "Violet"
+  },
+  {
+    "period": "20260929100030090",
+    "number": 9,
+    "size": "Big",
+    "color": "Green"
+  },
+  {
+    "period": "20260929100030091",
+    "number": 1,
+    "size": "Small",
+    "color": "Green"
+  },
+  {
+    "period": "20260929100030092",
+    "number": 3,
+    "size": "Small",
+    "color": "Green"
+  },
+  {
+    "period": "20260929100030093",
+    "number": 1,
+    "size": "Small",
+    "color": "Green"
+  },
+  {
+    "period": "20260929100030094",
+    "number": 4,
+    "size": "Small",
+    "color": "Red"
+  },
+  {
+    "period": "20260929100030095",
+    "number": 1,
+    "size": "Small",
+    "color": "Green"
+  },
+  {
+    "period": "20260929100030096",
+    "number": 8,
+    "size": "Big",
+    "color": "Red"
+  },
+  {
+    "period": "20260929100030097",
+    "number": 8,
+    "size": "Big",
+    "color": "Red"
+  },
+  {
+    "period": "20260929100030098",
+    "number": 2,
+    "size": "Small",
+    "color": "Red"
+  },
+  {
+    "period": "20260929100030099",
+    "number": 6,
+    "size": "Big",
+    "color": "Red"
+  },
+  {
+    "period": "20260929100030100",
+    "number": 1,
+    "size": "Small",
+    "color": "Green"
+  }
+]

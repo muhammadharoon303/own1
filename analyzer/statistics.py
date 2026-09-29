@@ -47,21 +47,22 @@ class StatisticsAnalyzer:
         rec_total = len(recent_window)
         rec_big_pct = round((rec_big / rec_total * 100), 1) if rec_total else 50.0
 
-        # Mean reversion calculation:
-        # In a balanced game, Big and Small each tend toward 50%.
-        # If in the last 20 periods Big is <= 35%, there is significant mean-reversion pull towards Big.
+        # Cluster Momentum & Statistical Ratio Analysis:
+        # Respect true cluster momentum without falling into Gambler's Fallacy.
         stat_signal = "Neutral"
         stat_conf = 50.0
         stat_reason = "Big and Small distribution is well balanced near 50%."
 
-        if rec_big_pct <= 35.0:
+        if rec_big_pct >= 60.0:
+            # Active Big cluster: align with dominant flow
             stat_signal = "Big"
-            stat_conf = min(78.0, 50.0 + (50.0 - rec_big_pct) * 1.2)
-            stat_reason = f"Big is statistically oversold (only {rec_big_pct}% in last {rec_total} draws). Mean reversion favors BIG."
-        elif rec_big_pct >= 65.0:
+            stat_conf = min(64.0, 52.0 + (rec_big_pct - 50.0) * 0.4)
+            stat_reason = f"Big cluster momentum active ({rec_big_pct}% in last {rec_total} draws). Flow favors BIG."
+        elif rec_big_pct <= 40.0:
+            # Active Small cluster: align with dominant flow
             stat_signal = "Small"
-            stat_conf = min(78.0, 50.0 + (rec_big_pct - 50.0) * 1.2)
-            stat_reason = f"Small is statistically oversold (Big has dominated at {rec_big_pct}% in last {rec_total} draws). Mean reversion favors SMALL."
+            stat_conf = min(64.0, 52.0 + (50.0 - rec_big_pct) * 0.4)
+            stat_reason = f"Small cluster momentum active ({100.0 - rec_big_pct}% in last {rec_total} draws). Flow favors SMALL."
 
         # Number frequencies (0 to 9)
         num_counts = {i: 0 for i in range(10)}

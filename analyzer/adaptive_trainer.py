@@ -112,7 +112,7 @@ class AdaptiveTrainer:
             prim_num = None
             digit_hit = None
             primary_hit = None
-            if digit_predictor and cons_pred != "NEUTRAL":
+            if digit_predictor:
                 try:
                     d_res = digit_predictor.predict_target_numbers(sub_hist, cons_pred, top_k=3)
                     top_nums = d_res.get("top_numbers", [])

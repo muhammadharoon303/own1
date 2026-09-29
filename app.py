@@ -11,7 +11,8 @@ from analyzer.engine import PredictionEngine
 from ocr.parser import ImageHistoryParser
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-DATA_FILE = os.path.join(BASE_DIR, "data", "history.json")
+DATA_DIR = os.path.join(BASE_DIR, "data")
+DATA_FILE = os.path.join(DATA_DIR, "history.json")
 UPLOAD_FOLDER = os.path.join(BASE_DIR, "uploads")
 ALLOWED_EXTENSIONS = {"png", "jpg", "jpeg", "webp", "bmp", "zip", "csv", "txt", "json"}
 
@@ -38,18 +39,28 @@ def get_next_period_string(history):
     return str(len(history) + 1)
 
 
-def load_history():
-    if not os.path.exists(DATA_FILE):
-        return []
+def get_history_file(game_key="1m"):
+    if game_key in ["1m", "30s", "3m", "5m"]:
+        return os.path.join(DATA_DIR, f"history_{game_key}.json")
+    return DATA_FILE
+
+
+def load_history(game_key="1m"):
+    filepath = get_history_file(game_key)
+    if not os.path.exists(filepath):
+        if game_key == "1m" and os.path.exists(DATA_FILE):
+            filepath = DATA_FILE
+        else:
+            return []
     try:
-        with open(DATA_FILE, "r", encoding="utf-8") as f:
+        with open(filepath, "r", encoding="utf-8") as f:
             records = json.load(f)
             return records
     except Exception:
         return []
 
 
-def save_history(records):
+def save_history(records, game_key="1m"):
     # Deduplicate while strictly preserving chronological insertion order
     seen = set()
     deduped = []
@@ -61,8 +72,17 @@ def save_history(records):
         elif not p:
             deduped.append(r)
 
-    with open(DATA_FILE, "w", encoding="utf-8") as f:
+    # Sort strictly chronologically by period
+    deduped.sort(key=lambda x: str(x.get("period", "")))
+
+    filepath = get_history_file(game_key)
+    with open(filepath, "w", encoding="utf-8") as f:
         json.dump(deduped, f, indent=2)
+
+    if game_key == "1m":
+        with open(DATA_FILE, "w", encoding="utf-8") as f:
+            json.dump(deduped, f, indent=2)
+
     return deduped
 
 
@@ -135,13 +155,13 @@ def live_sync():
     issue_info = live_client.get_game_issue(game_key)
     live_draws = live_client.get_history_draws(game_key, page_size=30)
 
-    history = load_history()
+    history = load_history(game_key)
     if live_draws:
         existing_periods = {str(h.get("period", "")).strip() for h in history}
         new_records = [d for d in live_draws if str(d.get("period", "")).strip() not in existing_periods]
         if new_records or not history:
             history.extend(new_records)
-            saved = save_history(history)
+            saved = save_history(history, game_key)
         else:
             saved = history
     else:
@@ -164,10 +184,12 @@ def live_sync():
 
 @app.route("/api/data", methods=["GET"])
 def get_data():
-    history = load_history()
+    game_key = request.args.get("game", "1m")
+    history = load_history(game_key)
     prediction_data = engine.predict(history)
     return jsonify({
         "status": "success",
+        "game_key": game_key,
         "total_records": len(history),
         "history": history,
         "prediction_data": prediction_data
